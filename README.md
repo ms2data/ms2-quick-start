@@ -8,14 +8,6 @@ Prior to starting this guide, you'll need to have an MS2 admin set up an organiz
 
 The MS2 experience is built around the open-source semantic modeling language [Malloy](https://www.malloydata.dev/). The MS2 developer tools will assist you as you write Malloy code, but it's still helpful to have a basic understanding of the language. The [Malloy documentation](https://docs.malloydata.dev/documentation/) provides a good introduction and serves as a great reference resource.
 
-Install the MS2 CLI (this requirement will be removed soon):
-
-```bash
-npm i -g ms2pm
-```
-
-*NOTE: if you've used the MS2 CLI before, run `ms2pm logout` to clear any residual state.*
-
 ## Install the MS2 VS Code Extension (VS Code or Cursor)
 
 1. Open VS Code and navigate to the Extensions view (Command+Shift+X).
