@@ -27,11 +27,11 @@ Then open the folder in VS Code or Cursor.
 
 Open the MS2 panel in the primary sidebar and click "Sign In". You will have to click "Allow" and then "Open" to get redirected to a web page where you can log in with your username and password or a Google account.
 
-*NOTE: be sure to log in with an email address that matches what you provided the MS2 admin when they set up your organization.*
+*NOTE: be sure to log in with the email address that you provided the MS2 admin when they set up your organization.*
 
 ### Select Environment
 
-After your login shows, click where it says "No environment found" and then select the "ms2-quick-start" environment. This will load the connections needed for this quick start guide.
+After login succeeds, you will be prompted to select an environment (choose "ms2-quick-start"). If you aren't prompted for this, click where it says "No environment found" and then select the "ms2-quick-start" environment. This will load the connections needed for this quick start guide.
 
 ### Create a Semantic Model
 
@@ -40,6 +40,8 @@ In the file view, create and open a new file called "ecommerce.malloy". Open the
 > Build a model of ecommerce data that makes it easy to analyze sales trends across different dimensions
 
 After around 20-30s the semantic model will show in the editor. The system fixes most compile errors, but if there are any errors left, you'll want to fix them manually.
+
+In a normal workflow, you would review the generated model and adjust it to be more applicable to your needs and the underlying data. For the purposes of this demo, you can leave the model as is and move on to the next step. However, it's worth noting that the quality of query generation is directly related to the quality of the semantic model. So for real-world use cases you will want to build the most complete and accurate model possible.
 
 ### Build a Notebook Data Story
 
