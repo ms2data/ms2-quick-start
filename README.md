@@ -35,7 +35,7 @@ After login succeeds, you will be prompted to select an environment (choose "ms2
 
 ### Create a Semantic Model
 
-In the file view, create and open a new file called "ecommerce.malloy". Open the command palette (Command+Shift+P) and select "MS2: Suggest Semantic Model". You will be prompted to enter a description for the semantic model. You can try something like:
+In the file view, create and open a new file called `ecommerce.malloy`. Open the command palette (Command+Shift+P) and select "MS2: Suggest Semantic Model". You will be prompted to enter a description for the semantic model. You can try something like:
 
 > Build a model of ecommerce data that makes it easy to analyze sales trends across different dimensions
 
@@ -43,9 +43,9 @@ After around 20-30s the semantic model will show in the editor. The system fixes
 
 In a normal workflow, you would review the generated model and adjust it to be more applicable to your needs and the underlying data. For the purposes of this demo, you can leave the model as is and move on to the next step. However, it's worth noting that the quality of query generation is directly related to the quality of the semantic model. So for real-world use cases you will want to build the most complete and accurate model possible.
 
-### Build a Notebook Data Story
+### Develop a Notebook Data Story
 
-In the file view, create and open a new file called "sales_performance.malloynb". Open the command palette and select "MS2: Suggest Analysis Topics". You will be prompted to enter a description for the notebook. You can try something like:
+In the file view, create and open a new file called `sales_performance.malloynb`. Open the command palette and select "MS2: Suggest Analysis Topics". You will be prompted to enter a description for the notebook. You can try something like:
 
 > Explore product sales performance across various dimensions like product category, brand, distribution method, etc.
 
@@ -56,5 +56,23 @@ The last part of the process involves working through the analysis sections in t
 When the description is satisfactory for a given analysis, click the "Generate" button in the "MS2" section of the code cell. A block of Malloy code will show in the cell after about 10-15s. Fix errors if there are any and then run the cell to see the results of the query.
 
 ## Integrating Analyses into a Data App
+
+In this section, we are going to take the data story we built and make it widely available online by publishing the package to the MS2 platform and embedding the analyses in a sample data app.
+
+### Publish the Package
+
+In the file view, open the `publisher.json` file. Manually edit the version to be `0.0.1`. Then with the MS2 side panel open in the primary sidebar, click the "Publish" button (it's a cloud icon with an arrow and is in the upper right of the "PACKAGE" section). You can verify that it is published by checking the "Published versions" section in the "PACKAGE" section.
+
+You can also view the published package via the MS2 online portal. Just replace `<organization_name>` with the name of your organization in the URL below:
+
+```
+https://<organization_name>.staging-admin.ms2.co/ms2-quick-start/ms2-quick-start/latest/
+```
+
+### Getting the Embed Code
+
+Once the package is published, any analysis cell from the notebook data story can be easily embedded into a data app. To get the embed code for a given cell, just click on the "Embed" button in the "MS2" section of the cell. This will open a dialog with the embed code and you can copy it from there.
+
+### Running a Sample Data App
 
 Coming soon.
