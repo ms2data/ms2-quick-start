@@ -25,7 +25,7 @@ Then open the folder in VS Code or Cursor.
 
 ### MS2 Login
 
-Open the MS2 panel in the primary sidebar and click "Sign In". You will have to click "Allow" and then "Open" to get redirected to a web page where you can log in with your username and password or a Google account.
+Open the MS2 panel in the primary sidebar and click "Sign In". If you are prompted for the "organization", write in the name of the organization that was set up for you. Then you will have to click "Allow" and then "Open" to get redirected to a web page where you can log in with your username and password or a Google account.
 
 *NOTE: be sure to log in with the email address that you provided the MS2 admin when they set up your organization.*
 
