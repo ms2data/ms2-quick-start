@@ -29,11 +29,30 @@ Open the MS2 panel in the primary sidebar and click "Sign In". You will have to 
 
 *NOTE: be sure to log in with an email address that matches what you provided the MS2 admin when they set up your organization.*
 
+### Select Environment
+
 After your login shows, click where it says "No environment found" and then select the "ms2-quick-start" environment. This will load the connections needed for this quick start guide.
 
 ### Create a Semantic Model
 
-In the file view, create and open a new file called "ecommerce.malloy".
+In the file view, create and open a new file called "ecommerce.malloy". Open the command palette (Command+Shift+P) and select "MS2: Suggest Semantic Model". You will be prompted to enter a description for the semantic model. You can try something like:
 
+> Build a model of ecommerce data that makes it easy to analyze sales trends across different dimensions
 
-"A model of our ecommerce data that makes it easy to analyze sales trends across different dimensions."
+After around 20-30s the semantic model will show in the editor. The system fixes most compile errors, but if there are any errors left, you'll want to fix them manually.
+
+### Build a Notebook Data Story
+
+In the file view, create and open a new file called "sales_performance.malloynb". Open the command palette and select "MS2: Suggest Analysis Topics". You will be prompted to enter a description for the notebook. You can try something like:
+
+> Explore product sales performance across various dimensions like product category, brand, distribution method, etc.
+
+This command will populate the notebook with a sequence of data analysis topics that can be refined to your liking.
+
+The last part of the process involves working through the analysis sections in the notebook and building Malloy queries for them. For each analysis block, modify the suggested analysis description so that it reflects the analysis you want to perform. MS2 will use this description to generate a relevant Malloy query.
+
+When the description is satisfactory for a given analysis, click the "Generate" button in the "MS2" section of the code cell. A block of Malloy code will show in the cell after about 10-15s. Fix errors if there are any and then run the cell to see the results of the query.
+
+## Integrating Analyses into a Data App
+
+Coming soon.
