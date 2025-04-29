@@ -1,27 +1,27 @@
 {
-    "name": "ms2-quick-start",
-    "version": "0.0.0",
-    "description": "Quick start guide to MS2 using ecommerce data",
-    "data_sources": [
-      {
-        "connection": "bq_demo",
-        "dataset": "ecommerce_bq",
-        "table_name": "inventory_items"
-      },
-      {
-        "connection": "bq_demo",
-        "dataset": "ecommerce_bq",
-        "table_name": "order_items"
-      },
-      {
-        "connection": "bq_demo",
-        "dataset": "ecommerce_bq",
-        "table_name": "users"
-      },
-      {
-        "connection": "bq_demo",
-        "dataset": "ecommerce_bq",
-        "table_name": "products"
-      }
-    ]
+  "name": "ms2-quick-start",
+  "version": "0.0.0",
+  "description": "Quick start guide to MS2 using ecommerce data",
+  "data_sources": [
+    {
+      "connection": "bq_demo",
+      "dataset": "ecommerce_bq",
+      "table_name": "inventory_items"
+    },
+    {
+      "connection": "bq_demo",
+      "dataset": "ecommerce_bq",
+      "table_name": "order_items"
+    },
+    {
+      "connection": "bq_demo",
+      "dataset": "ecommerce_bq",
+      "table_name": "users"
+    },
+    {
+      "connection": "bq_demo",
+      "dataset": "ecommerce_bq",
+      "table_name": "products"
+    }
+  ]
 }
