@@ -4,14 +4,17 @@ This repo contains a stub for the `ms2-quick-start` package (just the [publisher
 
 ## Prerequisites
 
-Prior to starting this guide, you'll need to have an MS2 admin set up an organization for you to use on the MS2 platform. Additionally, you'll need to get the .vsix file that is used to install the MS2 VS Code extension.
+Prior to starting this guide, you'll need to have an MS2 admin set up an organization for you to use on the MS2 platform.
 
 The MS2 experience is built around the open-source semantic modeling language [Malloy](https://www.malloydata.dev/). The MS2 developer tools will assist you as you write Malloy code, but it's still helpful to have a basic understanding of the language. The [Malloy documentation](https://docs.malloydata.dev/documentation/) provides a good introduction and serves as a great reference resource.
 
-## Install the MS2 VS Code Extension (VS Code or Cursor)
+## Install the MS2 VS Code Extension
 
-1. Open VS Code and navigate to the Extensions view (Command+Shift+X).
-2. Drag the extension ".vsix" file onto the Extensions view.
+1. VS Code and navigate to the Extensions view (Command+Shift+X).
+2. Search for "MS2" and install the extension.
+3. [Temporary] Find the Malloy extension and click "Switch to Pre-Release Version".
+
+*NOTE: the extension mostly works with Cursor, but it has not been fully tested in Cursor and some features may not work.*
 
 ## Building a Package
 
@@ -21,17 +24,13 @@ Start by cloning this repo on your local machine:
 git clone https://github.com/ms2data/ms2-quick-start.git
 ```
 
-Then open the folder in VS Code or Cursor.
+Then open the folder in VS Code.
 
 ### MS2 Login
 
-Open the MS2 panel in the primary sidebar and click "Sign In". If you are prompted for the "organization", write in the name of the organization that was set up for you. Then you will have to click "Allow" and then "Open" to get redirected to a web page where you can log in with your username and password or a Google account.
+Open the Explorer panel in the primary sidebar and expand the "MS2 Service" section. Click "Sign In" and then click "+ Add new organization" and write in the name of the organization that was set up for you. Then you will have to click "Allow" and then "Open" to get redirected to a web page where you can log in with your username and password or a Google account. When redirected back to VS Code, you will be prompted to select a project and you should choose "ms2-quick-start". This will load the connections needed for this quick start guide. Later you can change the project by clicking on the project name in the "MS2 Service" section.
 
 *NOTE: be sure to log in with the email address that you provided the MS2 admin when they set up your organization.*
-
-### Select Environment
-
-After login succeeds, you will be prompted to select an environment (choose "ms2-quick-start"). If you aren't prompted for this, click where it says "No environment found" and then select the "ms2-quick-start" environment. This will load the connections needed for this quick start guide.
 
 ### Create a Semantic Model
 
@@ -39,21 +38,25 @@ In the file view, create and open a new file called `ecommerce.malloy`. Open the
 
 > Build a model of ecommerce data that makes it easy to analyze sales trends across different dimensions
 
-After around 20-30s the semantic model will show in the editor. The system fixes most compile errors, but if there are any errors left, you'll want to fix them manually.
+After around 30s the semantic model will show in the editor. The system fixes most compile errors, but if there are any errors left, you'll want to fix them manually.
 
-In a normal workflow, you would review the generated model and adjust it to be more applicable to your needs and the underlying data. For the purposes of this demo, you can leave the model as is and move on to the next step. However, it's worth noting that the quality of query generation is directly related to the quality of the semantic model. So for real-world use cases you will want to build the most complete and accurate model possible.
+In a normal workflow, you would review the generated model and adjust it to be more applicable to your needs and the underlying data. For the purposes of this demo, you can leave the model as is and move on to the next step.
+
+**NOTE: it's worth noting that the quality of query generation is directly related to the quality of the semantic model. So for real-world use cases you will want to build the most complete and accurate model possible.**
 
 ### Develop a Notebook Data Story
 
-In the file view, create and open a new file called `sales_performance.malloynb`. Open the command palette and select "MS2: Suggest Analysis Topics". You will be prompted to enter a description for the notebook. You can try something like:
+In the file view, create and open a new file called `sales_performance.malloynb`. Then open the command palette and select "MS2: Suggest Analysis Topics". You will be prompted to enter a description for the notebook. You can try something like:
 
 > Explore product sales performance across various dimensions like product category, brand, distribution method, etc.
 
 This command will populate the notebook with a sequence of data analysis topics that can be refined to your liking.
 
+#### Generating Malloy Queries
+
 The last part of the process involves working through the analysis sections in the notebook and building Malloy queries for them. For each analysis block, modify the suggested analysis description so that it reflects the analysis you want to perform. MS2 will use this description to generate a relevant Malloy query.
 
-When the description is satisfactory for a given analysis, click the "Generate" button in the "MS2" section of the code cell. A block of Malloy code will show in the cell after about 10-15s. Fix errors if there are any and then run the cell to see the results of the query.
+When the description is satisfactory for a given analysis, click the "Generate" button in the "MS2" section of the code cell. A block of Malloy code will show in the cell after about 10-15s. Fix errors if there are any and then click the "Run" text above the query to see the results.
 
 ## Integrating Analyses into a Data App
 
@@ -61,7 +64,9 @@ In this section, we are going to take the data story we built and make it widely
 
 ### Publish the Package
 
-In the file view, open the `publisher.json` file. Manually edit the version to be `0.0.1`. Then with the MS2 side panel open in the primary sidebar, click the "Publish" button (it's a cloud icon with an arrow and is in the upper right of the "PACKAGE" section). You can verify that it is published by checking the "Published versions" section in the "PACKAGE" section.
+In the file view, open the `publisher.json` file. Manually edit the version to be `0.0.1`. Next locate and expand the "MS2 Local Packages" section in the Explorer panel in the primary sidebar. This sections shows all available publisher packages within the root folder of the workspace. In this case there will only be one package which is the "ms2-quick-start" package. Expand this entry and then click the "Publish" button and confirm by clicking "Yes".
+
+You can verify that it's published by checking the "MS2 Service" section in the Explorer panel in the primary sidebar. First refresh the panel by clicking the refresh button and then expand "Packages" and "ms2-quick-start". You should see the new version show in the list of versions.
 
 You can also view the published package via the MS2 online portal. Just replace `<organization_name>` with the name of your organization in the URL below:
 
