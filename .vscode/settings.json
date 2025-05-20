@@ -3,9 +3,6 @@
     "github.copilot.editor.enableCodeActions": false,
     "cursor.cmdk.autoSelect": false,
     "cursor.cpp.disabledLanguages": [
-        "markdown",
-        "plaintext",
-        "malloy",
-        "malloynb"
+        "malloy"
     ]
 }
