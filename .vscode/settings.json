@@ -1,0 +1,8 @@
+{
+    "github.copilot.editor.enableAutoCompletions": false,
+    "github.copilot.editor.enableCodeActions": false,
+    "cursor.cmdk.autoSelect": false,
+    "cursor.cpp.disabledLanguages": [
+        "malloy"
+    ]
+}
