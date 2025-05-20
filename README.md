@@ -44,6 +44,10 @@ In a normal workflow, you would review the generated model and adjust it to be m
 
 **NOTE: it's worth noting that the quality of query generation is directly related to the quality of the semantic model. So for real-world use cases you will want to build the most complete and accurate model possible.**
 
+When editing a semantic model, you will see some code suggestions coming from the MS2 extension which you can tab to accept. You can also prompt our system to generate code or modify selected code by using the "ctrl+cmd+i" keyboard shortcut and providing directions at the top of the window.
+
+*NOTE: some of the inline suggestions may also come from Copilot if you have that enabled and it can be hard to tell which service provided the suggestion.*
+
 ### Develop a Notebook Data Story
 
 In the file view, create and open a new file called `sales_performance.malloynb`. Then open the command palette and select "MS2: Suggest Analysis Topics". You will be prompted to enter a description for the notebook. You can try something like:
