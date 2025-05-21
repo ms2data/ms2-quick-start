@@ -15,6 +15,7 @@ import SideMenu from "./components/SideMenu";
 import MainGrid from "./components/MainGrid";
 import { useMemo } from "react";
 import { useAuth } from "./hooks/useAuth";
+import { QueryResult } from "@malloy-publisher/sdk";
 
 export default function Dashboard() {
   const [mode, setMode] = React.useState<PaletteMode>("light");
