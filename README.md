@@ -64,7 +64,7 @@ When the description is satisfactory for a given analysis, click the "Generate" 
 
 ## Integrating Analyses into a Data App
 
-In this section, we are going to take the data story we built and make it widely available online by publishing the package to the MS2 platform and embedding the analyses in a sample data app.
+In this section, we are going to take the data story we built and make it widely available online by publishing the package to the MS2 platform and embedding an analysis into a sample data app.
 
 ### Publish the Package
 
@@ -78,13 +78,15 @@ You can also view the published package via the MS2 online portal. Just replace 
 https://<organization_name>.staging-admin.ms2.co/ms2-quick-start/ms2-quick-start/latest/
 ```
 
-### Getting the Embed Code
-
-Once the package is published, any analysis cell from the notebook data story can be easily embedded into a data app. To get the embed code for a given cell, just click on the "Embed" button in the "MS2" section of the cell. This will open a dialog with the embed code and you can copy it from there.
-
 ### Running a Sample Data App
 
-Coming soon.
+In the [sample_data_app](sample_data_app) folder, there's a simple React app that can be run locally to display embedded content that is served from the MS2 platform. To run the app, move to that folder and run `npm install` and then `npm run dev`. A default version of the app with some fake charts will be running at [http://localhost:5173](http://localhost:5173).
+
+*NOTE: you will probably need to log in to MS2 when you first open the app so that you're authenticated properly to view the embedded content when we add it later.*
+
+### Embedding a Published Analysis
+
+Now we're ready to modify the sample data app to actually reference content on the MS2 platform. Any analysis cell from the notebook data story you created can be easily embedded into the app. To get the embed code for a given cell, just click on the "Embed" button in the "MS2" section of the cell. This will open a dialog with the embed code and you can copy it from there. Then open the [Dashboard.tsx](sample_data_app/src/Dashboard.tsx) file and replace the `<MainGrid />` component with the copied embed code (indented to match the existing code). Now if you refresh the app, you should see the embedded content.
 
 ## Exploring the Malloy Samples
 

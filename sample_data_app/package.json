@@ -1,0 +1,35 @@
+{
+  "name": "ms2-sample-data-app",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@auth0/auth0-react": "^2.2.4",
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@malloy-publisher/sdk": "^0.0.16",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@mui/x-charts": "latest",
+    "@mui/x-data-grid": "latest",
+    "@mui/x-data-grid-pro": "^7.23.0",
+    "@mui/x-date-pickers": "latest",
+    "@mui/x-date-pickers-pro": "^7.23.0",
+    "@mui/x-tree-view": "latest",
+    "dayjs": "^1.11.13",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}
