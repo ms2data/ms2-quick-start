@@ -16,6 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         audience: "https://dev-ohaafogw5p8uyx1m.us.auth0.com/api/v2/",
         scope: "openid profile email",
       }}
+      cacheLocation="localstorage"
     >
       <ThemeProvider theme={theme}>
         <CssBaseline />

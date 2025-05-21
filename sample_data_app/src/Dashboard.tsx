@@ -8,43 +8,39 @@ import {
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import AppNavbar from "./components/AppNavbar";
 import Header from "./components/Header";
 import SideMenu from "./components/SideMenu";
-import { useAuth0 } from "@auth0/auth0-react";
-import { useEffect, useState } from "react";
-import { QueryResult } from "@malloy-publisher/sdk";
 import MainGrid from "./components/MainGrid";
+import { useMemo } from "react";
+import { useAuth } from "./hooks/useAuth";
 
 export default function Dashboard() {
   const [mode, setMode] = React.useState<PaletteMode>("light");
-  const defaultTheme = createTheme({ palette: { mode } });
+  const defaultTheme = useMemo(
+    () => createTheme({ palette: { mode } }),
+    [mode]
+  );
 
-  const { isLoading, isAuthenticated, loginWithRedirect, getIdTokenClaims } =
-    useAuth0();
-  const [accessToken, setAccessToken] = useState<string>();
+  const { isLoading, accessToken, error } = useAuth();
 
-  useEffect(() => {
-    (async function login() {
-      if (!isLoading && !isAuthenticated) {
-        await loginWithRedirect();
-      }
-    })();
-  }, [isLoading, isAuthenticated, loginWithRedirect]);
-
-  useEffect(() => {
-    const getIdToken = async () => {
-      try {
-        const token = await getIdTokenClaims();
-        if (token) {
-          setAccessToken(token.__raw);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    getIdToken();
-  }, [isLoading, isAuthenticated, getIdTokenClaims]);
+  if (error) {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <Typography color="error">
+          Authentication error: {error.message}
+        </Typography>
+      </Box>
+    );
+  }
 
   return (
     <ThemeProvider theme={defaultTheme}>
