@@ -68,8 +68,17 @@ export default function Dashboard() {
               }}
             >
               <Header />
-              {/* Replace MainGrid with a QueryResult */}
-              <MainGrid />
+              <Box
+                sx={{
+                  height: "600px",
+                  overflow: "auto",
+                  borderRadius: 1,
+                  p: 2,
+                }}
+              >
+                {/* Replace MainGrid with a QueryResult */}
+                <MainGrid />
+              </Box>
             </Stack>
           )}
         </Box>
