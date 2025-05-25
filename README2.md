@@ -36,8 +36,7 @@ At the core of Credible is the **semantic model**—a governed, versioned interf
 Before starting, make sure:
 
 - An **MS2 admin has set up your organization** on the platform.
-- You have a basic understanding of **Malloy**, the semantic modeling language Credible is built on.  
-  📖 [View Malloy Docs →](https://malloydata.dev)
+- You have a basic understanding of **Malloy**, the semantic modeling language Credible is built on. [View Malloy Docs →](https://malloydata.dev)
 
 ### Install the MS2 VS Code Extension
 
@@ -68,21 +67,19 @@ code .
 
 ### Generate Your Semantic Model
 
-1. In the file view, create a new file:  
-   `ecommerce.malloy`
-2. Open the Command Palette (`Cmd+Shift+P`) and run:  
-   **MS2: Suggest Semantic Model**
-3. When prompted, enter a high-level prompt. For example:
+1. In the file view, create a new file: `ecommerce.malloy`
+2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Semantic Model**
+3. When prompted, enter a high-level prompt. For example: _Build a model of ecommerce data that makes it easy to analyze sales trends across different dimensions._
 
-> _“Build a model of ecommerce data that makes it easy to analyze sales trends across different dimensions.”_
-
-> TODO: We should stream results. The 30 second wait is too long. 4. Wait ~30 seconds. A complete Malloy model will appear in the editor, including:
+The copilot will generate a Malloy model with:
 
 - Dimensions, measures, joins
 - Common views and reusable queries
 - Descriptions and documentation
 
 > ⚠️ If any syntax errors remain, fix them manually before proceeding.
+
+> TODO: We should stream results. The 30 second wait is too long. 4. Wait ~30 seconds. A complete Malloy model will appear in the editor, including:
 
 ### Review & Adjust
 
@@ -100,13 +97,9 @@ Notebooks in Credible combine the structure of a dashboard with the flexibility 
 
 ### Create a New Notebook
 
-1. Create a new file called:  
-   `sales_performance.malloynb`
-2. Open the Command Palette (`Cmd+Shift+P`) and run:  
-   **MS2: Suggest Analysis Topics**
-3. Enter a notebook description such as:
-
-> _“Explore product sales performance across various dimensions like product category, brand, distribution method, etc.”_
+1. Create a new file called: `sales_performance.malloynb`
+2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Analysis Topics**
+3. Enter a notebook description such as: _Explore product sales performance across various dimensions like product category, brand, distribution method, etc._
 
 Credible will insert a sequence of structured analysis blocks—each one describing a business question to explore.
 
@@ -162,9 +155,7 @@ Publishing makes your semantic model and analysis available across the platform�
 
 1. In the Explorer panel, expand **“MS2 Service.”**
 2. Click the **Refresh** icon (🔄).
-3. Expand:
-   - `Packages`
-   - `ms2-quick-start`
+3. Expand:`Packages` > `ms2-quick-start`
 4. You should now see version `0.0.1` listed under the package.
 
 > ✅ This confirms your semantic package is successfully published and available on the platform.
@@ -179,33 +170,21 @@ Your semantic model and analysis notebook are now:
 
 Now that your semantic models and notebooks are published, it’s time to put them to work.
 
-## A Platform for Everyone—Not Just One Persona
+Most data tools are built with a single persona in mind: the analyst, the engineer, the business user. That leads to fragmented workflows, mismatched definitions, and yet another silo in the stack. **Credible is different.**
 
-Most data tools are built with a single persona in mind: the analyst, the engineer, the business user. That leads to fragmented workflows, mismatched definitions, and yet another silo in the stack.
-
-**Credible is different.**
-
-Credible is a true **semantic data platform**—designed to unify how your organization defines, governs, and uses data, across roles, teams, and tools. Whether you're writing code, building apps, exploring data, or enabling AI, you work from the **same shared semantic foundation**.
-
-That means:
-
-- **No duplicate logic** scattered across notebooks, dashboards, and pipelines
-- **No "which number is right?"** debates
-- **No rebuilding metrics** for every new interface or tool
-
-Instead, you define meaning once — and everyone, and everything, speaks the same data language.
-
-## How Do You Want to Present Your Data?
+Credible is a **semantic data platform** — designed to unify how your organization defines, governs, and uses data, across different roles, teams, and tools. Whether you're writing code, building apps, exploring data, or enabling AI, you work from the **same shared semantic foundation**.
 
 Credible offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your target roles and goals best — and build from a single source of truth.
 
+<hr>
 <details>
 <summary>
-    <strong>Option 1: Natural Language Notebooks (No-Code + AI)</strong><br>
-    <b>Best for:</b> Business analysts, product managers, less-technical users<br>  
-    <b>Interface:</b> AI-powered notebook in the Credible platform<br>
+    <strong>Option 1: Natural Language Notebooks (No-Code + AI)</strong>
+    <ul>
+        <li><b>Best for:</b> Business analysts, product managers, less-technical users</li>
+        <li><b>Interface:</b> AI-powered notebook in the Credible platform</li>
+    </ul>
 </summary>
-<br>
 
 Credible’s data platform includes an intelligent, notebook-based interface that combines:
 
@@ -227,14 +206,15 @@ This enables fast, confident data exploration—without needing to write SQL or 
 
 </details>
 
-<br>
+<hr>
 <details>
 <summary>
-    <strong>Option 2: Embedded Data Apps (React SDK)</strong><br>
-    <b>Best for:</b> Software engineers building data-driven apps<br>  
-    <b>Interface:</b> React SDK with embeddable components<br>
+    <strong>Option 2: Embedded Data Apps (React SDK)</strong>
+    <ul>
+        <li><b>Best for:</b> Software engineers building data-driven apps</li>
+        <li><b>Interface:</b> React SDK with embeddable components</li>
+    </ul>
 </summary>
-<br>
 
 Credible makes it easy to embed governed analytics into your web applications—directly from your semantic models and notebooks. The SDK lets you drop live visualizations, metrics, or full analyses into your product with just a few lines of code.
 
@@ -297,20 +277,23 @@ You can embed any analysis cell from your published Malloy notebook directly int
 
 </details>
 
-<br>
+<hr>
 <details>
 <summary>
-    <strong>Option 3: AI Agents (Model Context Protocol)</strong><br>
-    <b>Best for:</b> AI/ML developers using tools like Claude, Cursor, or custom agents<br>  
-    <b>Interface:</b> Model Context Protocol (MCP)<br>
+    <strong>Option 3: AI Agents (Model Context Protocol)</strong>
+    <ul>
+        <li><b>Best for:</b> AI/ML developers using tools like Claude, Cursor, or custom agents</li>
+        <li><b>Interface:</b> Model Context Protocol (MCP)</li>
+    </ul>
 </summary>
-<br>
 
 Credible supports the **Model Context Protocol (MCP)**—a framework that allows AI agents to:
 
 - Discover your semantic model’s metrics, dimensions, relationships, and lineage
 - Ask intelligent, business-aware questions
 - Receive explainable, consistent responses
+
+> TODO: Uses your semantic models rich documentation, descriptions, and metadata to ensure the agent is asking the right questions and getting the right answers.
 
 ### How to Get Started:
 
@@ -323,12 +306,14 @@ Credible supports the **Model Context Protocol (MCP)**—a framework that allows
 
 </details>
 
-<br>
+<hr>
 <details>
 <summary>
-    <strong>Option 4: Traditional Dashboards (SQL Interface)</strong><br>
-    <b>Best for:</b> Analysts using Looker, Tableau, Power BI, Metabase, etc.<br>  
-    <b>Interface:</b> SQL access to semantic models _(coming soon)_<br>
+    <strong>Option 4: Traditional Dashboards (SQL Interface)</strong>
+    <ul>
+        <li><b>Best for:</b> Analysts using Looker, Tableau, Power BI, Metabase, etc.</li>
+        <li><b>Interface:</b> SQL access to semantic models _(coming soon)_</li>
+    </ul>
 </summary>
 <br>
 
@@ -338,15 +323,14 @@ Soon, you’ll be able to query Malloy models using SQL directly. This enables:
 - Reduced maintenance and duplication of logic
 - A bridge from your existing BI tools into the semantic layer
 
-### Coming Soon:
-
-- Direct SQL querying via the Credible Platform
-- Native BI tool connectors
-- Early access available in the docs
-
 > ✅ Great for organizations that want governed, trusted definitions in familiar tools.
 
 </details>
+<hr>
+
+### More options coming soon...
+
+<br>
 
 # What’s Next?
 
