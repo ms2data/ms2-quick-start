@@ -18,7 +18,7 @@ Here’s how it works:
 
 This Quick Start Guide will walk you through building your first semantic model, publishing it, and choosing how you want to put it to work — based on your target roles and your goals.
 
-## The Semantic Modeling Workflow
+# The Semantic Modeling Workflow
 
 Credible helps you create, govern, and use AI-ready semantic models of your business data—quickly and at scale. In this section, you’ll:
 
@@ -26,13 +26,11 @@ Credible helps you create, govern, and use AI-ready semantic models of your busi
 2. Analyze data using Malloy notebooks
 3. Publish your models and analyses to the platform
 
-### Step 1: Build a Semantic Model with AI Copilot
-
----
+## Step 1: Build a Semantic Model with AI Copilot
 
 At the core of Credible is the **semantic model**—a governed, versioned interface that defines how your data should be understood and used. Think of it as a **semantic API**: it captures not just structure, but business meaning. You’ll use the **MS2 AI Copilot in VS Code** to generate your first model using existing catalog metadata, query logs, and the structure of your data warehouse.
 
-#### Prerequisites
+### Prerequisites
 
 Before starting, make sure:
 
@@ -40,7 +38,7 @@ Before starting, make sure:
 - You have a basic understanding of **Malloy**, the semantic modeling language Credible is built on.  
   📖 [View Malloy Docs →](https://malloydata.dev)
 
-#### Install the MS2 VS Code Extension
+### Install the MS2 VS Code Extension
 
 1. Open VS Code.
 2. Go to the Extensions view (`Cmd+Shift+X`).
@@ -49,7 +47,7 @@ Before starting, make sure:
 
 > Note: The extension mostly works in Cursor, but it hasn't been fully tested—some features may be limited.
 
-#### Clone the Quick Start Package
+### Clone the Quick Start Package
 
 ```bash
 git clone https://github.com/ms2data/ms2-quick-start.git
@@ -57,7 +55,7 @@ cd ms2-quick-start
 code .
 ```
 
-#### Log In to MS2
+### Log In to MS2
 
 1. In the VS Code Explorer sidebar, expand **“MS2 Service.”**
 2. Click **“Sign In.”**
@@ -67,7 +65,7 @@ code .
 
 > ✅ Make sure you log in with the same email address your MS2 admin used to set up your access.
 
-#### ✨ Generate Your Semantic Model
+### Generate Your Semantic Model
 
 1. In the file view, create a new file:  
    `ecommerce.malloy`
@@ -85,7 +83,7 @@ code .
 
 > ⚠️ If any syntax errors remain, fix them manually before proceeding.
 
-#### Review & Adjust
+### Review & Adjust
 
 Your generated model is a strong starting point—but real-world accuracy matters. You can:
 
@@ -95,13 +93,11 @@ Your generated model is a strong starting point—but real-world accuracy matter
 
 > 💡 The more accurate and complete your semantic model, the better your downstream analysis and AI performance.
 
-### Step 2: Create a Notebook Analysis
-
----
+## Step 2: Create a Notebook Analysis
 
 Notebooks in Credible combine the structure of a dashboard with the flexibility of a document. They’re governed, versioned, and powered by your semantic models.
 
-#### Create a New Notebook
+### Create a New Notebook
 
 1. Create a new file called:  
    `sales_performance.malloynb`
@@ -113,7 +109,7 @@ Notebooks in Credible combine the structure of a dashboard with the flexibility 
 
 Credible will insert a sequence of structured analysis blocks—each one describing a business question to explore.
 
-#### Generate Malloy Queries
+### Generate Malloy Queries
 
 For each analysis block:
 
@@ -125,7 +121,7 @@ For each analysis block:
 
 > 💡 You’re now describing data questions in plain English and letting the system handle the query writing.
 
-#### Run and Review
+### Run and Review
 
 1. Check for errors in the generated code and fix if needed.
 2. Click **“Run”** above the block to execute the query.
@@ -133,15 +129,13 @@ For each analysis block:
 
 Repeat across the notebook to build a complete, presentation-ready analysis.
 
-### Step 3: Publish to the Credible Platform
-
----
+## Step 3: Publish to the Credible Platform
 
 Publishing makes your semantic model and analysis available across the platform—ready to serve AI agents, applications, dashboards, and notebooks.
 
 > TODO: Add a screenshot describing the MS2 local and remote package management panels
 
-#### Update the Package Version
+### Update the Package Version
 
 1. Open the `publisher.json` file in your workspace.
 2. Set the version to `0.0.1`:
@@ -154,7 +148,7 @@ Publishing makes your semantic model and analysis available across the platform�
 }
 ```
 
-#### Publish from VS Code
+### Publish from VS Code
 
 1. In the Explorer panel, expand **“MS2 Local Packages.”**
 2. You should see the package `ms2-quick-start`.
@@ -163,7 +157,7 @@ Publishing makes your semantic model and analysis available across the platform�
 
 > 📡 This publishes your semantic model and notebooks to the Credible (MS2) platform under your organization and project.
 
-#### Confirm Successful Publication
+### Confirm Successful Publication
 
 1. In the Explorer panel, expand **“MS2 Service.”**
 2. Click the **Refresh** icon (🔄).
@@ -180,11 +174,11 @@ Your semantic model and analysis notebook are now:
 - **Discoverable** and queryable via APIs and notebooks
 - **Ready** for use in embedded apps, dashboards, or AI agents
 
-## Choose Your Data Adventure
+# Choose Your Data Adventure
 
 Now that your semantic models and notebooks are published, it’s time to put them to work.
 
-### A Platform for Everyone—Not Just One Persona
+## A Platform for Everyone—Not Just One Persona
 
 Most data tools are built with a single persona in mind: the analyst, the engineer, the business user. That leads to fragmented workflows, mismatched definitions, and yet another silo in the stack.
 
@@ -200,7 +194,7 @@ That means:
 
 Instead, you define meaning once — and everyone, and everything, speaks the same data language.
 
-### How Do You Want to Present Your Data?
+## How Do You Want to Present Your Data?
 
 Credible offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your target roles and goals best — and build from a single source of truth.
 
@@ -220,7 +214,7 @@ Credible’s data platform includes an intelligent, notebook-based interface tha
 
 This enables fast, confident data exploration—without needing to write SQL or Malloy.
 
-#### How to Get Started:
+### How to Get Started:
 
 1. Go to the Credible platform in your browser.
 2. Click **“New Notebook.”**
@@ -243,7 +237,7 @@ This enables fast, confident data exploration—without needing to write SQL or 
 
 Credible makes it easy to embed governed analytics into your web applications—directly from your semantic models and notebooks. The SDK lets you drop live visualizations, metrics, or full analyses into your product with just a few lines of code.
 
-#### Try the Sample App
+### Try the Sample App
 
 1. Open the `sample_data_app` folder included in the Quick Start repo.
 2. Run the following commands to start the app:
@@ -259,7 +253,7 @@ Credible makes it easy to embed governed analytics into your web applications—
 
 > 🔐 **Note:** If you’re not already logged into MS2, the app may prompt you to sign in before embedded content loads.
 
-#### Embed a Published Analysis
+### Embed a Published Analysis
 
 You can embed any analysis cell from your published Malloy notebook directly into the app.
 
@@ -269,7 +263,7 @@ You can embed any analysis cell from your published Malloy notebook directly int
 2. Click the **“Embed”** button in the **MS2 toolbar** for that block.
 3. Copy the embed code provided in the dialog.
 
-#### Add the Embed to Your App
+### Add the Embed to Your App
 
 1. Open `Dashboard.tsx` inside the `sample_data_app` project.
 2. Replace the `<MainGrid />` placeholder with your copied embed code.
@@ -317,7 +311,7 @@ Credible supports the **Model Context Protocol (MCP)**—a framework that allows
 - Ask intelligent, business-aware questions
 - Receive explainable, consistent responses
 
-#### How to Get Started:
+### How to Get Started:
 
 1. In your MCP-compatible tool (like Claude desktop or Cursor), connect to your organization’s MCP endpoint.
 2. Select the semantic model or project you want to use.
@@ -343,7 +337,7 @@ Soon, you’ll be able to query Malloy models using SQL directly. This enables:
 - Reduced maintenance and duplication of logic
 - A bridge from your existing BI tools into the semantic layer
 
-#### Coming Soon:
+### Coming Soon:
 
 - Direct SQL querying via the Credible Platform
 - Native BI tool connectors
@@ -353,7 +347,7 @@ Soon, you’ll be able to query Malloy models using SQL directly. This enables:
 
 </details>
 
-## What’s Next?
+# What’s Next?
 
 Choose the consumption path(s) that match your workflow and:
 
