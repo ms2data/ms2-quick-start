@@ -6,8 +6,7 @@ Credible transforms the chaos of raw operational data into clean, governed, and 
 
 **Here’s how it works:**
 
-- We start with operational tables, SQL logs, and catalog metadata.
-- Using our **VS Code AI Copilot**, you generate rich, structured semantic models that define your business concepts, metrics, and relationships with precision.
+- Using our **VS Code AI Copilot**, you generate rich, structured semantic models that define your business concepts, metrics, and relationships with precision. Our AI Copilot uses your operational tables, SQL logs, and catalog metadata to generate rich models quickly and accurately.
 - From there, your models become the foundation for a variety of trusted data experiences:
   - Natural Language Notebooks for ad hoc exploration
   - Embedded Data Apps for developers
