@@ -15,9 +15,10 @@ Credible transforms the chaos of raw operational data into clean, governed, and 
   - BI Dashboards (via SQL, coming soon)
 
 <img src="overview.png" alt="Overview Diagram" width="600"/>
-> TODO: Update diagram.
 
 This Quick Start Guide will walk you through building your first semantic model, publishing it, and choosing how you want to put it to work — based on your target roles and your goals.
+
+> TODO: Update diagram.
 
 # The Semantic Modeling Workflow
 
