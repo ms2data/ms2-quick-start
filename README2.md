@@ -22,7 +22,7 @@ Credible helps you create, govern, and use semantic models of your business data
 2. Analyze data using Malloy notebooks
 3. Publish your models and analyses to the platform
 
-## Step 1: Build a Semantic Model with AI Copilot
+## Step 1: Build a Semantic Model with a Credible AI Copilot
 
 At the core of Credible is the **semantic model**—a governed, versioned interface that defines how your data should be understood and used. Think of it as a **semantic API**: it captures not just structure, but business meaning. You’ll use the **MS2 AI Copilot in VS Code** to generate your first model using existing catalog metadata, query logs, and the structure of your data warehouse.
 
@@ -60,6 +60,8 @@ code .
 
 > ✅ Make sure you log in with the same email address your MS2 admin used to set up your access.
 
+> TODO: Describe what logging in does. Discover connections, etc. so you don't have to have local database credentials.
+
 ### Generate Your Semantic Model
 
 1. In the file view, create a new file: `ecommerce.malloy`
@@ -86,7 +88,7 @@ Your generated model is a strong starting point — but real-world accuracy matt
 
 > 💡 The more accurate and complete your semantic model, the better your downstream analysis and AI performance.
 
-## Step 2: Create a Notebook Analysis
+## Step 2: Create a Notebook Analysis with a Credible AI Copilot
 
 Notebooks in Credible combine the structure of a dashboard with the flexibility of a document. They’re governed, versioned, and powered by your semantic models.
 
@@ -118,7 +120,7 @@ For each analysis block:
 
 Repeat across the notebook to build a complete, presentation-ready analysis.
 
-## Step 3: Publish to the Credible Platform
+## Step 3: Publish to the Credible Data Platform
 
 Publishing makes your semantic model and analysis available across the platform—ready to serve AI agents, applications, dashboards, and notebooks.
 
@@ -165,7 +167,7 @@ Your semantic model and analysis notebook are now:
 
 <br>
 
-# Choose Your Data Adventure
+# Credible Data Adventures
 
 Now that your semantic models and notebooks are published, it’s time to put them to work.
 
