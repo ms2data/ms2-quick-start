@@ -178,7 +178,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ✅ **Great for:** ad hoc reporting, fast insights, and sharing lightweight dashboards.
 
-[📖 Goto Natural Language Notebooks →](READMEs/nl-notebooks.md)
+[📖 Natural Language Notebooks →](READMEs/nl-notebooks.md)
 
 ## Embedded Data Apps (React SDK)
 
