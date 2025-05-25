@@ -1,5 +1,7 @@
 # Credible Quick Start
 
+---
+
 Welcome to **Credible**, your AI-powered semantic data platform.
 
 Credible transforms the chaos of raw operational data into clean, governed, and AI-ready semantic models—and then makes those models usable everywhere. Whether you're a developer, analyst, product manager, or AI engineer, you work from the same shared foundation.
@@ -19,6 +21,8 @@ Here’s how it works:
 This Quick Start Guide will walk you through building your first semantic model, publishing it, and choosing how you want to put it to work — based on your target roles and your goals.
 
 ## The Semantic Modeling Workflow
+
+---
 
 Credible helps you create, govern, and use AI-ready semantic models of your business data—quickly and at scale. In this section, you’ll:
 
@@ -181,6 +185,8 @@ Your semantic model and analysis notebook are now:
 - **Ready** for use in embedded apps, dashboards, or AI agents
 
 ## Choose Your Data Adventure
+
+---
 
 Now that your semantic models and notebooks are published, it’s time to put them to work.
 
@@ -358,6 +364,8 @@ Soon, you’ll be able to query Malloy models using SQL directly. This enables:
 </details>
 
 ## What’s Next?
+
+---
 
 Choose the consumption path(s) that match your workflow and:
 
