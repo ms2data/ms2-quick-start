@@ -28,6 +28,8 @@ Credible helps you create, govern, and use AI-ready semantic models of your busi
 
 ### Step 1: Build a Semantic Model with AI Copilot
 
+---
+
 At the core of Credible is the **semantic model**—a governed, versioned interface that defines how your data should be understood and used. Think of it as a **semantic API**: it captures not just structure, but business meaning. You’ll use the **MS2 AI Copilot in VS Code** to generate your first model using existing catalog metadata, query logs, and the structure of your data warehouse.
 
 #### Prerequisites
@@ -95,6 +97,8 @@ Your generated model is a strong starting point—but real-world accuracy matter
 
 ### Step 2: Create a Notebook-Based Analysis
 
+---
+
 Notebooks in Credible combine the structure of a dashboard with the flexibility of a document. They’re governed, versioned, and powered by your semantic models.
 
 #### Create a New Notebook
@@ -131,7 +135,11 @@ Repeat across the notebook to build a complete, presentation-ready analysis.
 
 ### Step 3: Publish to the Credible Platform
 
+---
+
 Publishing makes your semantic model and analysis available across the platform—ready to serve AI agents, applications, dashboards, and notebooks.
+
+> TODO: Add a screenshot describing the MS2 local and remote package management panels
 
 #### Update the Package Version
 
@@ -192,13 +200,13 @@ That means:
 
 Instead, you define meaning once — and everyone, and everything, speaks the same data language.
 
-### How Do You Want to Work with Data?
+### How Do You Want to Present Your Data?
 
-Credible offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your data product's roles and goals best — and build from a single source of truth.
+Credible offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your target roles and goals best — and build from a single source of truth.
 
 <details>
 <summary>
-    Option 1: Natural Language Notebooks (No-Code + AI)
+    <strong>Option 1: Natural Language Notebooks (No-Code + AI)</strong>
     <hr>
     <b>Best for:</b> Business analysts, product managers, less-technical users<br>  
     <b>Interface:</b> AI-powered notebook in the Credible platform<br>
@@ -228,7 +236,7 @@ This enables fast, confident data exploration—without needing to write SQL or 
 <br>
 <details>
 <summary>
-    Option 2: Embedded Data Apps (React SDK)
+    <strong>Option 2: Embedded Data Apps (React SDK)</strong>
     <hr>
     <b>Best for:</b> Software engineers building data-driven apps<br>  
     <b>Interface:</b> React SDK with embeddable components<br>
@@ -299,7 +307,7 @@ You can embed any analysis cell from your published Malloy notebook directly int
 <br>
 <details>
 <summary>
-    Option 3: AI Agents (Model Context Protocol)
+    <strong>Option 3: AI Agents (Model Context Protocol)</strong>
     <hr>
     <b>Best for:</b> AI/ML developers using tools like Claude, Cursor, or custom agents<br>  
     <b>Interface:</b> Model Context Protocol (MCP)<br>
@@ -326,7 +334,7 @@ Credible supports the **Model Context Protocol (MCP)**—a framework that allows
 <br>
 <details>
 <summary>
-    Option 4: Traditional Dashboards (SQL Interface)
+    <strong>Option 4: Traditional Dashboards (SQL Interface)</strong>
     <hr>
     <b>Best for:</b> Analysts using Looker, Tableau, Power BI, Metabase, etc.<br>  
     <b>Interface:</b> SQL access to semantic models _(coming soon)_<br>
