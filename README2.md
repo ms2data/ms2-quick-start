@@ -59,7 +59,7 @@ code .
 
 > ✅ Make sure you log in with the same email address your MS2 admin used to set up your access.
 
-> TODO: Describe what logging in does. Discover connections, etc. so you don't have to have local database credentials.
+> TODO: Add a screenshot when the service is back online. Describe what logging in does. Discover connections, etc. so you don't have to have local database credentials.
 
 ### Generate Your Semantic Model
 
@@ -73,7 +73,7 @@ The copilot will generate a Malloy model with:
 - Common views and reusable queries
 - Descriptions and documentation
 
-> ⚠️ If any syntax errors remain, fix them manually before proceeding. Please note MS2 is an early-stage product and the copilot is not yet fully trained. We expect to make substantial improvements to the copilot in the coming months.
+> ⚠️ Please note MS2 is an early-stage product and the copilot is not yet fully trained. We expect to make substantial improvements to the copilot in the coming months. If any syntax errors remain, fix them manually before proceeding.
 
 ### Review & Adjust
 
@@ -119,7 +119,7 @@ Repeat across the notebook to build a complete, presentation-ready analysis.
 
 Publishing makes your semantic model and analysis available across the platform—ready to serve AI agents, applications, dashboards, and notebooks.
 
-> TODO: Add a screenshot describing the MS2 local and remote package management panels
+> TODO: Add a screenshot of the MS2 local package management panel when the serivce is back online.
 
 ### Update the Package Version
 
