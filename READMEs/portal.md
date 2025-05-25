@@ -147,6 +147,5 @@ The notebook UI enables interactive data exploration through semantic models.
 ## Next Steps
 
 1. Log into the MS2 Portal.
-2. Select your Organization and Project.
+2. Select the 'malloy-samples' project.
 3. Explore Packages, Notebooks, and Models.
-4. Share and version your semantic models confidently.

@@ -221,5 +221,4 @@ When you're ready to go deeper:
 
 - [Explore the MS2 Portal →](READMEs/portal.md)
 - [Explore the MS2 CLI →](READMEs/cli.md)
-- [Explore Malloy Samples in the MS2 Portal →](READMEs/exploring-malloy-samples.md)
 - [Request a Personalized Walkthrough](#)
