@@ -2,8 +2,6 @@
 
 The MS2 Command Line Interface (CLI) offers full control over your semantic modeling resources, matching the capabilities of the MS2 Portal. It’s built for data engineers and DevOps professionals who prefer to automate workflows and integrate directly with scripts and CI/CD pipelines.
 
----
-
 ## Installation
 
 Before installing the CLI, ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
@@ -13,8 +11,6 @@ Install the MS2 CLI globally:
 ```bash
 npm i -g ms2pm
 ```
-
----
 
 ## Authentication and Project Setup
 
@@ -26,8 +22,6 @@ ms2pm set-project malloy-samples
 ```
 
 You must authenticate with an organization before accessing any resources.
-
----
 
 ## Basic Package Operations
 
@@ -54,8 +48,6 @@ Example output:
 ]
 ```
 
----
-
 ### List Versions in a Package
 
 ```bash
@@ -72,8 +64,6 @@ Example output:
   }
 ]
 ```
-
----
 
 ### Publish a New Version
 
@@ -99,8 +89,6 @@ You can verify the updated versions with:
 ```bash
 ms2pm ls /imdb
 ```
-
----
 
 ## Full CLI Reference
 
@@ -140,13 +128,9 @@ Commands:
   publish                        Publish the current package
 ```
 
----
-
 ## Tip
 
 The CLI is ideal for scripting, CI/CD pipelines, or power users who prefer the keyboard over a GUI.
-
----
 
 ## See Also
 
