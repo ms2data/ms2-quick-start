@@ -18,7 +18,7 @@ Here’s how it works:
 
 This Quick Start Guide will walk you through building your first semantic model, publishing it, and choosing how you want to put it to work — based on your target roles and your goals.
 
-## Understand the Semantic Modeling Workflow
+## The Semantic Modeling Workflow
 
 Credible helps you create, govern, and use AI-ready semantic models of your business data—quickly and at scale. In this section, you’ll:
 
@@ -117,6 +117,8 @@ For each analysis block:
 2. In the MS2 toolbar of the code cell, click **“Generate.”**
 3. Wait ~10–15 seconds. A Malloy query tailored to the prompt will appear.
 
+> TODO: Why not just generate and execute all the cells at once? And, let folks refine and regenerate? The current workflow has a lot of back and forth during demos.
+
 > 💡 You’re now describing data questions in plain English and letting the system handle the query writing.
 
 #### Run and Review
@@ -196,9 +198,7 @@ Credible offers multiple, role-tailored ways to consume your semantic models. Pi
 
 <details>
 <summary>
-    <p style="font-size:16px; display:inline; font-weight:bold">
-        Option 1: Natural Language Notebooks (No-Code + AI)
-    </p>
+    Option 1: Natural Language Notebooks (No-Code + AI)
     <hr>
     <b>Best for:</b> Business analysts, product managers, less-technical users<br>  
     <b>Interface:</b> AI-powered notebook in the Credible platform<br>
@@ -228,9 +228,7 @@ This enables fast, confident data exploration—without needing to write SQL or 
 <br>
 <details>
 <summary>
-    <p style="font-size:16px; display:inline; font-weight:bold">
-        Option 2: Embedded Data Apps (React SDK)
-    </p>
+    Option 2: Embedded Data Apps (React SDK)
     <hr>
     <b>Best for:</b> Software engineers building data-driven apps<br>  
     <b>Interface:</b> React SDK with embeddable components<br>
@@ -301,9 +299,7 @@ You can embed any analysis cell from your published Malloy notebook directly int
 <br>
 <details>
 <summary>
-    <p style="font-size:16px; display:inline; font-weight:bold">
     Option 3: AI Agents (Model Context Protocol)
-    </p>
     <hr>
     <b>Best for:</b> AI/ML developers using tools like Claude, Cursor, or custom agents<br>  
     <b>Interface:</b> Model Context Protocol (MCP)<br>
@@ -330,9 +326,7 @@ Credible supports the **Model Context Protocol (MCP)**—a framework that allows
 <br>
 <details>
 <summary>
-    <p style="font-size:16px; display:inline; font-weight:bold">
-        Option 4: Traditional Dashboards (SQL Interface)
-    </p>
+    Option 4: Traditional Dashboards (SQL Interface)
     <hr>
     <b>Best for:</b> Analysts using Looker, Tableau, Power BI, Metabase, etc.<br>  
     <b>Interface:</b> SQL access to semantic models _(coming soon)_<br>
