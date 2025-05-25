@@ -1,7 +1,5 @@
 # Credible Quick Start
 
----
-
 Welcome to **Credible**, your AI-powered semantic data platform.
 
 Credible transforms the chaos of raw operational data into clean, governed, and AI-ready semantic models—and then makes those models usable everywhere. Whether you're a developer, analyst, product manager, or AI engineer, you work from the same shared foundation.
@@ -21,8 +19,6 @@ Here’s how it works:
 This Quick Start Guide will walk you through building your first semantic model, publishing it, and choosing how you want to put it to work — based on your target roles and your goals.
 
 ## The Semantic Modeling Workflow
-
----
 
 Credible helps you create, govern, and use AI-ready semantic models of your business data—quickly and at scale. In this section, you’ll:
 
@@ -99,7 +95,7 @@ Your generated model is a strong starting point—but real-world accuracy matter
 
 > 💡 The more accurate and complete your semantic model, the better your downstream analysis and AI performance.
 
-### Step 2: Create a Notebook-Based Analysis
+### Step 2: Create a Notebook Analysis
 
 ---
 
@@ -186,8 +182,6 @@ Your semantic model and analysis notebook are now:
 
 ## Choose Your Data Adventure
 
----
-
 Now that your semantic models and notebooks are published, it’s time to put them to work.
 
 ### A Platform for Everyone—Not Just One Persona
@@ -212,8 +206,7 @@ Credible offers multiple, role-tailored ways to consume your semantic models. Pi
 
 <details>
 <summary>
-    <strong>Option 1: Natural Language Notebooks (No-Code + AI)</strong>
-    <hr>
+    <strong>Option 1: Natural Language Notebooks (No-Code + AI)</strong><br>
     <b>Best for:</b> Business analysts, product managers, less-technical users<br>  
     <b>Interface:</b> AI-powered notebook in the Credible platform<br>
 </summary>
@@ -242,8 +235,7 @@ This enables fast, confident data exploration—without needing to write SQL or 
 <br>
 <details>
 <summary>
-    <strong>Option 2: Embedded Data Apps (React SDK)</strong>
-    <hr>
+    <strong>Option 2: Embedded Data Apps (React SDK)</strong><br>
     <b>Best for:</b> Software engineers building data-driven apps<br>  
     <b>Interface:</b> React SDK with embeddable components<br>
 </summary>
@@ -313,8 +305,7 @@ You can embed any analysis cell from your published Malloy notebook directly int
 <br>
 <details>
 <summary>
-    <strong>Option 3: AI Agents (Model Context Protocol)</strong>
-    <hr>
+    <strong>Option 3: AI Agents (Model Context Protocol)</strong><br>
     <b>Best for:</b> AI/ML developers using tools like Claude, Cursor, or custom agents<br>  
     <b>Interface:</b> Model Context Protocol (MCP)<br>
 </summary>
@@ -340,8 +331,7 @@ Credible supports the **Model Context Protocol (MCP)**—a framework that allows
 <br>
 <details>
 <summary>
-    <strong>Option 4: Traditional Dashboards (SQL Interface)</strong>
-    <hr>
+    <strong>Option 4: Traditional Dashboards (SQL Interface)</strong><br>
     <b>Best for:</b> Analysts using Looker, Tableau, Power BI, Metabase, etc.<br>  
     <b>Interface:</b> SQL access to semantic models _(coming soon)_<br>
 </summary>
@@ -364,8 +354,6 @@ Soon, you’ll be able to query Malloy models using SQL directly. This enables:
 </details>
 
 ## What’s Next?
-
----
 
 Choose the consumption path(s) that match your workflow and:
 
