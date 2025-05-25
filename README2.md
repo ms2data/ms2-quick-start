@@ -183,7 +183,7 @@ Credible offers multiple, role-tailored ways to consume your semantic models. Pi
     <strong>Option 1: Natural Language Notebooks (No-Code + AI)</strong>
     <ul>
         <li><b>Best for:</b> Business analysts, product managers, less-technical users</li>
-        <li><b>Interface:</b> AI-powered notebook in the Credible platform</li>
+        <li><b>Interface:</b> AI-powered notebook UX in the Credible platform</li>
     </ul>
 </summary>
 
@@ -204,6 +204,8 @@ This enables fast, confident data exploration—without needing to write SQL or 
 4. Explore results visually. Use Malloy Explorer to refine or pivot the analysis.
 
 > ✅ Great for ad hoc reporting, fast insights, and sharing lightweight dashboards.
+
+> TODO: Josh and Kyle to add instructions and more details here.
 
 </details>
 
@@ -276,6 +278,8 @@ You can embed any analysis cell from your published Malloy notebook directly int
 
 > 🔁 You can reuse this pattern to embed multiple notebook blocks, semantic model views, or even full interactive dashboards—all powered by a single semantic definition.
 
+> TODO: Matt and Daniel to improve the sample app.
+
 </details>
 
 <hr>
@@ -294,7 +298,7 @@ Credible supports the **Model Context Protocol (MCP)**—a framework that allows
 - Ask intelligent, business-aware questions
 - Receive explainable, consistent responses
 
-> TODO: Uses your semantic models rich documentation, descriptions, and metadata to ensure the agent is asking the right questions and getting the right answers.
+> TODO: James to add instructions and more details here. Uses your semantic models rich documentation, descriptions, and metadata to ensure the agent is asking the right questions and getting the right answers.
 
 ### How to Get Started:
 
@@ -313,7 +317,7 @@ Credible supports the **Model Context Protocol (MCP)**—a framework that allows
     <strong>Option 4: Traditional Dashboards (SQL Interface)</strong>
     <ul>
         <li><b>Best for:</b> Analysts using Looker, Tableau, Power BI, Metabase, etc.</li>
-        <li><b>Interface:</b> SQL access to semantic models _(coming soon)_</li>
+        <li><b>Interface:</b> SQL access to semantic models</li>
     </ul>
 </summary>
 <br>
@@ -325,6 +329,8 @@ Soon, you’ll be able to query Malloy models using SQL directly. This enables:
 - A bridge from your existing BI tools into the semantic layer
 
 > ✅ Great for organizations that want governed, trusted definitions in familiar tools.
+
+> TODO: Josh and Kyle to add instructions and more details here.
 
 </details>
 <hr>
