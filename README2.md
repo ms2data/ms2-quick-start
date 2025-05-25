@@ -4,7 +4,7 @@ Welcome to **Credible**, your AI-powered semantic data platform.
 
 Credible transforms the chaos of raw operational data into clean, governed, and AI-ready semantic models—and then makes those models usable everywhere. Whether you're a developer, analyst, product manager, or AI engineer, you work from the same shared foundation.
 
-Here’s how it works:
+**Here’s how it works:**
 
 - We start with operational tables, SQL logs, and catalog metadata.
 - Using our **VS Code AI Copilot**, you generate rich, structured semantic models that define your business concepts, metrics, and relationships with precision.
@@ -15,6 +15,7 @@ Here’s how it works:
   - BI Dashboards (via SQL, coming soon)
 
 <img src="overview.png" alt="Overview Diagram" width="600"/>
+> TODO: Update diagram.
 
 This Quick Start Guide will walk you through building your first semantic model, publishing it, and choosing how you want to put it to work — based on your target roles and your goals.
 
@@ -257,7 +258,7 @@ Credible makes it easy to embed governed analytics into your web applications—
 
 You can embed any analysis cell from your published Malloy notebook directly into the app.
 
-// TODO: We should embed the whole notebook.
+> TODO: We should embed the whole notebook.
 
 1. In your notebook on the Credible platform, find the analysis block you want to embed.
 2. Click the **“Embed”** button in the **MS2 toolbar** for that block.
