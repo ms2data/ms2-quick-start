@@ -4,7 +4,7 @@ MS2 makes it easy to embed governed analytics into your web applications—direc
 
 ### Try the Sample App
 
-1. Open the `sample_data_app` folder included in the Quick Start repo.
+1. Open the `sample_data_app` in the ms2-quick-start project.
 2. Run the following commands to start the app:
 
    ```bash

@@ -186,7 +186,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ✅ **Great for:** Building internal tools, customer-facing dashboards, or any UI that needs trustworthy data experiences.
 
-[📖 Goto Embedded Data Apps →](READMEs/embedded-data-apps.md)
+[📖 Embedded Data Apps →](READMEs/embedded-data-apps.md)
 
 ## AI Agents (Model Context Protocol)
 
@@ -194,7 +194,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ✅ **Great for:** Trustworthy AI copilots, conversational analytics, and embedded intelligence.
 
-[📖 Goto AI Agents →](READMEs/ai-agents.md)
+[📖 AI Agents →](READMEs/ai-agents.md)
 
 ## Traditional Dashboards (SQL Interface)
 
@@ -202,7 +202,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ✅ **Great for:** Semantic consistency in legacy dashboards, reduced maintenance and duplication of logic, and a bridge from existing BI tools into the semantic layer.
 
-[📖 Goto Traditional Dashboards →](READMEs/traditional-dashboards.md)
+[📖 Traditional BI Dashboards →](READMEs/traditional-bi.md)
 
 ## More Consumer Experiences Coming Soon...
 
@@ -219,7 +219,7 @@ Choose the consumption path(s) that match your workflow and:
 
 When you're ready to go deeper:
 
-- 📖 [Explore the MS2 Admin Portal & CLI](READMEs/admin-portal.md)
-- 🗺️ [Explore Malloy Samples in MS2](READMEs/exploring-malloy-samples.md)
-
-- 🤝 [Request a Personalized Walkthrough](#)
+- [Explore the MS2 Portal](READMEs/portal.md)
+- [Explore the MS2 CLI](READMEs/cli.md)
+- [Explore Malloy Samples in the MS2 Portal](READMEs/exploring-malloy-samples.md)
+- [Request a Personalized Walkthrough](#)
