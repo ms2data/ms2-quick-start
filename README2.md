@@ -1,17 +1,12 @@
 # Credible Quick Start
 
-Welcome to **Credible**, your AI-powered semantic data platform.
-
-Credible transforms the chaos of raw operational data into clean, governed, and AI-ready semantic models—and then makes those models usable everywhere. Whether you're a developer, analyst, product manager, or AI engineer, you work from the same shared foundation.
+Welcome to **Credible**, your AI-powered semantic data platform. Credible transforms the chaos of raw operational data into clean, governed, and AI-ready semantic models — and then makes those models usable everywhere. Whether you're a developer, analyst, product manager, or AI engineer, you work from the same shared foundation.
 
 **Here’s how it works:**
 
-- Using our **VS Code AI Copilot**, you generate rich, structured semantic models that define your business concepts, metrics, and relationships with precision. Our AI Copilot uses your operational tables, SQL logs, and catalog metadata to generate rich models quickly and accurately.
-- From there, your models become the foundation for a variety of trusted data experiences:
-  - Natural Language Notebooks for ad hoc exploration
-  - Embedded Data Apps for developers
-  - AI Agents powered by semantic understanding
-  - BI Dashboards (via SQL, coming soon)
+- Using our VS Code **AI Copilot**, you generate rich, structured semantic models that define your business concepts, metrics, and relationships with precision. Our AI Copilot uses your operational tables, SQL logs, and catalog metadata to generate rich semantic models quickly and accurately.
+- From there, your models become the foundation for a variety of trusted data experiences such as --
+  _Natural Language Notebooks for ad hoc exploration, Embedded Data Apps, AI Agents powered by semantic understanding, and BI Dashboards (via a SQL interface)._
 
 <img src="overview.png" alt="Overview Diagram" width="600"/>
 
@@ -21,7 +16,7 @@ This Quick Start Guide will walk you through building your first semantic model,
 
 # The Semantic Modeling Workflow
 
-Credible helps you create, govern, and use AI-ready semantic models of your business data—quickly and at scale. In this section, you’ll:
+Credible helps you create, govern, and use semantic models of your business data — quickly and at scale. In this section, you’ll:
 
 1. Build a semantic model using the Credible AI Copilot
 2. Analyze data using Malloy notebooks
@@ -83,7 +78,7 @@ The copilot will generate a Malloy model with:
 
 ### Review & Adjust
 
-Your generated model is a strong starting point—but real-world accuracy matters. You can:
+Your generated model is a strong starting point — but real-world accuracy matters. You can:
 
 - Manually edit `.malloy` files
 - Accept inline suggestions from the MS2 extension
@@ -160,11 +155,15 @@ Publishing makes your semantic model and analysis available across the platform�
 
 > ✅ This confirms your semantic package is successfully published and available on the platform.
 
+### Mission Accomplished
+
 Your semantic model and analysis notebook are now:
 
 - **Governed** and version-controlled
 - **Discoverable** and queryable via APIs and notebooks
 - **Ready** for use in embedded apps, dashboards, or AI agents
+
+<br>
 
 # Choose Your Data Adventure
 
