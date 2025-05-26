@@ -62,7 +62,7 @@ The VS Code Service Panel is where you can view your organization's projects, co
 
 <img src="READMEs/screenshots/vs-code-service-panel.png" alt="VS Code Service Panel" width="600"/>
 
-In the `ms2-quick-start` project, you can see you have access to a "bq_demo" connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus eliminating the need to store datbase credentials locally. The `ms2-quick-start` project has a single package `ecommerce` and a single version has been publisher (0.0.0).
+In the `ms2-quick-start` project, you can see you have access to a "bq_demo" connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus eliminating the need to store datbase credentials locally. The `ms2-quick-start` project has a single package `ecommerce` and a single version has been published (0.0.0).
 
 You can read about organziations > projects > packages structures in the [MS2 Portal Getting Started Guide →](READMEs/portal.md)
 
