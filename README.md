@@ -162,7 +162,7 @@ If you have the `ecommerce` package open locally, you should see a single versio
 3. Expand: `Packages` > `ecommerce`
 4. You should now see version `0.0.1` listed under the package.
 
-### Voila
+### Voila!
 
 Your semantic model and analysis notebook are now:
 
