@@ -134,4 +134,4 @@ The CLI is ideal for scripting, CI/CD pipelines, or power users who prefer the k
 
 ## See Also
 
-For more advanced tasks (e.g., managing permissions, viewing analytics), refer to the [MS2 Portal Getting Started Guide](./portal.md).
+[MS2 Portal Getting Started Guide](./portal.md).
