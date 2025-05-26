@@ -47,7 +47,7 @@ code .
 3. Search for `MS2` and install the extension.
 4. _(Temporary)_ Find the installed Malloy extension and select **“Switch to Pre-Release Version.”**
 
-> [!NOTE]
+> [!WARNING]
 > The VS Code AI Copilot extension mostly works in Cursor, but it hasn't been fully tested—some features may be limited.
 
 ### Log In to MS2
@@ -81,7 +81,7 @@ The copilot will generate a Malloy model with:
 For more information on how Malloy dimensions, measurres, joins, views, etc. work, see the [Malloy documentation →](https://malloydata.dev/documentation)
 
 > [!WARNING]
-> Please note MS2 is an early-stage product and the copilot is not yet fully trained. We expect to make substantial improvements to the copilot in the coming months. If any syntax errors remain, fix them manually before proceeding.
+> Please note MS2 is an early-stage product and the copilot is not yet fully optimized. We expect to make substantial improvements to the copilot in the coming months. If any syntax errors remain, fix them manually before proceeding.
 
 ### Review & Adjust
 
@@ -91,7 +91,7 @@ Your generated model is a strong starting point — but real-world accuracy matt
 - Accept inline suggestions from the MS2 extension
 - Press `Ctrl+Cmd+I` to open the prompt window and generate or modify code with natural language instructions
 
-> [!NOTE]
+> [!TIP]
 > The more accurate and complete your semantic model, the better your downstream analysis and AI performance. Describe your data in detail and use the copilot to help you.
 
 ## Step 2: Create a Notebook Analysis with AI Copilot
@@ -104,7 +104,7 @@ Notebooks in MS2 combine the structure of a dashboard with the flexibility of a 
 2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Analysis Topics**
 3. Enter a notebook description such as: _Explore product sales performance across various dimensions like product category, brand, distribution method, etc._
 
-MS2 will insert a sequence of structured analysis blocks—each one describing a business question to explore.
+MS2 will insert a sequence of structured analysis blocks — each one describing a business question to explore.
 
 ### Generate Malloy Queries
 
@@ -169,7 +169,7 @@ If you have the `ms2-quick-start` package open locally, you should a single vers
 
 Your semantic model and analysis notebook are now:
 
-- **Governed** and version-controlled
+- **Governed** and version controlled
 - **Discoverable** and queryable via APIs and notebooks
 - **Ready** for use in embedded apps, dashboards, or AI agents
 
@@ -189,7 +189,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ## Natural Language Notebooks (No-Code + AI UX)
 
-👥 **Target Persona:** Business analysts, product managers, less-technical users
+👥 **Target Persona:** Business analysts, product managers, less technical users
 
 ✅ **Great for:** ad hoc reporting, fast insights, and sharing lightweight dashboards.
 
@@ -197,9 +197,9 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ## Embedded Data Apps (React SDK)
 
-👥 **Target Persona:** Software engineers building data-driven apps
+👥 **Target Persona:** Software engineers building data driven apps
 
-✅ **Great for:** Building internal tools, customer-facing dashboards, or any UI that needs trustworthy data experiences.
+✅ **Great for:** Building internal tools, customer facing dashboards, or any UI that needs trustworthy data experiences.
 
 [📖 Embedded Data Apps →](READMEs/embedded-data-apps.md)
 
@@ -227,7 +227,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 Choose the consumption path(s) that match your workflow and:
 
-- Start building semantic-powered applications
+- Start building semantic powered applications
 - Share notebooks with stakeholders
 - Connect AI agents to drive smart, explainable automation
 - Prepare to unify dashboards via the upcoming SQL interface
