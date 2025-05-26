@@ -216,7 +216,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 [📖 Traditional BI Dashboards →](READMEs/traditional-bi.md)
 
-## More Consumer Experiences Coming Soon
+## More Consumer Experiences Coming Soon...
 
 <br>
 
