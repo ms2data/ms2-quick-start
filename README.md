@@ -2,7 +2,7 @@
 
 Welcome to **MS2**, your AI-powered semantic data platform. MS2 transforms the chaos of raw operational data into clean, governed, and AI-ready semantic models — and then makes those models usable everywhere. Whether you're a developer, analyst, product manager, or AI engineer, you work from the same shared foundation.
 
-## Here’s how it works
+## Here’s How it Works
 
 Using our VS Code **AI Copilot**, you generate rich, structured semantic models that define your business concepts, metrics, and relationships with precision. Our AI Copilot uses your operational tables, SQL logs, and catalog metadata to generate rich semantic models quickly and accurately.
 
@@ -62,13 +62,13 @@ The VS Code Service Panel is where you can view your organization's projects, co
 
 <img src="READMEs/screenshots/vs-code-service-panel.png" alt="VS Code Service Panel" width="600"/>
 
-In the `ms2-quick-start` project, you can see you have access to a bq_demo connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus elimianting the need to store datbase credentials locally. The `ms2-quick-start` project has a single package `ms2-quick-start` and a single version has been publisher (0.0.0).
+In the `ms2-quick-start` project, you can see you have access to a "bq_demo" connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus eliminating the need to store datbase credentials locally. The `ms2-quick-start` project has a single package `ecommerce` and a single version has been publisher (0.0.0).
 
 You can read about organziations > projects > packages structures in the [MS2 Portal Getting Started Guide →](READMEs/portal.md)
 
 ### Generate Your Semantic Model
 
-1. In the file view, create a new file: `ecommerce.malloy` (files that end in `.malloy` are Malloy model files)
+1. In the file view within the `ecommerce` folder, create a new file: `ecommerce.malloy` (files that end in `.malloy` are Malloy model files)
 2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Semantic Model**
 3. When prompted, enter a high-level prompt. For example: _Build a model of ecommerce data that makes it easy to analyze sales trends across different dimensions._
 
@@ -100,7 +100,7 @@ Notebooks in MS2 combine the structure of a dashboard with the flexibility of a 
 
 ### Create a New Notebook
 
-1. Create a new file called: `sales_performance.malloynb` (files that end in `.malloynb` are Malloy notebook files)
+1. Create a new file in the `ecommerce` folder called: `sales_performance.malloynb` (files that end in `.malloynb` are Malloy notebook files)
 2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Analysis Topics**
 3. Enter a notebook description such as: _Explore product sales performance across various dimensions like product category, brand, distribution method, etc._
 
@@ -126,11 +126,11 @@ Repeat across the notebook to build a complete, presentation-ready analysis.
 
 Publishing makes your semantic model and analysis available across the platform — ready to serve AI agents, applications, dashboards, and notebooks. The MS2 service uses standard software package management conventions to provide data governance and versioning for your semantic models and notebooks.
 
-For pulishing, we will use the MS2 extentions "Local Packages" panel. The Local Packages panel is where you can view and manage the local packages in your workspace. For example:
+For publishing, we will use the MS2 extension's "Local Packages" panel. The Local Packages panel is where you can view and manage the local packages in your workspace. For example:
 
 <img src="READMEs/screenshots/vs-code-local-panel.png" alt="VS Code Local Packages Panel" width="600"/>
 
-If you have the `ms2-quick-start` package open locally, you should a single version `0.0.0`. This is the version in the package's local `publisher.json` file. `publisher.json` is a file package manifest file that contains the package's name, version, description, and other metadata. To publish a new version of the package, we will need to update the version in the `publisher.json` file.
+If you have the `ecommerce` package open locally, you should see a single version `0.0.0`. This is the version in the package's local `publisher.json` file. `publisher.json` is a file package manifest file that contains the package's name, version, description, and other metadata. To publish a new version of the package, we will need to update the version in the `publisher.json` file.
 
 ### Update the Package Version
 
@@ -139,7 +139,7 @@ If you have the `ms2-quick-start` package open locally, you should a single vers
 
 ```json
 {
-  "name": "ms2-quick-start",
+  "name": "ecommerce",
   "version": "0.0.1",
   ...
 }
@@ -148,7 +148,7 @@ If you have the `ms2-quick-start` package open locally, you should a single vers
 ### Publish from VS Code
 
 1. In the Explorer panel, expand **“MS2 Local Packages.”**
-2. You should see the package `ms2-quick-start`.
+2. You should see the package `ecommerce`.
 3. Click the **“Publish”** button.
 4. When prompted, click **“Yes”** to confirm.
 
@@ -159,7 +159,7 @@ If you have the `ms2-quick-start` package open locally, you should a single vers
 
 1. In the Explorer panel, expand **“MS2 Service.”**
 2. Click the **Refresh** icon (🔄).
-3. Expand:`Packages` > `ms2-quick-start`
+3. Expand: `Packages` > `ecommerce`
 4. You should now see version `0.0.1` listed under the package.
 
 ### Voila!
@@ -176,7 +176,7 @@ Your semantic model and analysis notebook are now:
 
 # Data Consumer Experiences
 
-Now that your semantic models and notebooks are published, it’s time to put them to work.d
+Now that your semantic models and notebooks are published, it’s time to put them to work.
 
 Most data tools are built with a single persona in mind: the analyst, the engineer, the business user. That leads to fragmented workflows, mismatched definitions, and yet another silo in the stack. **MS2 is different.**
 
