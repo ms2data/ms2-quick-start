@@ -60,7 +60,7 @@ code .
 
 The VS Code Service Panel is where you can view your organization's projects, connections, and packages in the MS2 service. For example:
 
-<img src="READMEs/screenshots/vs-code-service-panel.png" alt="VS Code Service Panel" width="400"/>
+<img src="READMEs/screenshots/vs-code-service-panel.png" alt="VS Code Service Panel" width="600"/>
 
 In the `ms2-quick-start` project, you can see you have access to a bq_demo connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus elimianting the need to store datbase credentials locally. The `ms2-quick-start` project has a single package `ms2-quick-start` and a single version has been publisher (0.0.0).
 
@@ -131,7 +131,7 @@ Publishing makes your semantic model and analysis available across the platform 
 
 For pulishing, we will use the MS2 extentions "Local Packages" panel. The Local Packages panel is where you can view and manage the local packages in your workspace. For example:
 
-<img src="READMEs/screenshots/vs-code-local-panel.png" alt="VS Code Local Packages Panel" width="400"/>
+<img src="READMEs/screenshots/vs-code-local-panel.png" alt="VS Code Local Packages Panel" width="600"/>
 
 If you have the `ms2-quick-start` package open locally, you should a single version `0.0.0`. This is the version in the package's local `publisher.json` file. `publisher.json` is a file package manifest file that contains the package's name, version, description, and other metadata. To publish a new version of the package, we will need to update the version in the `publisher.json` file.
 
