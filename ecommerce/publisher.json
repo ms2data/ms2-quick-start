@@ -1,7 +1,7 @@
 {
-  "name": "ms2-quick-start",
+  "name": "ecommerce",
   "version": "0.0.0",
-  "description": "Quick start guide to MS2 using ecommerce data",
+  "description": "A sample package that uses fake ecommerce data for exploring MS2 features",
   "data_sources": [
     {
       "connection": "bq_demo",
