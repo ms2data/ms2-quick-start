@@ -62,9 +62,9 @@ The VS Code Service Panel is where you can view your organization's projects, co
 
 <img src="READMEs/screenshots/vs-code-service-panel.png" alt="VS Code Service Panel" width="600"/>
 
-In the `ms2-quick-start` project, you can see you have access to a "bq_demo" connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus eliminating the need to store datbase credentials locally. The `ms2-quick-start` project has a single package `ecommerce` and a single version has been published (0.0.0).
+In the `ms2-quick-start` project, you can see you have access to a "bq_demo" connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus eliminating the need to store database credentials locally. The `ms2-quick-start` project has a single package `ecommerce` and a single version has been published (0.0.0)
 
-You can read about organziations > projects > packages structures in the [MS2 Portal Getting Started Guide →](READMEs/portal.md)
+You can read about organizations > projects > packages structures in the [MS2 Portal Getting Started Guide →](READMEs/portal.md)
 
 ### Generate Your Semantic Model
 
@@ -78,7 +78,7 @@ The copilot will generate a Malloy model with:
 - Common views and reusable queries
 - Descriptions and documentation
 
-For more information on how Malloy dimensions, measurres, joins, views, etc. work, see the [Malloy documentation →](https://malloydata.dev/documentation)
+For more information on how Malloy dimensions, measures, joins, views, etc. work, see the [Malloy documentation →](https://malloydata.dev/documentation)
 
 > [!WARNING]
 > Please note MS2 is an early-stage product and the copilot is not yet fully optimized. We expect to make substantial improvements to the copilot in the coming months. If any syntax errors remain, fix them manually before proceeding.
@@ -178,7 +178,7 @@ Your semantic model and analysis notebook are now:
 
 Now that your semantic models and notebooks are published, it’s time to put them to work.
 
-Most data tools are built with a single persona in mind: the analyst, the engineer, the business user. That leads to fragmented workflows, mismatched definitions, and yet another silo in the stack. **MS2 is different.**
+Most data tools are built with a single persona in mind: the analyst, the engineer, or the business user. That leads to fragmented workflows, mismatched definitions, and yet another silo in the stack. **MS2 is different.**
 
 MS2 is a **semantic data platform** — designed to unify how your organization defines, governs, and uses data, across different roles, teams, and tools. Whether you're writing code, building apps, exploring data, or enabling AI, you work from the **same shared semantic foundation**.
 
