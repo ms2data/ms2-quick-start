@@ -114,9 +114,6 @@ For each analysis block:
 2. In the MS2 toolbar of the code cell, click **“Generate.”**
 3. Wait ~10–15 seconds. A Malloy query tailored to the prompt will appear.
 
-> [!TIP]
-> You’re now describing data questions in plain English and letting the system handle the query writing.
-
 ### Run and Review
 
 1. Check for errors in the generated code and fix if needed.
