@@ -210,7 +210,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ## Traditional Dashboards (SQL Interface)
 
-👥 **Target Persona:** Analysts using Looker, Tableau, Power BI, Metabase, etc.
+👥 **Target Persona:** Analysts using Tableau, Power BI, Looker, Superset, Metabase, etc.
 
 ✅ **Great for:** Semantic consistency in legacy dashboards, reduced maintenance and duplication of logic, and a bridge from existing BI tools into the semantic layer.
 
