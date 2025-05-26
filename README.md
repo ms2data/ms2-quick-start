@@ -1,95 +1,234 @@
-# MS2 Quick Start Package
+# MS2 Quick Start
 
-This repo contains a stub for the `ms2-quick-start` package (just the [publisher.json](publisher.json) file). The steps below provide an intro to using the MS2 developer tools to build a semantic model, develop a notebook data story, and publish the package to the MS2 platform for deployment.
+Welcome to **MS2**, your AI-powered semantic data platform. MS2 transforms the chaos of raw operational data into clean, governed, and AI-ready semantic models — and then makes those models usable everywhere. Whether you're a developer, analyst, product manager, or AI engineer, you work from the same shared foundation.
 
-## Prerequisites
+## Here’s how it works
 
-Prior to starting this guide, you'll need to have an MS2 admin set up an organization for you to use on the MS2 platform.
+Using our VS Code **AI Copilot**, you generate rich, structured semantic models that define your business concepts, metrics, and relationships with precision. Our AI Copilot uses your operational tables, SQL logs, and catalog metadata to generate rich semantic models quickly and accurately.
 
-The MS2 experience is built around the open-source semantic modeling language [Malloy](https://www.malloydata.dev/). The MS2 developer tools will assist you as you write Malloy code, but it's still helpful to have a basic understanding of the language. The [Malloy documentation](https://docs.malloydata.dev/documentation/) provides a good introduction and serves as a great reference resource.
+From there, your models become the foundation for a variety of trusted data experiences such as --
+_Natural Language Notebooks for ad hoc exploration, Embedded Data Apps, AI Agents powered by semantic understanding, and BI Dashboards (via a SQL interface)._
 
-## Install the MS2 VS Code Extension
+<img src="overview.png" alt="Overview Diagram" width="600"/>
 
-1. VS Code and navigate to the Extensions view (Command+Shift+X).
-2. Search for "MS2" and install the extension.
-3. [Temporary] Find the Malloy extension and click "Switch to Pre-Release Version".
+This Quick Start Guide will walk you through building your first semantic model, publishing it, and choosing how you want to put it to work — based on your target roles and your goals.
 
-*NOTE: the extension mostly works with Cursor, but it has not been fully tested in Cursor and some features may not work.*
+# Semantic Modeling Workflow
 
-## Building a Package
+MS2 helps you create, govern, and use semantic models of your business data — quickly and at scale. In this section, you’ll:
 
-Start by cloning this repo on your local machine:
+1. Build a semantic model using the MS2 AI Copilot
+2. Analyze data using Malloy notebooks
+3. Publish your models and analyses to the MS2 service
+
+## Step 1: Build a Semantic Model with AI Copilot
+
+At the core of MS2 is the **semantic model**—a governed, versioned interface that defines how your data should be understood and used. Think of it as a **semantic API**: it captures not just structure, but business meaning. You’ll use the **MS2 AI Copilot in VS Code** to generate your first model using existing catalog metadata, query logs, and the structure of your data warehouse.
+
+### Prerequisites
+
+Before starting, make sure:
+
+- A **MS2 admin has set up your organization** on the service.
+- You have a basic understanding of **Malloy**, the semantic modeling language MS2 is built on. [📖 View Malloy Docs →](https://malloydata.dev)
+
+### Clone the Quick Start Package
 
 ```bash
 git clone https://github.com/ms2data/ms2-quick-start.git
+cd ms2-quick-start
+code .
 ```
 
-Then open the folder in VS Code.
+### Install the MS2 VS Code Extension
 
-### MS2 Login
+1. Open VS Code.
+2. Go to the Extensions view (`Cmd+Shift+X`).
+3. Search for `MS2` and install the extension.
+4. _(Temporary)_ Find the installed Malloy extension and select **“Switch to Pre-Release Version.”**
 
-Open the Explorer panel in the primary sidebar and expand the "MS2 Service" section. Click "Sign In" and then click "+ Add new organization" and write in the name of the organization that was set up for you. Then you will have to click "Allow" and then "Open" to get redirected to a web page where you can log in with your username and password or a Google account. When redirected back to VS Code, you will be prompted to select a project and you should choose "ms2-quick-start". This will load the connections needed for this quick start guide. Later you can change the project by clicking on the project name in the "MS2 Service" section.
+> [!NOTE] The VS Code AI Copilot extension mostly works in Cursor, but it hasn't been fully tested—some features may be limited.
 
-*NOTE: be sure to log in with the email address that you provided the MS2 admin when they set up your organization.*
+### Log In to MS2
 
-### Create a Semantic Model
+1. In the VS Code Explorer sidebar, expand **“MS2 Service.”**
+2. Click **“Sign In.”**
+3. Click **“+ Add new organization”** and enter the name provided by your MS2 admin.
+4. Complete the login flow in your browser (email or Google account).
+5. When redirected back to VS Code, select the project: `ms2-quick-start`.
 
-In the file view, create and open a new file called `ecommerce.malloy`. Open the command palette (Command+Shift+P) and select "MS2: Suggest Semantic Model". You will be prompted to enter a description for the semantic model. You can try something like:
+The VS Code Service Panel is where you can view your organization's projects, connections, and packages in the MS2 service. For example:
 
-> Build a model of ecommerce data that makes it easy to analyze sales trends across different dimensions
+![VS Code Service Panel](READMEs/screenshots/vs-code-service-panel.png)
 
-After around 30s the semantic model will show in the editor. The system fixes most compile errors, but if there are any errors left, you'll want to fix them manually.
+In the `ms2-quick-start` project, you can see you have access to a bq_demo connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus elimianting the need to store datbase credentials locally. The `ms2-quick-start` project has a single package `ms2-quick-start` and a single version has been publisher (0.0.0).
 
-In a normal workflow, you would review the generated model and adjust it to be more applicable to your needs and the underlying data. For the purposes of this demo, you can leave the model as is and move on to the next step.
+You can read about organziations > projects > packages structures in the [MS2 Portal Getting Started Guide](./READMEs/portal.md).
 
-**NOTE: it's worth noting that the quality of query generation is directly related to the quality of the semantic model. So for real-world use cases you will want to build the most complete and accurate model possible.**
+### Generate Your Semantic Model
 
-When editing a semantic model, you will see some code suggestions coming from the MS2 extension which you can tab to accept. You can also prompt our system to generate code or modify selected code by using the "ctrl+cmd+i" keyboard shortcut and providing directions at the top of the window.
+1. In the file view, create a new file: `ecommerce.malloy` (files that end in `.malloy` are Malloy model files)
+2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Semantic Model**
+3. When prompted, enter a high-level prompt. For example: _Build a model of ecommerce data that makes it easy to analyze sales trends across different dimensions._
 
-*NOTE: some of the inline suggestions may also come from Copilot if you have that enabled and it can be hard to tell which service provided the suggestion.*
+The copilot will generate a Malloy model with:
 
-### Develop a Notebook Data Story
+- Dimensions, measures, joins
+- Common views and reusable queries
+- Descriptions and documentation
 
-In the file view, create and open a new file called `sales_performance.malloynb`. Then open the command palette and select "MS2: Suggest Analysis Topics". You will be prompted to enter a description for the notebook. You can try something like:
+For more information on how Malloy dimensions, measurres, joins, views, etc. work, see the [Malloy documentation](https://malloydata.dev/documentation).
 
-> Explore product sales performance across various dimensions like product category, brand, distribution method, etc.
+> [!WARNING] Please note MS2 is an early-stage product and the copilot is not yet fully trained. We expect to make substantial improvements to the copilot in the coming months. If any syntax errors remain, fix them manually before proceeding.
 
-This command will populate the notebook with a sequence of data analysis topics that can be refined to your liking.
+### Review & Adjust
 
-#### Generating Malloy Queries
+Your generated model is a strong starting point — but real-world accuracy matters. You can:
 
-The last part of the process involves working through the analysis sections in the notebook and building Malloy queries for them. For each analysis block, modify the suggested analysis description so that it reflects the analysis you want to perform. MS2 will use this description to generate a relevant Malloy query.
+- Manually edit `.malloy` files
+- Accept inline suggestions from the MS2 extension
+- Press `Ctrl+Cmd+I` to open the prompt window and generate or modify code with natural language instructions
 
-When the description is satisfactory for a given analysis, click the "Generate" button in the "MS2" section of the code cell. A block of Malloy code will show in the cell after about 10-15s. Fix errors if there are any and then click the "Run" text above the query to see the results.
+> [!NOTE] The more accurate and complete your semantic model, the better your downstream analysis and AI performance. Describe your data in detail and use the copilot to help you.
 
-## Integrating Analyses into a Data App
+## Step 2: Create a Notebook Analysis with AI Copilot
 
-In this section, we are going to take the data story we built and make it widely available online by publishing the package to the MS2 platform and embedding an analysis into a sample data app.
+Notebooks in MS2 combine the structure of a dashboard with the flexibility of a document. They are great for ad hoc analysis and sharing insights with stakeholders.
 
-### Publish the Package
+### Create a New Notebook
 
-In the file view, open the `publisher.json` file. Manually edit the version to be `0.0.1`. Next locate and expand the "MS2 Local Packages" section in the Explorer panel in the primary sidebar. This sections shows all available publisher packages within the root folder of the workspace. In this case there will only be one package which is the "ms2-quick-start" package. Expand this entry and then click the "Publish" button and confirm by clicking "Yes".
+1. Create a new file called: `sales_performance.malloynb` (files that end in `.malloynb` are Malloy notebook files)
+2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Analysis Topics**
+3. Enter a notebook description such as: _Explore product sales performance across various dimensions like product category, brand, distribution method, etc._
 
-You can verify that it's published by checking the "MS2 Service" section in the Explorer panel in the primary sidebar. First refresh the panel by clicking the refresh button and then expand "Packages" and "ms2-quick-start". You should see the new version show in the list of versions.
+MS2 will insert a sequence of structured analysis blocks—each one describing a business question to explore.
 
-You can also view the published package via the MS2 online portal. Just replace `<organization_name>` with the name of your organization in the URL below:
+### Generate Malloy Queries
 
+For each analysis block:
+
+1. Refine the text description to reflect what you want to analyze.
+2. In the MS2 toolbar of the code cell, click **“Generate.”**
+3. Wait ~10–15 seconds. A Malloy query tailored to the prompt will appear.
+
+> [!TIP] You’re now describing data questions in plain English and letting the system handle the query writing.
+
+### Run and Review
+
+1. Check for errors in the generated code and fix if needed.
+2. Click **“Run”** above the block to execute the query.
+3. View your results as interactive tables or charts.
+
+Repeat across the notebook to build a complete, presentation-ready analysis.
+
+## Step 3: Publish to the MS2 Service
+
+Publishing makes your semantic model and analysis available across the platform — ready to serve AI agents, applications, dashboards, and notebooks. The MS2 service uses standard software package management conventions to provide data governance and versioning for your semantic models and notebooks.
+
+For pulishing, we will use the MS2 extentions "Local Packages" panel. The Local Packages panel is where you can view and manage the local packages in your workspace. For example:
+
+![VS Code Local Packages Panel](READMEs/screenshots/vs-code-local-panel.png)
+
+If you have the `ms2-quick-start` package open locally, you should a single version `0.0.0`. This is the version in the package's local `publisher.json` file. `publisher.json` is a file package manifest file that contains the package's name, version, description, and other metadata. To publish a new version of the package, we will need to update the version in the `publisher.json` file.
+
+### Update the Package Version
+
+1. Open the `publisher.json` file in your workspace.
+2. Set the version to `0.0.1`:
+
+```json
+{
+  "name": "ms2-quick-start",
+  "version": "0.0.1",
+  ...
+}
 ```
-https://<organization_name>.staging-admin.ms2.co/ms2-quick-start/ms2-quick-start/latest/
-```
 
-### Running a Sample Data App
+### Publish from VS Code
 
-In the [sample_data_app](sample_data_app) folder, there's a simple React app that can be run locally to display embedded content that is served from the MS2 platform. To run the app, move to that folder and run `npm install` and then `npm run dev`. A default version of the app with some fake charts will be running at [http://localhost:5173](http://localhost:5173).
+1. In the Explorer panel, expand **“MS2 Local Packages.”**
+2. You should see the package `ms2-quick-start`.
+3. Click the **“Publish”** button.
+4. When prompted, click **“Yes”** to confirm.
 
-*NOTE: you will probably need to log in to MS2 when you first open the app so that you're authenticated properly to view the embedded content when we add it later.*
+> [!NOTE] You can also publish from the command line using the [MS2 CLI](./READMEs/cli.md).
 
-### Embedding a Published Analysis
+### Confirm Successful Publication
 
-Now we're ready to modify the sample data app to actually reference content on the MS2 platform. Any analysis cell from the notebook data story you created can be easily embedded into the app. To get the embed code for a given cell, just click on the "Embed" button in the "MS2" section of the cell. This will open a dialog with the embed code and you can copy it from there. Then open the [Dashboard.tsx](sample_data_app/src/Dashboard.tsx) file and replace the `<MainGrid />` component with the copied embed code (indented to match the existing code). Now if you refresh the app, you should see the embedded content.
+1. In the Explorer panel, expand **“MS2 Service.”**
+2. Click the **Refresh** icon (🔄).
+3. Expand:`Packages` > `ms2-quick-start`
+4. You should now see version `0.0.1` listed under the package.
 
-## Exploring the Malloy Samples
+### Voila!
 
-If you switch the project from "ms2-quick-start" to "malloy-samples" and expand the "Packages" entry within the "MS2 Service" section, you'll see a number of example packages that have been loaded into your organization under the "malloy-samples" project. These packages are available for running on the MS2 platform but are not yet locally available.
+Your semantic model and analysis notebook are now:
 
-If you want to make local additions to any of these packages, you can clone the [malloy-samples repo](https://github.com/ms2data/malloy-samples) and open that folder in the root of the workspace. You can go into the subfolder for any one of these packages and make changes to the model or notebook analyses. If you want to publish a new version for that package, you can update the version number in the `publisher.json` file and then find the package in the "MS2 Local Packages" section and click "Publish". 
+- **Governed** and version-controlled
+- **Discoverable** and queryable via APIs and notebooks
+- **Ready** for use in embedded apps, dashboards, or AI agents
+
+---
+
+<br>
+
+# Data Consumer Experiences
+
+Now that your semantic models and notebooks are published, it’s time to put them to work.d
+
+Most data tools are built with a single persona in mind: the analyst, the engineer, the business user. That leads to fragmented workflows, mismatched definitions, and yet another silo in the stack. **MS2 is different.**
+
+MS2 is a **semantic data platform** — designed to unify how your organization defines, governs, and uses data, across different roles, teams, and tools. Whether you're writing code, building apps, exploring data, or enabling AI, you work from the **same shared semantic foundation**.
+
+MS2 offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your target roles and goals best — and build from a single source of truth. Click on the options below to continue.
+
+## Natural Language Notebooks (No-Code + AI UX)
+
+👥 **Target Persona:** Business analysts, product managers, less-technical users
+
+✅ **Great for:** ad hoc reporting, fast insights, and sharing lightweight dashboards.
+
+[📖 Natural Language Notebooks →](READMEs/nl-notebooks.md)
+
+## Embedded Data Apps (React SDK)
+
+👥 **Target Persona:** Software engineers building data-driven apps
+
+✅ **Great for:** Building internal tools, customer-facing dashboards, or any UI that needs trustworthy data experiences.
+
+[📖 Embedded Data Apps →](READMEs/embedded-data-apps.md)
+
+## AI Agents (Model Context Protocol)
+
+👥 **Target Persona:** Analysts and engineers using tools like Claude, Cursor, or custom agents
+
+✅ **Great for:** Trustworthy AI copilots, conversational analytics, and embedded intelligence.
+
+[📖 AI Agents →](READMEs/ai-agents.md)
+
+## Traditional Dashboards (SQL Interface)
+
+👥 **Target Persona:** Analysts using Looker, Tableau, Power BI, Metabase, etc.
+
+✅ **Great for:** Semantic consistency in legacy dashboards, reduced maintenance and duplication of logic, and a bridge from existing BI tools into the semantic layer.
+
+[📖 Traditional BI Dashboards →](READMEs/traditional-bi.md)
+
+## More Consumer Experiences Coming Soon...
+
+<br>
+
+# What’s Next?
+
+Choose the consumption path(s) that match your workflow and:
+
+- Start building semantic-powered applications
+- Share notebooks with stakeholders
+- Connect AI agents to drive smart, explainable automation
+- Prepare to unify dashboards via the upcoming SQL interface
+
+When you're ready to go deeper:
+
+- [Explore the MS2 Portal →](READMEs/portal.md)
+- [Explore the MS2 CLI →](READMEs/cli.md)
+- [Request a Personalized Walkthrough](#)
