@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       authorizationParams={{
         redirect_uri: window.location.origin,
         audience: "https://dev-ohaafogw5p8uyx1m.us.auth0.com/api/v2/",
-        scope: "openid profile email",
+        scope: "openid profile email offline_access",
       }}
       cacheLocation="localstorage"
     >
