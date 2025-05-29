@@ -5,10 +5,13 @@ import {
   ThemeProvider,
   alpha,
 } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
+import {
+  CircularProgress,
+  Typography,
+  Stack,
+  Box,
+  CssBaseline,
+} from "@mui/material";
 import AppNavbar from "./components/AppNavbar";
 import Header from "./components/Header";
 import SideMenu from "./components/SideMenu";
@@ -39,6 +42,21 @@ export default function Dashboard() {
         <Typography color="error">
           Authentication error: {error.message}
         </Typography>
+      </Box>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <Box
+        sx={{
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <CircularProgress />
       </Box>
     );
   }

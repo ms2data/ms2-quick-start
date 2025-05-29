@@ -6,36 +6,23 @@ export function useAuth() {
     isLoading,
     isAuthenticated,
     loginWithRedirect,
-    getIdTokenClaims,
+    getAccessTokenSilently,
     error: auth0Error,
   } = useAuth0();
 
   const [accessToken, setAccessToken] = useState<string>();
   const [authError, setAuthError] = useState<Error | null>(null);
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   const handleLogin = useCallback(async () => {
-    if (!isLoading && !isAuthenticated) {
-      try {
-        await loginWithRedirect({
-          appState: { returnTo: window.location.pathname },
-        });
-      } catch (error) {
-        setAuthError(error as Error);
-      }
-    }
-  }, [isLoading, isAuthenticated, loginWithRedirect]);
-
-  const fetchToken = useCallback(async () => {
     try {
-      const token = await getIdTokenClaims();
-      if (token) {
-        setAccessToken(token.__raw);
-        setAuthError(null);
-      }
+      await loginWithRedirect({
+        appState: { returnTo: window.location.pathname },
+      });
     } catch (error) {
       setAuthError(error as Error);
     }
-  }, [getIdTokenClaims]);
+  }, [loginWithRedirect]);
 
   // Initial auth check
   useEffect(() => {
@@ -46,13 +33,65 @@ export function useAuth() {
 
   // Token management
   useEffect(() => {
-    if (!isLoading && isAuthenticated && !accessToken) {
-      fetchToken();
+    let didCancel = false;
+
+    const fetchTokenSmart = async () => {
+      if (!isLoading && isAuthenticated && !accessToken) {
+        setIsRefreshing(true);
+        try {
+          const token = await getAccessTokenSilently({ cacheMode: "on" });
+          if (!didCancel) {
+            setAccessToken(token);
+            setAuthError(null);
+          }
+        } catch (err) {
+          console.warn("Cached token failed, trying forced refresh...");
+          try {
+            const token = await getAccessTokenSilently({ cacheMode: "off" });
+            if (!didCancel) {
+              setAccessToken(token);
+              setAuthError(null);
+            }
+          } catch (finalErr) {
+            if (!didCancel) {
+              console.error("Silent refresh ultimately failed:", finalErr);
+              setAuthError(finalErr as Error);
+            }
+          }
+        } finally {
+          if (!didCancel) {
+            setIsRefreshing(false);
+          }
+        }
+      }
+    };
+
+    fetchTokenSmart();
+
+    return () => {
+      didCancel = true;
+    };
+  }, [isLoading, isAuthenticated, accessToken, getAccessTokenSilently]);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (isLoading) {
+        setAuthError(new Error("Silent auth timed out"));
+      }
+    }, 8000);
+
+    return () => clearTimeout(timeout);
+  }, [isLoading]);
+
+  useEffect(() => {
+    if (authError && isAuthenticated) {
+      console.warn("Fatal auth error, redirecting to login...");
+      handleLogin();
     }
-  }, [isLoading, isAuthenticated, accessToken, fetchToken]);
+  }, [authError, isAuthenticated, handleLogin]);
 
   return {
-    isLoading,
+    isLoading: isLoading || isRefreshing,
     isAuthenticated,
     accessToken,
     error: authError || auth0Error,
