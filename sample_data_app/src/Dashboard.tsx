@@ -34,25 +34,8 @@ import Header from "./components/Header";
 import SideMenu from "./components/SideMenu";
 import { useAuth } from "./hooks/useAuth";
 import { parseQueryResultString } from "./utils/parseQueryResultString";
-
-type Widget = {
-  id: string;
-  server: string;
-  projectName: string;
-  packageName: string;
-  modelPath: string;
-  query: string;
-  title?: string;
-  layout: {
-    i: string;
-    x: number;
-    y: number;
-    w: number;
-    h: number;
-    static?: boolean;
-  };
-  locked: boolean;
-};
+import { Widget } from "./types/widget";
+import { getNextWidgetPosition } from "./utils/getNextWidgetPosition";
 
 export default function Dashboard() {
   const [mode, setMode] = useState<PaletteMode>("light");
@@ -77,6 +60,12 @@ export default function Dashboard() {
     }
 
     const id = uuidv4();
+    const widgetWidth = 6;
+    const widgetHeight = 10;
+    const cols = 12;
+
+    const { x, y } = getNextWidgetPosition(widgets, widgetWidth, cols);
+
     const newWidget: Widget = {
       id,
       server: parsed.server,
@@ -87,10 +76,10 @@ export default function Dashboard() {
       title: newTitle.trim() !== "" ? newTitle.trim() : undefined,
       layout: {
         i: id,
-        x: 0,
-        y: Infinity,
-        w: 6,
-        h: 10,
+        x,
+        y,
+        w: widgetWidth,
+        h: widgetHeight,
         static: false,
       },
       locked: false,
