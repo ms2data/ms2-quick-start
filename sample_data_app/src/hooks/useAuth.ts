@@ -8,6 +8,8 @@ export function useAuth() {
     loginWithRedirect,
     getAccessTokenSilently,
     error: auth0Error,
+    user,
+    logout,
   } = useAuth0();
 
   const [accessToken, setAccessToken] = useState<string>();
@@ -96,5 +98,7 @@ export function useAuth() {
     accessToken,
     error: authError || auth0Error,
     handleLogin,
+    user,
+    logout,
   };
 }
