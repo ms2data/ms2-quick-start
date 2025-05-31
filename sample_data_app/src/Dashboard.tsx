@@ -239,7 +239,14 @@ export default function Dashboard() {
                     </Box>
 
                     <Box
-                      sx={{ width: "100%", height: "100%", overflow: "hidden" }}
+                      sx={{
+                        width: "100%",
+                        height: "100%",
+                        overflow: "visible",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
                     >
                       <QueryResult
                         server={widget.server}
