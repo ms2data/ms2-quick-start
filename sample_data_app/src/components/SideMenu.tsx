@@ -3,15 +3,12 @@ import { styled } from "@mui/material/styles";
 import Avatar from "@mui/material/Avatar";
 import MuiDrawer, { drawerClasses } from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import SelectContent from "./SelectContent";
 import MenuContent from "./MenuContent";
-import CardAlert from "./CardAlert";
-import OptionsMenu from "./OptionsMenu";
 import { useAuth } from "../hooks/useAuth";
 import { Tooltip } from "@mui/material";
+import OptionsMenu from "./OptionsMenu";
 
 const drawerWidth = 240;
 
@@ -26,7 +23,15 @@ const Drawer = styled(MuiDrawer)({
   },
 });
 
-export default function SideMenu() {
+export default function SideMenu({
+  selectedView,
+  setSelectedView,
+}: {
+  selectedView: "malloySamples" | "singleEmbed" | "dynamicDashboard";
+  setSelectedView: (
+    view: "malloySamples" | "singleEmbed" | "dynamicDashboard"
+  ) => void;
+}) {
   const { user } = useAuth();
 
   return (
@@ -39,8 +44,10 @@ export default function SideMenu() {
         },
       }}
     >
-      <MenuContent />
-      <CardAlert />
+      <MenuContent
+        selectedView={selectedView}
+        setSelectedView={setSelectedView}
+      />
       <Stack
         direction="row"
         sx={{

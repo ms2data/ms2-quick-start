@@ -3,8 +3,8 @@ import * as ReactDOM from "react-dom/client";
 import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import theme from "./theme";
-import Dashboard from "./Dashboard";
 import { Auth0Provider } from "@auth0/auth0-react";
+import AppShell from "./AppShell";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     >
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Dashboard />
+        <AppShell />
       </ThemeProvider>
     </Auth0Provider>
   </React.StrictMode>
