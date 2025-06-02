@@ -5,7 +5,8 @@ MS2 makes it easy to embed governed analytics into your web applications—direc
 ### Try the Sample App
 
 1. Open the `sample_data_app` in the ms2-quick-start project.
-2. Run the following commands to start the app:
+2. Copy `.env.example` to `.env` and fill in the values so that the Malloy Samples dashboard will render correctly. You will set the `DEFAULT_ORGANIZATION` to the organization that was given to you for the demo.
+3. Run the following commands to start the app:
 
    ```bash
    cd sample_data_app
@@ -13,8 +14,11 @@ MS2 makes it easy to embed governed analytics into your web applications—direc
    npm run dev
    ```
 
-3. Open [http://localhost:5173](http://localhost:5173) in your browser.  
-   You should see a placeholder dashboard with some fake charts.
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.  
+
+You should see the "Malloy Samples" dashboard show with some charts and tables from the "names" package in the "malloy-samples" project.
+
+Click on "Dynamic Dashboard" to build your own dashboard by adding embed tags for notebook analyses or click on "Single Embed" to see an example where you can embed a single analysis directly in the code.
 
 > 🔐 **Note:** If you’re not already logged into MS2, the app may prompt you to sign in before embedded content loads.
 
@@ -28,22 +32,30 @@ You can embed any analysis cell from your published Malloy notebook directly int
 
 ### Add the Embed to Your App
 
-1. Open `Dashboard.tsx` inside the `sample_data_app` project.
-2. Replace the `<MainGrid />` placeholder with your copied embed code.
+1. Open `SingleEmbedDashboard.tsx` inside the `sample_data_app/src/components` folder.
+2. Replace the `<Box />` placeholder with your copied embed code.
 
-   For example:
+   The code will look something like this:
 
    ```tsx
-   // TODO: Add correct embed code here
+   import { QueryResult } from "@malloy-publisher/sdk";
+   import { useAuth } from "../hooks/useAuth";
 
-   import { CredibleEmbed } from "@credible/sdk";
-
-   export default function Dashboard() {
+   export default function SingleEmbedDashboard() {
+     const { accessToken } = useAuth();
      return (
        <div className="dashboard">
-         <CredibleEmbed
-           notebook="sales_performance"
-           block="top_products_by_revenue"
+         <QueryResult
+            server="https://demo.staging-data.ms2.co/api/v0"
+            accessToken={accessToken}
+            projectName="malloy-samples"
+            packageName="names"
+            modelPath="names1.malloynb"
+            query="
+              run: names-> {
+                aggregate: total_population
+              }
+            "
          />
        </div>
      );
