@@ -1,0 +1,59 @@
+[
+  {
+    "id": "188ecab1-5f75-4b6e-a254-3f445f59e812",
+    "server": "https://joandino2.staging-data.ms2.co/api/v0",
+    "projectName": "malloy-samples",
+    "packageName": "faa",
+    "modelPath": "carrier_analysis.malloynb",
+    "query": "run: flights -> carriers_over_time",
+    "title": "Flights carrier overtime",
+    "layout": {
+      "w": 12,
+      "h": 10,
+      "x": 0,
+      "y": 0,
+      "i": "188ecab1-5f75-4b6e-a254-3f445f59e812",
+      "moved": false,
+      "static": true
+    },
+    "locked": true
+  },
+  {
+    "id": "2f6da232-788a-4b79-83a1-2fbe2bd4c10f",
+    "server": "https://joandino2.staging-data.ms2.co/api/v0",
+    "projectName": "malloy-samples",
+    "packageName": "names",
+    "modelPath": "names1.malloynb",
+    "query": "# line_chart\nrun: names -> {\n  where: name = 'Elizabeth' | 'Linda' \n  group_by: decade\n  aggregate:\n    total_population\n  group_by: name\n  order_by: decade\n}",
+    "title": "USA names distribution",
+    "layout": {
+      "w": 6,
+      "h": 9,
+      "x": 0,
+      "y": 10,
+      "i": "2f6da232-788a-4b79-83a1-2fbe2bd4c10f",
+      "moved": false,
+      "static": true
+    },
+    "locked": true
+  },
+  {
+    "id": "e264f1c1-97f5-4f16-aa2a-fce822c633a3",
+    "server": "https://joandino2.staging-data.ms2.co/api/v0",
+    "projectName": "malloy-samples",
+    "packageName": "patterns",
+    "modelPath": "autobin.malloynb",
+    "query": "#(docs) limit=5000 size=large\nrun: airports -> by_elevation",
+    "title": "Overall elevation distribution",
+    "layout": {
+      "w": 6,
+      "h": 9,
+      "x": 6,
+      "y": 10,
+      "i": "e264f1c1-97f5-4f16-aa2a-fce822c633a3",
+      "moved": false,
+      "static": true
+    },
+    "locked": true
+  }
+]
