@@ -22,7 +22,6 @@ import AddIcon from "@mui/icons-material/Add";
 import LockIcon from "@mui/icons-material/Lock";
 import LockOpenIcon from "@mui/icons-material/LockOpen";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import defaultWidgets from "../constants/defaultDynamicDashboardWidgets.json";
 
 import { QueryResult } from "@malloy-publisher/sdk";
 import Header from "./Header";
@@ -131,7 +130,7 @@ export default function DynamicDashboard({
         console.error("Failed to parse saved dashboard", err);
       }
     } else {
-      setWidgets(defaultWidgets);
+      setWidgets([]);
     }
     setLoaded(true);
   }, []);

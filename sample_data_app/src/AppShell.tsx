@@ -24,7 +24,7 @@ export default function AppShell() {
   );
   const [selectedView, setSelectedView] = useState<
     "malloySamples" | "singleEmbed" | "dynamicDashboard"
-  >("dynamicDashboard");
+  >("malloySamples");
 
   const { isLoading, accessToken, error } = useAuth();
 
