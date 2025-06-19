@@ -87,40 +87,14 @@ For more information on how Malloy dimensions, measures, joins, views, etc. work
 
 Your generated model is a strong starting point — but real-world accuracy matters. You can:
 
+TODO: Flesh this section out with screenshots and more detail.
+
 - Manually edit `.malloy` files
 - Accept inline suggestions from the MS2 extension
 - Press `Ctrl+Cmd+I` to open the prompt window and generate or modify code with natural language instructions
 
 > [!TIP]
 > The more accurate and complete your semantic model, the better your downstream analysis and AI performance. Describe your data in detail and use the copilot to help you.
-
-## Step 2: Create a Notebook Analysis with AI Copilot
-
-Notebooks in MS2 combine the structure of a dashboard with the flexibility of a document. They are great for ad hoc analysis and sharing insights with stakeholders.
-
-### Create a New Notebook
-
-1. Create a new file in the `ecommerce` folder called: `sales_performance.malloynb` (files that end in `.malloynb` are Malloy notebook files)
-2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Analysis Topics**
-3. Enter a notebook description such as: _Explore product sales performance across various dimensions like product category, brand, distribution method, etc._
-
-MS2 will insert a sequence of structured analysis blocks — each one describing a business question to explore.
-
-### Generate Malloy Queries
-
-For each analysis block:
-
-1. Refine the text description to reflect what you want to analyze.
-2. In the MS2 toolbar of the code cell, click **“Generate.”**
-3. Wait ~10–15 seconds. A Malloy query tailored to the prompt will appear.
-
-### Run and Review
-
-1. Check for errors in the generated code and fix if needed.
-2. Click **“Run”** above the block to execute the query.
-3. View your results as interactive tables or charts.
-
-Repeat across the notebook to build a complete, presentation-ready analysis.
 
 ## Step 3: Publish to the MS2 Service
 
@@ -168,29 +142,40 @@ Your semantic model and analysis notebook are now:
 
 - **Governed** and version controlled
 - **Discoverable** and queryable via APIs and notebooks
-- **Ready** for use in embedded apps, dashboards, or AI agents
+- **Ready** for use by analaysts, embedded apps, dashboards, or AI agents
 
 ---
 
 <br>
 
-# Data Consumer Experiences
 
-Now that your semantic models and notebooks are published, it’s time to put them to work.
+# Ad Hoc Analysis
+
+Now that your semantic models are published, it’s time to put them to work.
 
 Most data tools are built with a single persona in mind: the analyst, the engineer, or the business user. That leads to fragmented workflows, mismatched definitions, and yet another silo in the stack. **MS2 is different.**
 
-MS2 is a **semantic data platform** — designed to unify how your organization defines, governs, and uses data, across different roles, teams, and tools. Whether you're writing code, building apps, exploring data, or enabling AI, you work from the **same shared semantic foundation**.
+MS2 is a **semantic data platform** — designed to unify how your organization defines, governs, and uses data, across different roles, teams, and tools. We've seen how a data engineer / data modeler can use the MS2 VS Code extension to generate a semantic model and publish it to the MS2 service. Now, we'll see how a business analyst can explore the data in MS2's no-code notebook.
 
-MS2 offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your target roles and goals best — and build from a single source of truth. Click on the options below to continue.
-
-## Natural Language Notebooks (No-Code + AI UX)
+// TODO
 
 👥 **Target Persona:** Business analysts, product managers, less technical users
 
 ✅ **Great for:** ad hoc reporting, fast insights, and sharing lightweight dashboards.
 
 [📖 Natural Language Notebooks →](READMEs/nl-notebooks.md)
+
+# Administration
+
+// TODO
+
+- [Explore the MS2 Portal →](READMEs/portal.md)
+- [Explore the MS2 CLI →](READMEs/cli.md)
+
+
+# Other Data Consumer Experiences
+
+MS2 offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your target roles and goals best — and build from a single source of truth. Click on the options below to continue.
 
 ## Embedded Data Apps (React SDK)
 
@@ -230,7 +215,4 @@ Choose the consumption path(s) that match your workflow and:
 - Prepare to unify dashboards via the upcoming SQL interface
 
 When you're ready to go deeper:
-
-- [Explore the MS2 Portal →](READMEs/portal.md)
-- [Explore the MS2 CLI →](READMEs/cli.md)
 - [Request a Personalized Walkthrough →](#)
