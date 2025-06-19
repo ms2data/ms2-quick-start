@@ -1,6 +1,8 @@
 # MS2 Sample Data App
 
-This is a sample data app used to demonstrate how an analysis from a package published to the MS2 platform can be easily embedded into a dashboard. Follow instructions in the root [README](../README.md) to achieve this.
+This is a sample data app used to demonstrate how an analysis from a package published to the MS2 platform can be easily embedded into a dashboard. Follow instructions in the root [Embedded Data Apps README](../READMEs/embedded_data_apps.md) to achieve this.
+
+NOTE: before running this, make sure you copy `.env.example` to `.env` and fill in the values so that the Malloy Samples dashboard will render correctly. You will set the `DEFAULT_ORGANIZATION` to the organization that was given to you for the demo.
 
 This app is based on the [Material UI - Vite.js in TypeScript example](https://github.com/mui/material-ui/tree/master/examples/material-ui-vite-ts).
 
