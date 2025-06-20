@@ -164,6 +164,8 @@ Choose from a range of formats, including:
 - Dashboards
 - JSON
 
+![Results Panel](explorer-screenshots/results-panel.png)
+
 Nested queries produce expandable subtables or inline charts that show multidimensional breakdowns per row.
 
 ### Code Transparency
