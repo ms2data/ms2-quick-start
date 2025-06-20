@@ -113,6 +113,8 @@ Choose how to visualize your results. Available formats include:
 - Scatter Chart
 - Segment Map
 
+![Query Panel Format Selector](explorer-screenshots/query-panel-format-selector.png)
+
 ### Query Configuration
 
 Your current query is displayed using clearly labeled sections:
