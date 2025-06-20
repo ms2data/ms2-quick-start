@@ -36,6 +36,8 @@ The panel is organized into three sections:
 
 Any field or view selected here will immediately appear in the **Query Panel**, ready to run or modify.
 
+![Source Panel](explorer-screenshots/source-panel.png)
+
 ### Dimensions
 
 The **Dimensions** section lists descriptive fields — such as IDs, dates, categories, and derived attributes — from both the primary model and any joined sources.
