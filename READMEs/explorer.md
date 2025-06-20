@@ -97,6 +97,7 @@ This menu allows you to add fields and logic by *operation*, rather than by data
 - **Add Blank Nested Query**
 
 ![Add Query Element](explorer-screenshots/query-add-element.png)
+![Add Query Element Full Menu](explorer-screenshots/add-query-element-full-menu.png)
 
 ### Display Format Selector
 
