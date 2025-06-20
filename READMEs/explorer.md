@@ -15,19 +15,6 @@ Designed for data consumers and developers alike, Malloy Explorer brings the pow
 - **AI and developer ready** – All queries are valid Malloy code, making them composable, reusable, and LLM-consumable.
 - **Guaranteed correct metrics** - Malloy supports **symmetric aggregates**, ensuring that metrics compute correctly even across joins with varying cardinality. This eliminates common errors found in traditional SQL-based tools. ([Learn more](https://cloud.google.com/looker/docs/best-practices/understanding-symmetric-aggregates))
 
-### How to view the Explorer
-
-Malloy Explorer is available in the Malloy VS Code extension. You can install it from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=malloydata.malloy-vscode).
-
-To open the Explorer, you can:
-- Open the command palette (Ctrl+Shift+P or Cmd+Shift+P) and type "Malloy Explorer".
-
-<img src="explorer-screenshots/explorer-entry-from-command-palette.png" alt="Explorer Entry Point" style="max-height: 600px;">
-
-- Click Explore from a source in a malloy model file.
-
-<img src="explorer-screenshots/explorer-entry-from-malloy-file-hover.png" alt="Explorer Entry Point" style="max-height: 600px;">
-
 ### Interface Overview
 
 Malloy Explorer is organized into three main panels:
@@ -35,7 +22,7 @@ Malloy Explorer is organized into three main panels:
 2. **Query Panel** – Assemble and refine your query using a clean visual editor.
 3. **Results Panel** – View results as tables or charts, and inspect the underlying Malloy and SQL.
 
-<img src="explorer-screenshots/explorer-full-UI.png" alt="Explorer Full UI" style="max-height: 600px;">
+<img src="explorer-screenshots/explorer-full-UI.png" alt="Explorer Full UI" width="900" style="max-width: 100%; height: auto;">
 
 ---
 
@@ -48,7 +35,7 @@ The panel is organized into three sections:
 - **Measures** – Predefined metrics you can aggregate, filter on, or sort with.
 - **Views** – Saved queries or perspectives authored in the model and ready to run. 
 
-<img src="explorer-screenshots/source-panel.png" alt="Source Panel" style="max-height: 600px;">
+<img src="explorer-screenshots/source-panel.png" alt="Source Panel" width="250" style="max-width: 100%; height: auto;">
 
 Hovering over a field or view in the Source Panel will show actions you can take to add it to your query - selections will immediately appear in the **Query Panel**, ready to run or modify.
 
@@ -63,7 +50,7 @@ Hovering over a dimension reveals contextual actions:
 - **Add as Filter** – Apply a filter based on the field.
 - **Add as Sort** – Sort the result set by this value.
 
-<img src="explorer-screenshots/source-panel-dimension-hover-groupby.png" alt="Source Panel Dimension Hover Actions" style="max-height: 600px;">
+<img src="explorer-screenshots/source-panel-dimension-hover-groupby.png" alt="Source Panel Dimension Hover Actions" width="250" style="max-width: 100%; height: auto;">
 
 ### Measures
 
@@ -74,7 +61,7 @@ Hovering over a measure provides the following actions:
 - **Add as Filter** – Use the measure to restrict the result set.
 - **Add as Sort** – Sort results based on the metric value.
 
-<img src="explorer-screenshots/source-panel-measure-hover-aggregate.png" alt="Source Panel Measures Hover Actions" style="max-height: 600px;">
+<img src="explorer-screenshots/source-panel-measure-hover-aggregate.png" alt="Source Panel Measures Hover Actions" width="250" style="max-width: 100%; height: auto;">
 
 ### Views
 
@@ -84,7 +71,7 @@ Hovering over a view provides the following actions:
 - **Add to Query** – Add the view to your query.
 - **Add as Nested Query** – Add the view to your query as a nested query.
 
-<img src="explorer-screenshots/source-panel-view-hover-add-to-query.png" alt="Source Panel View Hover Actions" style="max-height: 600px;">
+<img src="explorer-screenshots/source-panel-view-hover-add-to-query.png" alt="Source Panel View Hover Actions" width="260" style="max-width: 100%; height: auto;">
 
 Clicking a view loads its full query into the **Query Panel**, where it can be run, modified, or used as a base for deeper exploration. If a query is already open, the view will be added to the query as a nested query.
 
@@ -108,7 +95,7 @@ The **Query Panel** is where queries come together. It provides a structured, vi
   - **Chart Type Selector** – Select the type of chart to display the results.
   - **Query display** – Displays the current query you've built.
 
-<img src="explorer-screenshots/query-panel-with-query.png" alt="Query Panel Example" style="max-height: 600px;">
+<img src="explorer-screenshots/query-panel-with-query.png" alt="Query Panel Example" width="350" style="max-width: 100%; height: auto;">
 
 ### Add Query Element (`+`)
 
@@ -122,7 +109,7 @@ This menu allows you to add fields and logic by *operation*, rather than by data
 - **Order By**
 - **Add Blank Nested Query**
 
-<img src="explorer-screenshots/query-panel-add-action.png" alt="Add Query Element" style="max-height: 600px;">
+<img src="explorer-screenshots/query-panel-add-action.png" alt="Add Query Element" width="675" style="max-width: 100%; height: auto;">
 
 ### Display Format Selector
 
@@ -139,7 +126,7 @@ Choose how to visualize your results. Available formats include:
 - Scatter Chart
 - Segment Map
 
-<img src="explorer-screenshots/query-panel-chart-selector.png" alt="Query Panel Format Selector" style="max-height: 600px;">
+<img src="explorer-screenshots/query-panel-chart-selector.png" alt="Query Panel Format Selector" width="350" style="max-width: 100%; height: auto;">
 
 ### Query Configuration
 
@@ -155,7 +142,7 @@ Each section reflects the logic of your query and is fully editable.
 
 Hovering over a section will show another way to add elements to the query.
 
-<img src="explorer-screenshots/query-panel-hover-groupby.png" alt="Query Panel Hover Actions" style="max-height: 600px;">
+<img src="explorer-screenshots/query-panel-hover-groupby.png" alt="Query Panel Hover Actions" width="350" style="max-width: 100%; height: auto;">
 
 ---
 
@@ -167,11 +154,11 @@ To add a nested query, either:
 - Select **Nest Query** from the Query Panel **More Actions** menu.
 - Hover over a view in the Source Panel and select **Add as Nested Query**.
 
-<img src="explorer-screenshots/query-panel-more-nest.png" alt="Query Panel Nest Action" style="max-height: 600px;">
+<img src="explorer-screenshots/query-panel-more-nest.png" alt="Query Panel Nest Action" width="350" style="max-width: 100%; height: auto;">
 
 Each nested block can have its own groupings, aggregates, filters, ordering and even additional nests.
 
-<img src="explorer-screenshots/query-panel-build-nested-query.png" alt="Building a Nested Query" style="max-height: 600px;">
+<img src="explorer-screenshots/query-panel-build-nested-query.png" alt="Building a Nested Query" width="625" style="max-width: 100%; height: auto;">
 
 Use nesting to:
 - Break down results by subgroups
@@ -192,7 +179,7 @@ The **Results Panel** displays your query output whenever you click **Run**. Res
 
 The Results Panel renders results in the format specified by in the query above (e.g., table, chart, dashboard, etc.).
 
-<img src="explorer-screenshots/results-panel.png" alt="Example Results Panel" style="max-height: 600px;">
+<img src="explorer-screenshots/results-panel.png" alt="Example Results Panel" width="800" style="max-width: 100%; height: auto;">
 
 Nested queries produce expandable sub-tables or inline charts that show multidimensional breakdowns per row.
 
@@ -201,11 +188,11 @@ Nested queries produce expandable sub-tables or inline charts that show multidim
 Alongside visual output, the Results Panel includes:
 **Malloy Tab** – Shows the Malloy query generated by your visual configuration.
 
-<img src="explorer-screenshots/results-malloy.png" alt="Generated Malloy View" style="max-height: 600px;">
+<img src="explorer-screenshots/results-malloy.png" alt="Generated Malloy View" width="450" style="max-width: 100%; height: auto;">
 
 **SQL Tab** – Displays the fully compiled SQL sent to the database.
 
-<img src="explorer-screenshots/results-sql.png" alt="Generated SQL View" style="max-height: 600px;">
+<img src="explorer-screenshots/results-sql.png" alt="Generated SQL View" width="600" style="max-width: 100%; height: auto;">
 
 This transparency gives developers, analysts, and AI systems full access to inspect, reproduce, or extend any query.
 
