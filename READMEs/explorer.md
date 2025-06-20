@@ -125,6 +125,8 @@ Your current query is displayed using clearly labeled sections:
 - **Order By**
 - **Limit**
 
+![Full Query Panel](explorer-screenshots/query-panel-full-query.png)
+
 Each section reflects the logic of your query and is fully editable.
 
 ---
