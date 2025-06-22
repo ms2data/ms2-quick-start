@@ -1,4 +1,4 @@
-# Getting Started with the MS2 Portal
+# Getting Started with the MS2 Admin Portal
 
 > [!WARNING]
 > Work in progress. James to add screenshots and more details here.
