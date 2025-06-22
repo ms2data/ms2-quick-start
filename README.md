@@ -18,6 +18,9 @@ Once your semantic model is published, the MS2 platform makes it usable everywhe
 
 No matter how your team works — in notebooks, apps, dashboards, or chat — MS2 ensures you’re always working from the same semantic foundation, built on open standards and ready for the future.
 
+---
+
+<br>
 
 # Semantic Modeling Workflow
 
@@ -165,7 +168,7 @@ Your semantic model is now:
 
 <br>
 
-# Explorer - the No-Code UI
+# Explore your semantic model with Explorer - a no-code UI
 
 Now that you've published your semantic model to the MS2 platform, let’s explore and extend it — using Malloy’s **Publisher + Explorer** no-code interface.
 
@@ -203,8 +206,6 @@ At the top, you’ll see your available sources — `order_items`, `users`, `pro
 
 
 Let’s walk through a real example.
-
----
 
 ## Load and Run a Saved View
 
@@ -260,6 +261,9 @@ This is the power of MS2:
 - Code and no-code experiences that reinforce each other.
 - A single semantic model, used across tools and personas — AI, dashboards, apps, and more.
 
+---
+
+<br>
 
 # Architecture and Administration
 
@@ -305,6 +309,10 @@ To learn more, see the [MS2 CLI Guide →](READMEs/cli.md)
 
 With MS2’s robust admin tools, you can confidently govern semantic models across environments — and power data experiences at scale.
 
+---
+
+<br>
+
 # Other Data Consumer Experiences
 
 MS2 offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your target roles and goals best — and build from a single source of truth. Click on the options below to continue.
@@ -334,6 +342,8 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 [📖 Traditional BI Dashboards →](READMEs/traditional-bi.md)
 
 ## More Consumer Experiences Coming Soon...
+
+---
 
 <br>
 
