@@ -265,21 +265,15 @@ This is the power of MS2:
 
 <br>
 
-# Architecture and Administration
+# Administration
 
 While this Quick Start focused on the core workflow of building and exploring a semantic model, the MS2 platform is a globally distributed system designed to scale with your organization — across environments, teams, and regions.
-
-MS2 provides powerful administration tools to help you manage your semantic resources and deployment workflows with confidence and control.
-
-## Platform Architecture
-
-MS2 is built on a **distributed architecture** with:
-- A centralized **Global Controlplane** for orchestration, governance, and telemetry
-- Independent **Regional Dataplanes** that run Publisher workers close to your data
 
 This gives you:
 - **100× the scale**, **10× the availability**, and **1/10th the cost** compared to legacy BI and state of the art semantic layers
 - **Enterprise-grade controls** like governed metrics, fine-grained ACLs, versioning, audit logs, and usage telemetry
+
+MS2 provides powerful administration tools to help you manage your semantic resources and deployment workflows with confidence and control.
 
 ## MS2 Admin Portal
 
