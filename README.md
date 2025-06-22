@@ -168,7 +168,7 @@ Your semantic model is now:
 
 <br>
 
-# Explore your semantic model with Explorer - a no-code UI
+# Explore your Semantic Model
 
 Now that you've published your semantic model to the MS2 platform, let’s explore and extend it — using Malloy’s **Publisher + Explorer** no-code interface.
 
