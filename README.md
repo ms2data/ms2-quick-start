@@ -4,7 +4,7 @@ Welcome to **MS2**, your AI-powered, open-source-friendly semantic data platform
 
 At the core of MS2 is [**Malloy**](https://malloydata.dev), an open-source semantic modeling language designed for composability, auditability, and clarity. Malloy models are portable and can run anywhere — and MS2 extends this philosophy with an open, API-driven runtime based on the open-source **Malloy Publisher**. That means no vendor lock-in: you can build locally, host on your own infrastructure, or use our managed service — the choice is yours.
 
-In this Quick Start, you’ll follow a familiar and powerful flow: a **data modeler** defines trusted business logic in VS Code using our AI Copilot, and a **data analyst** explores and extends those definitions using Malloy’s no-code Explorer query builder. This mirrors the proven modeler → analyst workflow popularized by tools like Looker — now reimagined for the AI era, and freed from closed systems.
+In this Quick Start, you'll follow a familiar and powerful flow: a **data modeler** defines trusted business logic in VS Code using our AI Copilot, and a **data analyst** explores and extends those definitions using Malloy's no-code Explorer query builder. This mirrors the proven modeler → analyst workflow popularized by tools like DBT and Looker — now reimagined for the AI era, and freed from closed systems.
 
 But this is just the beginning.
 
@@ -16,7 +16,7 @@ Once your semantic model is published, the MS2 platform makes it usable everywhe
 
 <img src="overview.png" alt="MS2 Overview" width="400"/>
 
-No matter how your team works — in notebooks, apps, dashboards, or chat — MS2 ensures you’re always working from the same semantic foundation, built on open standards and ready for the future.
+No matter how your team works — in notebooks, apps, dashboards, or chat — MS2 ensures you're always working from the same semantic foundation, built on open standards and ready for the future.
 
 ---
 
@@ -24,7 +24,7 @@ No matter how your team works — in notebooks, apps, dashboards, or chat — MS
 
 # Semantic Modeling Workflow
 
-MS2 helps you create, govern, and use semantic models of your business data — quickly and at scale. In this section, you’ll:
+MS2 helps you create, govern, and use semantic models of your business data — quickly and at scale. In this section, you'll:
 
 1. Build a semantic model using the MS2 AI Copilot
 2. Analyze data using Malloy notebooks
@@ -32,16 +32,16 @@ MS2 helps you create, govern, and use semantic models of your business data — 
 
 ## Step 1: Build a Semantic Model with AI Copilot
 
-At the core of MS2 is the **semantic model**—a governed, versioned interface that defines how your data should be understood and used. Think of it as a **semantic API**: it captures not just structure, but business meaning. You’ll use the **MS2 AI Copilot in VS Code** to generate your first model using existing catalog metadata, query logs, and the structure of your data warehouse.
+At the core of MS2 is the **semantic model**—a governed, versioned interface that defines how your data should be understood and used. Think of it as a **semantic API**: it captures not just structure, but business meaning. You'll use the **MS2 AI Copilot in VS Code** to generate your first model using existing catalog metadata, query logs, and the structure of your data warehouse.
 
-### Prerequisites
+#### Prerequisites
 
 Before starting, make sure:
 
 - A **MS2 admin has set up your organization** on the service.
 - You have a basic understanding of **Malloy**, the semantic modeling language MS2 is built on. [View Malloy Docs →](https://docs.malloydata.dev/documentation/)
 
-### Clone the Quick Start Package
+#### Clone the Quick Start Package
 
 ```bash
 git clone https://github.com/ms2data/ms2-quick-start.git
@@ -49,21 +49,21 @@ cd ms2-quick-start
 code .
 ```
 
-### Install the MS2 VS Code Extension
+#### Install the MS2 VS Code Extension
 
 1. Open VS Code.
 2. Go to the Extensions view (`Cmd+Shift+X`).
 3. Search for `MS2` and install the extension.
-4. _(Temporary)_ Find the installed Malloy extension and select **“Switch to Pre-Release Version.”**
+4. _(Temporary)_ Find the installed Malloy extension and select **"Switch to Pre-Release Version."**
 
 > [!WARNING]
 > The VS Code AI Copilot extension mostly works in Cursor, but it hasn't been fully tested—some features may be limited.
 
-### Log In to MS2
+**Log In to MS2**
 
-1. In the VS Code Explorer sidebar, expand **“MS2 Service.”**
-2. Click **“Sign In.”**
-3. Click **“+ Add new organization”** and enter the name provided by your MS2 admin.
+1. In the VS Code Explorer sidebar, expand **"MS2 Service."**
+2. Click **"Sign In."**
+3. Click **"+ Add new organization"** and enter the name provided by your MS2 admin.
 4. Complete the login flow in your browser (email or Google account).
 5. When redirected back to VS Code, select the project: `ms2-quick-start`.
 
@@ -75,7 +75,7 @@ In the `ms2-quick-start` project, you can see you have access to a "bq_demo" con
 
 You can read about organizations > projects > packages structures in the [MS2 Portal Getting Started Guide →](docs/portal.md)
 
-### Generate Your Semantic Model
+#### Generate Your Semantic Model
 
 1. In the file view within the `ecommerce` folder, create a new file: `ecommerce.malloy` (files that end in `.malloy` are Malloy model files)
 2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Semantic Model**
@@ -93,7 +93,7 @@ For more information on how Malloy dimensions, measures, joins, views, etc. work
 > - Query logs
 > - Business glossary
 
-### Review & Adjust
+#### Review & Adjust
 
 Your generated model is a strong starting point — but real-world accuracy matters. You should review the model and make any necessary adjustments.  You can manually edit `.malloy` files, or if you're still learning Malloy, you can use the MS2 extension to help you. For example, highlight a measure or dimensions and press `Ctrl+Cmd+I` to open the prompt text box at the top of the VS code window.  Give our copilot natural language instructions for how to modify the code, e.g., _make the age dimension an age range string such as 10-19_.
 
@@ -126,7 +126,7 @@ For publishing, we will use the MS2 extension's "Local Packages" panel. The Loca
 
 If you have the `ecommerce` package open locally, you should see a single version `0.0.0`. This is the version in the package's local `publisher.json` file. `publisher.json` is a file package manifest file that contains the package's name, version, description, and other metadata. To publish a new version of the package, we will need to update the version in the `publisher.json` file.
 
-### Update the Package Version
+#### Update the Package Version
 
 1. Open the `publisher.json` file in your workspace.
 2. Set the version to `0.0.1`:
@@ -139,24 +139,24 @@ If you have the `ecommerce` package open locally, you should see a single versio
 }
 ```
 
-### Publish from VS Code
+#### Publish from VS Code
 
-1. In the Explorer panel, expand **“MS2 Local Packages.”**
+1. In the Explorer panel, expand **"MS2 Local Packages."**
 2. You should see the package `ecommerce`.
-3. Click the **“Publish”** button.
-4. When prompted, click **“Yes”** to confirm.
+3. Click the **"Publish"** button.
+4. When prompted, click **"Yes"** to confirm.
 
 > [!NOTE]
 > You can also publish packages from the command line using the [MS2 CLI →](docs/cli.md)
 
-### Confirm Successful Publication
+#### Confirm Successful Publication
 
-1. In the Explorer panel, expand **“MS2 Service.”**
+1. In the Explorer panel, expand **"MS2 Service."**
 2. Click the **Refresh** icon (🔄).
 3. Expand: `Packages` > `ecommerce`
 4. You should now see version `0.0.1` listed under the package.
 
-### Voila!
+## Voila!
 
 Your semantic model is now:
 
@@ -170,11 +170,11 @@ Your semantic model is now:
 
 # Explore your Semantic Model
 
-Now that you've published your semantic model to the MS2 platform, let’s explore and extend it — using Malloy’s **Publisher + Explorer** no-code interface.
+Now that you've published your semantic model to the MS2 platform, let's explore and extend it — using Malloy's **Publisher + Explorer** no-code interface.
 
 This is where your work as a data modeler becomes a launchpad for analysts, product managers, and other data consumers to ask meaningful questions — without writing a single line of SQL.
 
-## Open Publisher + Explorer
+## Open Publisher → Explorer
 
 1. Open your browser, go to, and login:  
    `https://<your-org>.data.ms2.co/ms2-quick-start`
@@ -184,7 +184,7 @@ This is where your work as a data modeler becomes a launchpad for analysts, prod
 
    <img src="docs/screenshots/publisher-home.png" alt="Explorer Home" width="1000"/>
 
-3. Click the package to open it. You’ll land on a screen with three panels: **Package Config**, **Notebooks**, and **Models**.
+3. Click the package to open it. You'll land on a screen with three panels: **Package Config**, **Notebooks**, and **Models**.
 
    <img src="docs/screenshots/publisher-package.png" alt="Explorer Package" width="1000"/>
 
@@ -200,12 +200,12 @@ The Explorer interface has three panels:
 - **Query Panel (Middle)**: Construct and refine your queries.
 - **Results Panel (Right)**: See your live results and inspect the generated Malloy or SQL.
 
-At the top, you’ll see your available sources — `order_items`, `users`, `products`, `inventory_items` — created earlier in your Malloy model.  Note that some of the source, dimension, and measure names in this quick start guide may be different from the names in your model.
+At the top, you'll see your available sources — `order_items`, `users`, `products`, `inventory_items` — created earlier in your Malloy model.  Note that some of the source, dimension, and measure names in this quick start guide may be different from the names in your model.
 
 <img src="docs/screenshots/publisher-explorer.png" alt="Explorer Layout" width="1000"/>
 
 
-Let’s walk through a real example.
+Let's walk through a real example.
 
 ## Load and Run a Saved View
 
@@ -219,9 +219,9 @@ Let’s walk through a real example.
 ✅ You should see the exact same result in the Results Panel that you saw earlier in VS Code.
 
 
-## Recreate the Revenue by Brand Nested Query in Explorer
+## Recreate Nested Query in Explorer
 
-Now let’s recreate that same query — from scratch — using just clicks.
+Now let's recreate that same query — from scratch — using just clicks.
 
 1. In the Query Panel, click **Clear** to start fresh.
 2. In the Source Panel:
@@ -244,13 +244,13 @@ Now let’s recreate that same query — from scratch — using just clicks.
 
    <img src="docs/screenshots/publisher-explorer-nested-query.png" alt="Explorer Run Nested Query" width="1000"/>
 
-✅ You’ve just created a **nested query** that breaks down sales by brand and age group — the same query you wrote earlier in code — now in just a few clicks.
+✅ You've just created a **nested query** that breaks down sales by brand and age group — the same query you wrote earlier in code — now in just a few clicks.
 
 To learn more about the Explorer, see the [Explorer Documentation →](https://github.com/malloydata/publisher/blob/main/docs/explorer.md)
 
 ## Reflect on What You Just Did
 
-Let’s pause and appreciate what just happened:
+Let's pause and appreciate what just happened:
 
 - You **built a semantic model** using Malloy and the MS2 AI Copilot.
 - You created a view in **VS Code** with nested logic that most SQL experts would struggle to write.
@@ -277,7 +277,7 @@ MS2 provides powerful administration tools to help you manage your semantic reso
 
 ## MS2 Admin Portal
 
-The **Admin Portal** is a browser-based interface for managing your organization’s semantic models.
+The **Admin Portal** is a browser-based interface for managing your organization's semantic models.
 
 🔗 Open the Admin Portal:  
 `https://<your-org>.admin.ms2.co/ms2-quick-start`
@@ -301,7 +301,7 @@ With the CLI, you can:
 
 To learn more, see the [MS2 CLI Guide →](docs/cli.md)
 
-With MS2’s robust admin tools, you can confidently govern semantic models across environments — and power data experiences at scale.
+With MS2's robust admin tools, you can confidently govern semantic models across environments — and power data experiences at scale.
 
 ---
 
@@ -337,7 +337,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ## More Consumer Experiences Coming Soon...
 
-# What’s Next?
+# What's Next?
 
 Choose the consumption path(s) that match your workflow and:
 
