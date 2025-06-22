@@ -181,17 +181,13 @@ This is where your work as a data modeler becomes a launchpad for analysts, prod
 
    <img src="READMEs/screenshots/publisher-home.png" alt="Explorer Home" width="1000"/>
 
-3. Click the package to open it. You’ll land on a screen with three panels:
-   - **Package Config**
-   - **Notebooks**
-   - **Models**
+3. Click the package to open it. You’ll land on a screen with three panels: **Package Config**, **Notebooks**, and **Models**.
 
    <img src="READMEs/screenshots/publisher-package.png" alt="Explorer Package" width="1000"/>
 
 4. In the **Models** panel, you should see the `ecommerce.malloy` file you authored in VS Code.  
    Click it. This will open the **Explorer** — your visual, no-code query builder.
 
----
 
 ## Understand the Explorer Layout
 
