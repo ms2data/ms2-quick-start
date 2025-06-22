@@ -343,10 +343,6 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ## More Consumer Experiences Coming Soon...
 
----
-
-<br>
-
 # What’s Next?
 
 Choose the consumption path(s) that match your workflow and:
