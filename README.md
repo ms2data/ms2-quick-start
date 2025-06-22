@@ -69,11 +69,11 @@ code .
 
 The VS Code Service Panel is where you can view your organization's projects, connections, and packages in the MS2 service. For example:
 
-<img src="READMEs/screenshots/vs-code-service-panel.png" alt="VS Code Service Panel" width="400"/>
+<img src="docs/screenshots/vs-code-service-panel.png" alt="VS Code Service Panel" width="400"/>
 
 In the `ms2-quick-start` project, you can see you have access to a "bq_demo" connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus eliminating the need to store database credentials locally. The `ms2-quick-start` project has a single package `ecommerce` and a single version has been published (0.0.0)
 
-You can read about organizations > projects > packages structures in the [MS2 Portal Getting Started Guide →](READMEs/portal.md)
+You can read about organizations > projects > packages structures in the [MS2 Portal Getting Started Guide →](docs/portal.md)
 
 ### Generate Your Semantic Model
 
@@ -104,17 +104,17 @@ Your generated model is a strong starting point — but real-world accuracy matt
 
 Let's create a view to help our analysts explore the orders data.  Inside the orders source below the dimensions and measures, write `view: sales_by_brand ` and wait a second.  The copilot should generate a view with a measure for the total sales by brand similar to the following.  
 
-<img src="READMEs/screenshots/vs-code-view-results.png" alt="VS Code View Results" width="1000"/>
+<img src="docs/screenshots/vs-code-view-results.png" alt="VS Code View Results" width="1000"/>
 
 We can run the query by clicking the "Run" above the view.  You should see the results in the "Results" panel on the right.
 
 Let's try a little more complext query.  Below the total sales aggregate type something like _nest age group_ and wait a second.  The copilot should genreate a nested view with a measure for the total sales by age group.  When you run this query, you should see sales broken down by brand, and within each brand, sales broken down by age group similar to the following:
 
-<img src="READMEs/screenshots/vs-code-view-prompt-2.png" alt="VS Code View Prompt 2" width="1000"/>
+<img src="docs/screenshots/vs-code-view-prompt-2.png" alt="VS Code View Prompt 2" width="1000"/>
 
 While this type of model and viewing might look simple, it's very difficult to create in most modern data tools.  For example, clicking on the SQL in the results panel, you will see the SQL that was used to generate the results.  This SQL is not easy to write (especially for an LLM) and is prone to errors.  And if you want to change the query, you have to write the SQL manually.
 
-<img src="READMEs/screenshots/vs-code-view-sql.png" alt="VS Code View SQL" width="500"/>
+<img src="docs/screenshots/vs-code-view-sql.png" alt="VS Code View SQL" width="500"/>
 
 ## Step 3: Publish to the MS2 Service
 
@@ -122,7 +122,7 @@ Publishing makes your semantic model and analysis available across the platform 
 
 For publishing, we will use the MS2 extension's "Local Packages" panel. The Local Packages panel is where you can view and manage the local packages in your workspace. For example:
 
-<img src="READMEs/screenshots/vs-code-local-panel.png" alt="VS Code Local Packages Panel" width="400"/>
+<img src="docs/screenshots/vs-code-local-panel.png" alt="VS Code Local Packages Panel" width="400"/>
 
 If you have the `ecommerce` package open locally, you should see a single version `0.0.0`. This is the version in the package's local `publisher.json` file. `publisher.json` is a file package manifest file that contains the package's name, version, description, and other metadata. To publish a new version of the package, we will need to update the version in the `publisher.json` file.
 
@@ -147,7 +147,7 @@ If you have the `ecommerce` package open locally, you should see a single versio
 4. When prompted, click **“Yes”** to confirm.
 
 > [!NOTE]
-> You can also publish packages from the command line using the [MS2 CLI →](READMEs/cli.md)
+> You can also publish packages from the command line using the [MS2 CLI →](docs/cli.md)
 
 ### Confirm Successful Publication
 
@@ -182,11 +182,11 @@ This is where your work as a data modeler becomes a launchpad for analysts, prod
 2. You should see a screen with a single package:  
    **`ecommerce`** — the one you just created and pushed.
 
-   <img src="READMEs/screenshots/publisher-home.png" alt="Explorer Home" width="1000"/>
+   <img src="docs/screenshots/publisher-home.png" alt="Explorer Home" width="1000"/>
 
 3. Click the package to open it. You’ll land on a screen with three panels: **Package Config**, **Notebooks**, and **Models**.
 
-   <img src="READMEs/screenshots/publisher-package.png" alt="Explorer Package" width="1000"/>
+   <img src="docs/screenshots/publisher-package.png" alt="Explorer Package" width="1000"/>
 
 4. In the **Models** panel, you should see the `ecommerce.malloy` file you authored in VS Code.  
    Click it. This will open the **Explorer** — your visual, no-code query builder.
@@ -202,7 +202,7 @@ The Explorer interface has three panels:
 
 At the top, you’ll see your available sources — `order_items`, `users`, `products`, `inventory_items` — created earlier in your Malloy model.  Note that some of the source, dimension, and measure names in this quick start guide may be different from the names in your model.
 
-<img src="READMEs/screenshots/publisher-explorer.png" alt="Explorer Layout" width="1000"/>
+<img src="docs/screenshots/publisher-explorer.png" alt="Explorer Layout" width="1000"/>
 
 
 Let’s walk through a real example.
@@ -214,7 +214,7 @@ Let’s walk through a real example.
 3. Click it. The Query Panel should populate with your saved query.
 4. Click **Run**.
 
-<img src="READMEs/screenshots/publisher-explorer-run-view.png" alt="Explorer Run" width="1000"/>
+<img src="docs/screenshots/publisher-explorer-run-view.png" alt="Explorer Run" width="1000"/>
 
 ✅ You should see the exact same result in the Results Panel that you saw earlier in VS Code.
 
@@ -233,7 +233,7 @@ Now let’s recreate that same query — from scratch — using just clicks.
 3. The Query Panel now shows these fields.  
    Click **Run** — and you'll see revenue by brand in the Results Panel.
 
-   <img src="READMEs/screenshots/publisher-explorer-run-query.png" alt="Explorer Run Query" width="1000"/>
+   <img src="docs/screenshots/publisher-explorer-run-query.png" alt="Explorer Run Query" width="1000"/>
 
 4. Now, click the **+** button at the top of the Main Query panel and select **Add blank nested query**.
 
@@ -242,11 +242,11 @@ Now let’s recreate that same query — from scratch — using just clicks.
    - Add an Aggregate and select `total_sales` 
    - Click **Run**.
 
-   <img src="READMEs/screenshots/publisher-explorer-nested-query.png" alt="Explorer Run Nested Query" width="1000"/>
+   <img src="docs/screenshots/publisher-explorer-nested-query.png" alt="Explorer Run Nested Query" width="1000"/>
 
 ✅ You’ve just created a **nested query** that breaks down sales by brand and age group — the same query you wrote earlier in code — now in just a few clicks.
 
-To learn more about the Explorer, see the [Explorer Documentation →](READMEs/explorer.md)
+To learn more about the Explorer, see the [Explorer Documentation →](https://github.com/malloydata/publisher/blob/main/docs/explorer.md)
 
 ## Reflect on What You Just Did
 
@@ -294,7 +294,7 @@ From the portal, you can:
 - View and promote package versions
 - Configure database connections for different environments (e.g., dev, staging, prod)
 
-To learn more, see the [Admin Portal Guide →](READMEs/portal.md)
+To learn more, see the [Admin Portal Guide →](docs/portal.md)
 
 ## MS2 CLI
 
@@ -305,7 +305,7 @@ With the CLI, you can:
 - Publish and promote versions
 - Automate semantic model deployments
 
-To learn more, see the [MS2 CLI Guide →](READMEs/cli.md)
+To learn more, see the [MS2 CLI Guide →](docs/cli.md)
 
 With MS2’s robust admin tools, you can confidently govern semantic models across environments — and power data experiences at scale.
 
@@ -323,7 +323,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ✅ **Great for:** Building internal tools, customer facing dashboards, or any UI that needs trustworthy data experiences.
 
-[📖 Embedded Data Apps →](READMEs/embedded-data-apps.md)
+[📖 PublisherEmbedded Data Apps →](https://github.com/malloydata/publisher/blob/main/docs/embedded-data-apps.md)
 
 ## AI Agents (Model Context Protocol)
 
@@ -331,15 +331,15 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ✅ **Great for:** Trustworthy AI copilots, conversational analytics, and embedded intelligence.
 
-[📖 AI Agents →](READMEs/ai-agents.md)
+[📖 Publisher AI Agents →](https://github.com/malloydata/publisher/blob/main/docs/ai-agents.md)
 
-## Traditional Dashboards (SQL Interface)
+## Legacy Dashboards (SQL Interface)
 
 👥 **Target Persona:** Analysts using Tableau, Power BI, Looker, Superset, Metabase, etc.
 
 ✅ **Great for:** Semantic consistency in legacy dashboards, reduced maintenance and duplication of logic, and a bridge from existing BI tools into the semantic layer.
 
-[📖 Traditional BI Dashboards →](READMEs/traditional-bi.md)
+[📖 Legacy BI Dashboards →](https://github.com/malloydata/publisher/blob/main/docs/legacy-bi.md)
 
 ## More Consumer Experiences Coming Soon...
 
@@ -352,5 +352,3 @@ Choose the consumption path(s) that match your workflow and:
 - Connect AI agents to drive smart, explainable automation
 - Prepare to unify dashboards via the upcoming SQL interface
 
-When you're ready to go deeper:
-- [Request a Personalized Walkthrough →](#)
