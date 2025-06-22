@@ -39,7 +39,7 @@ At the core of MS2 is the **semantic model**—a governed, versioned interface t
 Before starting, make sure:
 
 - A **MS2 admin has set up your organization** on the service.
-- You have a basic understanding of **Malloy**, the semantic modeling language MS2 is built on. [View Malloy Docs →](https://malloydata.dev)
+- You have a basic understanding of **Malloy**, the semantic modeling language MS2 is built on. [View Malloy Docs →](https://docs.malloydata.dev/documentation/)
 
 ### Clone the Quick Start Package
 
