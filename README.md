@@ -217,7 +217,6 @@ Let’s walk through a real example.
 
 ✅ You should see the exact same result in the Results Panel that you saw earlier in VS Code.
 
----
 
 ## Recreate the Revenue by Brand Nested Query in Explorer
 
@@ -247,8 +246,6 @@ Now let’s recreate that same query — from scratch — using just clicks.
 ✅ You’ve just created a **nested query** that breaks down sales by brand and age group — the same query you wrote earlier in code — now in just a few clicks.
 
 To learn more about the Explorer, see the [Explorer Documentation →](READMEs/explorer.md)
-
----
 
 ## Reflect on What You Just Did
 
@@ -280,8 +277,6 @@ This gives you:
 - **100× the scale**, **10× the availability**, and **1/10th the cost** compared to legacy BI and state of the art semantic layers
 - **Enterprise-grade controls** like governed metrics, fine-grained ACLs, versioning, audit logs, and usage telemetry
 
----
-
 ## MS2 Admin Portal
 
 The **Admin Portal** is a browser-based interface for managing your organization’s semantic models.
@@ -297,8 +292,6 @@ From the portal, you can:
 
 To learn more, see the [Admin Portal Guide →](READMEs/portal.md)
 
----
-
 ## MS2 CLI
 
 For advanced users and DevOps teams, the **MS2 CLI** offers full control over your semantic layer via the command line — ideal for automation, CI/CD, and scripting.
@@ -309,8 +302,6 @@ With the CLI, you can:
 - Automate semantic model deployments
 
 To learn more, see the [MS2 CLI Guide →](READMEs/cli.md)
-
----
 
 With MS2’s robust admin tools, you can confidently govern semantic models across environments — and power data experiences at scale.
 
