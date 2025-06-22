@@ -323,7 +323,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ✅ **Great for:** Building internal tools, customer facing dashboards, or any UI that needs trustworthy data experiences.
 
-[📖 PublisherEmbedded Data Apps →](https://github.com/malloydata/publisher/blob/main/docs/embedded-data-apps.md)
+[📖 Publisher - Embedded Data Apps →](https://github.com/malloydata/publisher/blob/main/docs/embedded-data-apps.md)
 
 ## AI Agents (Model Context Protocol)
 
@@ -331,7 +331,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ✅ **Great for:** Trustworthy AI copilots, conversational analytics, and embedded intelligence.
 
-[📖 Publisher AI Agents →](https://github.com/malloydata/publisher/blob/main/docs/ai-agents.md)
+[📖 Publisher - AI Agents →](https://github.com/malloydata/publisher/blob/main/docs/ai-agents.md)
 
 ## Legacy Dashboards (SQL Interface)
 
@@ -339,7 +339,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ✅ **Great for:** Semantic consistency in legacy dashboards, reduced maintenance and duplication of logic, and a bridge from existing BI tools into the semantic layer.
 
-[📖 Legacy BI Dashboards →](https://github.com/malloydata/publisher/blob/main/docs/legacy-bi.md)
+[📖 Legacy - BI Dashboards →](https://github.com/malloydata/publisher/blob/main/docs/legacy-bi.md)
 
 ## More Consumer Experiences Coming Soon...
 
