@@ -217,9 +217,9 @@ Let's walk through a real example.
 ✅ You should see the exact same result in the Results Panel that you saw earlier in VS Code.
 
 
-## Recreate Nested Query in Explorer
+## Create a Nested Query in Explorer
 
-Now let's recreate that same query — from scratch — using just clicks.
+Now let's recreate the same view we created in VS Code — from scratch — using just clicks.
 
 1. In the Query Panel, click **Clear** to start fresh.
 2. In the Source Panel:
