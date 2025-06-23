@@ -1,13 +1,13 @@
 # MS2 Quick Start
 
-Welcome to **MS2**, your AI-powered, open-source-friendly semantic data platform. MS2 helps you transform raw operational data into clean, governed, and reusable semantic models — and then puts those models to work across a wide range of modern data experiences.
+Welcome to **MS2**, your AI-powered, open-source based, semantic data platform. MS2 helps you transform raw operational data into clean, governed, and reusable semantic models — and then puts those models to work across a wide range of modern data experiences.
 
 At the core of MS2 is [**Malloy**](https://malloydata.dev), an open-source semantic modeling language designed for composability, auditability, and clarity. Malloy models are portable and can run anywhere — and MS2 extends this philosophy with an open, API-driven runtime based on the open-source **Malloy Publisher**. That means no vendor lock-in: you can build locally, host on your own infrastructure, or use our managed service — the choice is yours.
 
 Once a semantic model is published, the MS2 platform makes it usable everywhere, powering a wide range of modern data experiences:
 - **Natural language notebooks** for ad hoc exploration
 - **AI agents** with contextual, trusted data
-- **Embedded data apps** built with our React SDK
+- **Embedded data apps** built with the OpenSource Malloy SDK
 - **BI dashboards** through our SQL interface
 
 <img src="overview.png" alt="MS2 Overview" width="400"/>
@@ -22,7 +22,15 @@ In this Quick Start, we'll focus on a familiar and powerful core workflow: a **d
 
 # Semantic Modeling Workflow
 
-MS2 helps you create, govern, and use semantic models of your business data — quickly and at scale. In this section, you'll use MS2's VS Code extension to:
+### What is a Semantic Model?
+Raw data in SQL or datawarehouses needs to be refined to be useful. A semantic model is a way to describe your data in a way that is easy to understand and use.
+The semantic model defines the joins, dimensions, measures, and views that are used to query the data.
+It includes the business logic that makes the raw data useful in business terms.
+Instead of 5 different data analysts all writing slightly different queries to compute "revenue",
+the semantic model defines definition of each measure that can be used by all analysts.
+
+### What's in the this Quick Start?
+MS2 helps you create and deploy semantic models of your business data — quickly and at scale. In this section, you'll use MS2's VS Code extension to:
 
 1. **Build a semantic model** using the MS2 AI Copilot
 2. **Create a view** to validate and iterate on your model
@@ -36,8 +44,9 @@ Before you can build a semantic model, you'll need to set up your environment.
 
 Before starting, make sure:
 
-- A **MS2 admin has set up your organization** on the service.
+- A **MS2 admin has set up your organization** on the service. [Can we create a self-service demo instance?]
 - You have a basic understanding of **Malloy**, the semantic modeling language MS2 is built on. [View Malloy Docs →](https://docs.malloydata.dev/documentation/)
+[I don't think this is right. Malloy is too new- we need to walk customers through at least an intro to Malloy]
 
 #### Clone the Quick Start Package
 
@@ -46,6 +55,7 @@ git clone https://github.com/ms2data/ms2-quick-start.git
 cd ms2-quick-start
 code .
 ```
+
 
 #### Install the MS2 VS Code Extension
 
