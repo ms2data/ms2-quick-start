@@ -81,11 +81,9 @@ You can read about organizations > projects > packages structures in the [MS2 Po
 2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Semantic Model**
 3. When prompted, enter a high-level prompt.  Typically, you want to identify and start with the main transaction table in your data.  For example, in the ecommerce data, the `orders` table is the main transaction table.  So, you might enter: _Build a model of our orders data_
 
-The ecommerce data set has four tables -- orders_items, users, products, and investory_items.  You should see Malloy sources for each of these tables.  The orders data should have join relationship to the users and investory_items tables.  And the investory_items table should have a join relationship to the products table.
+The ecommerce data set has four tables -- `orders_items`, `users`, `products`, and `inventory_items`.  You should see Malloy sources for each of these tables.  The `orders_items` table should have join relationship to the `users` and `inventory_items` tables.  And the `inventory_items` table should have a join relationship to the `products` table.
 
-Each source show have as set of dimensions and measures defined -- and annotations describing the different entities and type information (e.g., currency, percent, duration).
-
-For more information on how Malloy dimensions, measures, joins, views, etc. work, see the [Malloy documentation →](https://malloydata.dev/documentation)
+Each source show have as set of dimensions and measures defined -- and annotations describing the different entities and type information (e.g., currency, percent, duration).  For more information on how Malloy dimensions, measures, joins, views, etc. work, see the [Malloy documentation →](https://malloydata.dev/documentation)
 
 > [!TIP] In this example, we are using the ecommerce data set.  The ecommerce data set is a sample data set that is included with the Malloy samples.  Our copilot only has access to the table schema to generate the model.  In a real-world scenario, you can add more context to the copilot by connecting to or uploading additional metadata such as:
 > - SQL logs
