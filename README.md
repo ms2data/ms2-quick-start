@@ -87,7 +87,6 @@ Each source show have as set of dimensions and measures defined -- and annotatio
 
 > [!NOTE] 
 > In this example, we are using the ecommerce data set.  The ecommerce data set is a sample data set that is included with the Malloy samples.  Our copilot only has access to the table schema to generate the model.  In a real-world scenario, you can add more context to the copilot by connecting to or uploading additional metadata such as:
-> - SQL logs
 > - Catalog metadata
 > - Query logs
 > - Business glossary
