@@ -288,13 +288,47 @@ This is the power of MS2:
 
 <br>
 
+# Other Data Consumer Experiences
+
+MS2 offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your target roles and goals best — and build from a single source of truth. Click on the options below to continue.
+
+## Embedded Data Apps (React SDK)
+
+👥 **Target Persona:** Software engineers building data driven apps
+
+✅ **Great for:** Building internal tools, customer facing dashboards, or any UI that needs trustworthy data experiences.
+
+[📖 Publisher - Embedded Data Apps →](https://github.com/malloydata/publisher/blob/main/docs/embedded-data-apps.md)
+
+## AI Agents (Model Context Protocol)
+
+👥 **Target Persona:** Analysts and engineers using tools like Claude, Cursor, or custom agents
+
+✅ **Great for:** Trustworthy AI copilots, conversational analytics, and embedded intelligence.
+
+[📖 Publisher - AI Agents →](https://github.com/malloydata/publisher/blob/main/docs/ai-agents.md)
+
+## Legacy Dashboards (SQL Interface)
+
+👥 **Target Persona:** Analysts using Tableau, Power BI, Looker, Superset, Metabase, etc.
+
+✅ **Great for:** Semantic consistency in legacy dashboards, reduced maintenance and duplication of logic, and a bridge from existing BI tools into the semantic layer.
+
+[📖 Legacy - BI Dashboards →](https://github.com/malloydata/publisher/blob/main/docs/legacy-bi.md)
+
+### More Consumer Experiences Coming Soon...
+
+---
+
+<br>
+
 # Administration
 
 While this Quick Start focused on the core workflow of building and exploring a semantic model, the MS2 platform is a globally distributed system designed to scale with your organization — across environments, teams, and regions.
 
 This gives you:
 
-- **100× the scale**, **10× the availability**, and **1/10th the cost** compared to legacy BI and state of the art semantic layers
+- **100× the scale**, **10× the availability**, and **1/10th the cost** compared to BI tools and state of the art semantic layers
 - **Enterprise-grade controls** like governed metrics, fine-grained ACLs, versioning, audit logs, and usage telemetry
 
 MS2 provides powerful administration tools to help you manage your semantic resources and deployment workflows with confidence and control.
@@ -352,36 +386,6 @@ With MS2's robust admin tools, you can confidently govern semantic models across
 ---
 
 <br>
-
-# Other Data Consumer Experiences
-
-MS2 offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your target roles and goals best — and build from a single source of truth. Click on the options below to continue.
-
-## Embedded Data Apps (React SDK)
-
-👥 **Target Persona:** Software engineers building data driven apps
-
-✅ **Great for:** Building internal tools, customer facing dashboards, or any UI that needs trustworthy data experiences.
-
-[📖 Publisher - Embedded Data Apps →](https://github.com/malloydata/publisher/blob/main/docs/embedded-data-apps.md)
-
-## AI Agents (Model Context Protocol)
-
-👥 **Target Persona:** Analysts and engineers using tools like Claude, Cursor, or custom agents
-
-✅ **Great for:** Trustworthy AI copilots, conversational analytics, and embedded intelligence.
-
-[📖 Publisher - AI Agents →](https://github.com/malloydata/publisher/blob/main/docs/ai-agents.md)
-
-## Legacy Dashboards (SQL Interface)
-
-👥 **Target Persona:** Analysts using Tableau, Power BI, Looker, Superset, Metabase, etc.
-
-✅ **Great for:** Semantic consistency in legacy dashboards, reduced maintenance and duplication of logic, and a bridge from existing BI tools into the semantic layer.
-
-[📖 Legacy - BI Dashboards →](https://github.com/malloydata/publisher/blob/main/docs/legacy-bi.md)
-
-## More Consumer Experiences Coming Soon...
 
 # What's Next?
 
