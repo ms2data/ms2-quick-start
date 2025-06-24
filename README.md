@@ -327,6 +327,27 @@ To learn more, see the [MS2 CLI Guide →](docs/cli.md)
 
 With MS2's robust admin tools, you can confidently govern semantic models across environments — and power data experiences at scale.
 
+### Versioning & Deployment
+
+While MS2 is flexible, we recommend integrating it with standard software development practices for robust, scalable deployments. The following outlines our best-practice approach.
+
+MS2 uses a **dual-versioning system**:
+1.  **Source Control** (e.g., Git) for tracking code changes.
+2.  **Package Registry** for managing published, versioned semantic models.
+
+#### Recommended Workflow
+
+A typical workflow integrates your existing tools:
+1.  **Develop:** Use source control like Git to manage model changes.
+2.  **Publish:** Use a CI/CD pipeline (e.g., GitHub Actions) to automatically publish versioned packages to the MS2 registry upon merging.
+3.  **Deploy:** Manage deployment across environments (dev, staging, prod) using Infrastructure as Code (IaC) tools like Terraform.
+
+#### Consumption & Compatibility
+
+By default, consuming applications will use the **'latest'** version of a semantic model. However, any downstream tool can pin to a specific version number. This ensures that changes to the model won't break existing dashboards, AI agents, or embedded applications.
+
+This versioning system enables robust deployment patterns like A/B testing, blue-green deployments, and instant rollbacks, giving you full control over your data assets.
+
 ---
 
 <br>
