@@ -268,7 +268,7 @@ Now let's recreate the same view we created in VS Code — from scratch — usin
 
 ✅ You've just created a **nested query** that breaks down sales by brand and age group — the same query you wrote earlier in code — now in just a few clicks.
 
-To learn more about the Explorer, see the [Explorer Documentation →](https://github.com/malloydata/publisher/blob/main/docs/explorer.md)
+To learn more about the Explorer, see the [Publisher → Explorer Documentation →](https://github.com/malloydata/publisher?tab=readme-ov-file#ad-hoc-data-analysis)
 
 ## Reflect on What You Just Did
 
@@ -292,21 +292,29 @@ This is the power of MS2:
 
 MS2 offers multiple, role-tailored ways to consume your semantic models. Pick the path (or paths) that suit your target roles and goals best — and build from a single source of truth. Click on the options below to continue.
 
-## Embedded Data Apps (React SDK)
+## Notebook-based Dashboards
+
+👥 **Target Persona:** Technical stakeholders who want reproducibility and transparency
+
+✅ **Great for:** Shareable, code-first, live dashboards on your semantic models.
+
+[📖 Publisher → Notebook-based Dashboards →](https://github.com/malloydata/publisher?tab=readme-ov-file#notebook-based-dashboards--data-stories)
+
+## Embedded Data Apps (Publisher SDK)
 
 👥 **Target Persona:** Software engineers building data driven apps
 
 ✅ **Great for:** Building internal tools, customer facing dashboards, or any UI that needs trustworthy data experiences.
 
-[📖 Publisher - Embedded Data Apps →](https://github.com/malloydata/publisher/blob/main/docs/embedded-data-apps.md)
+[📖 Publisher → Embedded Data Apps →](https://github.com/malloydata/publisher?tab=readme-ov-file#embedded-data-applications)
 
 ## AI Agents (Model Context Protocol)
 
 👥 **Target Persona:** Analysts and engineers using tools like Claude, Cursor, or custom agents
 
-✅ **Great for:** Trustworthy AI copilots, conversational analytics, and embedded intelligence.
+✅ **Great for:** Trustworthy AI copilots, guided analysis, conversational analytics, and embedded intelligence.
 
-[📖 Publisher - AI Agents →](https://github.com/malloydata/publisher/blob/main/docs/ai-agents.md)
+[📖 Publisher → AI Agents →](https://github.com/malloydata/publisher?tab=readme-ov-file#mcp-based-ai-data-agents)
 
 ## Legacy Dashboards (SQL Interface)
 
@@ -314,7 +322,7 @@ MS2 offers multiple, role-tailored ways to consume your semantic models. Pick th
 
 ✅ **Great for:** Semantic consistency in legacy dashboards, reduced maintenance and duplication of logic, and a bridge from existing BI tools into the semantic layer.
 
-[📖 Legacy - BI Dashboards →](https://github.com/malloydata/publisher/blob/main/docs/legacy-bi.md)
+[📖 Publisher → BI Dashboards →](https://github.com/malloydata/publisher?tab=readme-ov-file#legacy-bi-tools-coming-soon)
 
 ### More Consumer Experiences Coming Soon...
 
