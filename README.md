@@ -66,7 +66,7 @@ code .
 4. Complete the login flow in your browser (email or Google account).
 5. When redirected back to VS Code, select the project: `ms2-quick-start`.
 
-<img src="docs/screenshots/MS2-Ext-login.gif" alt="Expanding MS2 Service in VS Code sidebar" width="600"/>
+<img src="docs/screenshots/ms2-ext-login4.gif" alt="Expanding MS2 Service in VS Code sidebar" width="600"/>
 
 The VS Code Service Panel is where you can view your organization's projects, connections, and packages in the MS2 service. For example:
 
@@ -231,10 +231,7 @@ The Explorer interface has three panels:
 
 At the top, you'll see your available sources — `order_items`, `users`, `products`, `inventory_items` — created earlier in your Malloy model. Note that some of the source, dimension, and measure names in this quick start guide may be different from the names in your model. Select the `order_items` source tab, which is built around the ecommerce dataset's main fact table.
 
-
-
 <img src="docs/screenshots/publisher-explorer.png" alt="Explorer Layout" width="1000"/>
-
 
 Let's walk through a real example.
 
@@ -297,9 +294,6 @@ This is the power of MS2:
 ---
 
 <br>
-
-## How to Share Feedback
-We are actively working on improving MS2 and would love to hear your feedback. If you have suggestions, encounter issues, or want to share your experience, please reach out to us at [feedback@ms2.co](mailto:feedback@ms2.co).
 
 # Other Data Consumer Experiences
 
