@@ -5,6 +5,7 @@ Welcome to **MS2**, your AI-powered, open-source based, semantic data platform. 
 At the core of MS2 is [**Malloy**](https://malloydata.dev), an open-source semantic modeling language designed for composability, auditability, and clarity. Malloy models are portable and can run anywhere — and MS2 extends this philosophy with an open, API-driven runtime based on the open-source **Malloy Publisher**. That means no vendor lock-in: you can build locally, host on your own infrastructure, or use our managed service — the choice is yours.
 
 Once a semantic model is published, the MS2 platform makes it usable everywhere, powering a wide range of modern data experiences:
+
 - **Natural language notebooks** for ad hoc exploration
 - **AI agents** with contextual, trusted data
 - **Embedded data apps** built with the OpenSource Malloy SDK
@@ -14,27 +15,17 @@ Once a semantic model is published, the MS2 platform makes it usable everywhere,
 
 No matter how your team works — in notebooks, apps, dashboards, or chat — MS2 ensures you're always working from the same semantic foundation, built on open standards and ready for the future.
 
-In this Quick Start, we'll focus on a familiar and powerful core workflow: a **data modeler** defines trusted business logic in VS Code using our AI Copilot, and a **data analyst** explores and extends those definitions using Malloy's no-code Explorer query builder. This mirrors the proven modeler → analyst workflow popularized by tools like DBT and Looker — now reimagined for the AI era, and freed from closed systems.
+## What's in this Quick Start?
+This Quick Start guides you through the end-to-end MS2 workflow, focusing on a familiar and powerful pattern: a **data modeler** defines trusted business logic in VS Code using our AI Copilot, and a **data analyst** explores and extends those definitions using Malloy's no-code Explorer query builder. This mirrors the proven modeler → analyst workflow popularized by tools like DBT and Looker — now reimagined for the AI era, and freed from closed systems.
 
----
+You will learn how to:
+1. [**Build a semantic model**](#step-1-build-a-semantic-model-with-the-ms2-ai-copilot) using the MS2 AI Copilot in VS Code.
+2. [**Create a view**](#step-2-create-a-view) to validate and iterate on your model.
+3. [**Publish your work**](#step-3-publish-to-the-ms2-service) to the MS2 service for broader use.
+4. [**Explore your semantic model**](#step-4-explore-your-semantic-model) using the no-code Explorer to answer business questions.
 
-<br>
-
-# Semantic Modeling Workflow
-
-### What is a Semantic Model?
-Raw data in SQL or datawarehouses needs to be refined to be useful. A semantic model is a way to describe your data in a way that is easy to understand and use.
-The semantic model defines the joins, dimensions, measures, and views that are used to query the data.
-It includes the business logic that makes the raw data useful in business terms.
-Instead of 5 different data analysts all writing slightly different queries to compute "revenue",
-the semantic model defines definition of each measure that can be used by all analysts.
-
-### What's in the this Quick Start?
-MS2 helps you create and deploy semantic models of your business data — quickly and at scale. In this section, you'll use MS2's VS Code extension to:
-
-1. **Build a semantic model** using the MS2 AI Copilot
-2. **Create a view** to validate and iterate on your model
-3. **Publish your work** to the MS2 service for broader use
+> [!NOTE]
+> **What is a semantic model?** Raw data in SQL or data warehouses needs to be refined to be useful. A semantic model describes your data in business terms, defining the joins, dimensions, measures, and views used to query the data. It includes the business logic that makes raw data useful — ensuring that instead of 5 different analysts writing slightly different queries to compute "revenue," there's one trusted definition that everyone can use.
 
 ## Step 0: Get Set Up
 
@@ -74,6 +65,8 @@ code .
 3. Click **"+ Add new organization"** and enter the name provided by your MS2 admin.
 4. Complete the login flow in your browser (email or Google account).
 5. When redirected back to VS Code, select the project: `ms2-quick-start`.
+
+<img src="docs/screenshots/ms2-ext-login4.gif" alt="Expanding MS2 Service in VS Code sidebar" width="600"/>
 
 The VS Code Service Panel is where you can view your organization's projects, connections, and packages in the MS2 service. For example:
 
@@ -123,19 +116,35 @@ Creating views is a powerful way to validate your semantic model and define reus
 > [!NOTE]
 > If you have other AI copilot extensions enabled (like GitHub Copilot), you may need to disable them to ensure that the MS2 Copilot's autocomplete functionality works correctly.
 
-Let's create a simple view to calculate sales by brand - a good jumping off point for analysts or other downstream consumers of the data. In your `ecommerce.malloy` file, find the `order_items` source. Below the dimensions and measures, start typing `view: sales_by_brand ` and pause. The copilot should suggest a complete view definition with a measure for total sales by brand, similar to the following screenshot:
+Let's create a simple view to calculate sales by brand - a good jumping off point for analysts or other downstream consumers of the data.
 
-<img src="docs/screenshots/vs-code-view-results.png" alt="VS Code View Results" width="1000"/>
+#### Step-by-Step Instructions:
 
-We can run the query by clicking the "Run" above the view. You should see the results in the "Results" panel on the right.
+1. **Find the `order_items` source** in your `ecommerce.malloy`
+2. **Below the dimensions and measures**, start typing `view: sales_by_brand `  and pause (be sure to include a space after brand to trigger the copilot)
+3. **Wait for the copilot suggestion** - it should suggest a complete view definition with a measure for total sales by brand. Adjust as desired & resolve any errors
+4. **Add a `# bar_chart` tag** above the view to make it display as a bar chart
+5. **Click "Run"** above the view execute the query. Results will display on the right
+
+These steps are demonstrated in the following screencast:
+
+<img src="docs/screenshots/autocomplete-and-run-view.gif" alt="Autocomplete for sales_by_brand view" width="750"/>
 
 Let's try a more complex query. First, move the `# bar_chart` tag below  `aggregate: total_sales` - this will change the `sales_by_brand` to a table, which is better to display a nested query for each table row.  Below this tag, type something like `nest: age_bucket ` and wait a couple seconds.  The **MS2 AI Copilot** should autogenerate a nested view with a measure for the total sales by age group.  When you run this query, you should see sales broken down by brand, and within each brand, sales broken down by age group similar to the following:
 
-<img src="docs/screenshots/vs-code-view-prompt-2.png" alt="VS Code View Prompt 2" width="1000"/>
+<img src="docs/screenshots/Add-nest-to-view-and-run.gif" alt="VS Code View Prompt 2" width="750"/>
 
 While this type of nested view might look simple, it's very difficult to create in most modern data tools. For example, clicking on the **SQL** tab in the results panel will show the SQL that was used to generate the results. This SQL is not easy to write (especially for an LLM) and is prone to errors. And if you want to change the query, you would have to write and validate the SQL manually.
 
 <img src="docs/screenshots/vs-code-view-sql.png" alt="VS Code View SQL" width="500"/>
+
+#### Troubleshooting
+If you're having trouble with the autocomplete feature, here are a few things to try:
+- **Ensure you've typed a `space` or `Tab`** after the start of your code (e.g., after `view: sales_by_brand`).
+- **Wait 2-3 seconds** for the suggestion to appear. The service latency is not yet optimized, so it can sometimes take a moment.
+- **Disable other AI copilots.** If you use tools like GitHub Copilot, they may provide conflicting suggestions. Try disabling them for this workspace.
+- **Start with valid Malloy.** Autocomplete works best when it has a valid starting point, such as `view: `
+- **This feature is new and a work in progress.** We are actively working to improve it - Please share any feedback you have!
 
 ## Step 3: Publish to the MS2 Service
 
@@ -177,6 +186,11 @@ If you have the `ecommerce` package open locally, you should see a single versio
 3. Expand: `Packages` > `ecommerce`
 4. You should now see version `0.0.1` listed under the package.
 
+#### Publish Package Screencast
+Here's a screencast of the publish process, showing all the steps:
+
+<img src="docs/screenshots/publish-package.gif" alt="Publish Package" width="600"/>
+
 ## Voila!
 
 Your semantic model is now:
@@ -185,11 +199,8 @@ Your semantic model is now:
 - **Discoverable** and queryable via APIs and notebooks
 - **Ready** for use by analysts, embedded apps, dashboards, or AI agents
 
----
 
-<br>
-
-# Explore your Semantic Model
+## Step 4: Explore your Semantic Model
 
 Now that you've published your semantic model to the MS2 platform, it's time to explore and extend it using Malloy's **Publisher + Explorer** no-code interface.
 
@@ -197,21 +208,18 @@ This is where your work as a data modeler becomes a launchpad for analysts, prod
 
 ## Open Publisher → Explorer
 
-1. Open your browser, go to, and login:  
-   `https://<your-org>.data.ms2.co/ms2-quick-start`
+Let's open the Explorer interface to explore your semantic model.
 
-2. You should see a screen with a single package:  
-   **`ecommerce`** — the one you just created and pushed.
+1. **Open your browser** and navigate to: `https://<your-org>.data.ms2.co/ms2-quick-start`
+2. **Log in** to your MS2 account
+3. **Select the `ms2-quick-start` project** from your organization's project list
+4. **Click the `ecommerce` package** you just published to open its detailed view
+5. **Navigate to the Models panel** and click `ecommerce.malloy` — the model file you authored in VS Code
+6. **Select the `order_items` source tab** to focus on the main fact table
 
-   <img src="docs/screenshots/publisher-home.png" alt="Explorer Home" width="500"/>
+The complete navigation process is shown in this screencast:
 
-3. Click the package to open it. You'll land on a screen with three panels: **Package Config**, **Notebooks**, and **Models**.
-
-   <img src="docs/screenshots/publisher-package.png" alt="Explorer Package" width="1000"/>
-
-4. In the **Models** panel, you should see the `ecommerce.malloy` file you authored in VS Code.  
-   Click it. This will open the **Explorer** — your visual, no-code query builder.
-
+<img src="docs/screenshots/navigate-to-explorer-order-items.gif" alt="Selecting the order_items source in Explorer" width="750"/>
 
 ## Understand the Explorer Layout
 
@@ -224,7 +232,6 @@ The Explorer interface has three panels:
 At the top, you'll see your available sources — `order_items`, `users`, `products`, `inventory_items` — created earlier in your Malloy model. Note that some of the source, dimension, and measure names in this quick start guide may be different from the names in your model. Select the `order_items` source tab, which is built around the ecommerce dataset's main fact table.
 
 <img src="docs/screenshots/publisher-explorer.png" alt="Explorer Layout" width="1000"/>
-
 
 Let's walk through a real example.
 
