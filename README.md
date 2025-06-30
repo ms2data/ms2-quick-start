@@ -20,7 +20,14 @@ In this Quick Start, we'll focus on a familiar and powerful core workflow: a **d
 
 <br>
 
-# Semantic Modeling Workflow
+## What's in this Quick Start?
+This Quick Start guides you through the end-to-end MS2 workflow. You will play two roles: a **data modeler** who builds and publishes a semantic model, and a **data analyst** who consumes and explores that model.
+
+You will learn how to:
+1. [**Build a semantic model**](#step-1-build-a-semantic-model-with-the-ms2-ai-copilot) using the MS2 AI Copilot in VS Code.
+2. [**Create a view**](#step-2-create-a-view) to validate and iterate on your model.
+3. [**Publish your work**](#step-3-publish-to-the-ms2-service) to the MS2 service for broader use.
+4. [**Explore your semantic model**](#step-4-explore-your-semantic-model) using the no-code Explorer to answer business questions.
 
 ### What is a Semantic Model?
 Raw data in SQL or datawarehouses needs to be refined to be useful. A semantic model is a way to describe your data in a way that is easy to understand and use.
@@ -28,13 +35,6 @@ The semantic model defines the joins, dimensions, measures, and views that are u
 It includes the business logic that makes the raw data useful in business terms.
 Instead of 5 different data analysts all writing slightly different queries to compute "revenue",
 the semantic model defines definition of each measure that can be used by all analysts.
-
-### What's in the this Quick Start?
-MS2 helps you create and deploy semantic models of your business data — quickly and at scale. In this section, you'll use MS2's VS Code extension to:
-
-1. **Build a semantic model** using the MS2 AI Copilot
-2. **Create a view** to validate and iterate on your model
-3. **Publish your work** to the MS2 service for broader use
 
 ## Step 0: Get Set Up
 
@@ -74,6 +74,8 @@ code .
 3. Click **"+ Add new organization"** and enter the name provided by your MS2 admin.
 4. Complete the login flow in your browser (email or Google account).
 5. When redirected back to VS Code, select the project: `ms2-quick-start`.
+
+[ADD GIF HERE: Expanding MS2 Service in VS Code sidebar]
 
 The VS Code Service Panel is where you can view your organization's projects, connections, and packages in the MS2 service. For example:
 
@@ -125,6 +127,8 @@ Creating views is a powerful way to validate your semantic model and define reus
 
 Let's create a simple view to calculate sales by brand - a good jumping off point for analysts or other downstream consumers of the data. In your `ecommerce.malloy` file, find the `order_items` source. Below the dimensions and measures, start typing `view: sales_by_brand ` and pause. The copilot should suggest a complete view definition with a measure for total sales by brand, similar to the following screenshot:
 
+[ADD GIF HERE: Autocomplete for sales_by_brand view]
+
 <img src="docs/screenshots/vs-code-view-results.png" alt="VS Code View Results" width="1000"/>
 
 We can run the query by clicking the "Run" above the view. You should see the results in the "Results" panel on the right.
@@ -136,6 +140,14 @@ Let's try a more complex query. First, move the `# bar_chart` tag below  `aggreg
 While this type of nested view might look simple, it's very difficult to create in most modern data tools. For example, clicking on the **SQL** tab in the results panel will show the SQL that was used to generate the results. This SQL is not easy to write (especially for an LLM) and is prone to errors. And if you want to change the query, you would have to write and validate the SQL manually.
 
 <img src="docs/screenshots/vs-code-view-sql.png" alt="VS Code View SQL" width="500"/>
+
+#### Troubleshooting Autocomplete
+If you're having trouble with the autocomplete feature, here are a few things to try:
+- **Ensure you've typed a space or `Tab`** after the start of your code (e.g., after `view:`).
+- **Wait 2-3 seconds** for the suggestion to appear. The service latency is not yet optimized, so it can sometimes take a moment.
+- **Disable other AI copilots.** If you use tools like GitHub Copilot, they may provide conflicting suggestions. Try disabling them for this workspace.
+- **Start with valid Malloy.** Autocomplete works best when it has a valid starting point, such as `view: ` or `query: `.
+- **This feature is new and finicky.** We are actively working to improve its reliability. Please share any feedback you have!
 
 ## Step 3: Publish to the MS2 Service
 
@@ -189,7 +201,7 @@ Your semantic model is now:
 
 <br>
 
-# Explore your Semantic Model
+## Step 4: Explore your Semantic Model
 
 Now that you've published your semantic model to the MS2 platform, it's time to explore and extend it using Malloy's **Publisher + Explorer** no-code interface.
 
@@ -222,6 +234,8 @@ The Explorer interface has three panels:
 - **Results Panel (Right)**: See your live results and inspect the generated Malloy or SQL.
 
 At the top, you'll see your available sources — `order_items`, `users`, `products`, `inventory_items` — created earlier in your Malloy model. Note that some of the source, dimension, and measure names in this quick start guide may be different from the names in your model. Select the `order_items` source tab, which is built around the ecommerce dataset's main fact table.
+
+[ADD GIF HERE: Selecting the order_items source in Explorer]
 
 <img src="docs/screenshots/publisher-explorer.png" alt="Explorer Layout" width="1000"/>
 
@@ -287,6 +301,9 @@ This is the power of MS2:
 ---
 
 <br>
+
+## How to Share Feedback
+We are actively working on improving MS2 and would love to hear your feedback. If you have suggestions, encounter issues, or want to share your experience, please reach out to us at [feedback@ms2.co](mailto:feedback@ms2.co).
 
 # Other Data Consumer Experiences
 
