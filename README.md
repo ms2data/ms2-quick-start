@@ -128,11 +128,11 @@ Let's create a simple view to calculate sales by brand - a good jumping off poin
 
 These steps are demonstrated in the following screencast:
 
-<img src="docs/screenshots/autocomplete-and-run-view.gif" alt="Autocomplete for sales_by_brand view" width="750"/>
+<img src="docs/screenshots/autocomplete-and-run-view2.gif" alt="Autocomplete for sales_by_brand view" width="750"/>
 
 Let's try a more complex query. First, move the `# bar_chart` tag below  `aggregate: total_sales` - this will change the `sales_by_brand` to a table, which is better to display a nested query for each table row.  Below this tag, type something like `nest: age_bucket ` and wait a couple seconds.  The **MS2 AI Copilot** should autogenerate a nested view with a measure for the total sales by age group.  When you run this query, you should see sales broken down by brand, and within each brand, sales broken down by age group similar to the following:
 
-<img src="docs/screenshots/Add-nest-to-view-and-run.gif" alt="VS Code View Prompt 2" width="750"/>
+<img src="docs/screenshots/add-nest-to-view-and-run2.gif" alt="VS Code View Prompt 2" width="750"/>
 
 While this type of nested view might look simple, it's very difficult to create in most modern data tools. For example, clicking on the **SQL** tab in the results panel will show the SQL that was used to generate the results. This SQL is not easy to write (especially for an LLM) and is prone to errors. And if you want to change the query, you would have to write and validate the SQL manually.
 
