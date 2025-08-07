@@ -92,7 +92,7 @@ At the core of MS2 is the **semantic model**—a governed, versioned interface t
 <img src="docs/screenshots/AIcopilot-create-model.gif" alt="MS2 Chat Create Malloy File" width="800"/>
 
 2. The Agent will walk you through the process of building a Malloy semantic model - asking clarify questions at key steps along the process. You may have to review the AI agent's recommendations and confirm to ensure that the model meets your needs: 
-<img src="docs/screenshots/GenerateModel.gif" alt="MS2 Chat Generate Model" width="400"/>
+<img src="docs/screenshots/GenerateModel.gif" alt="MS2 Chat Generate Model" width="800"/>
 
 3. After the model is generated, you can review Approve the edit to move the model into a malloy file. 
 
