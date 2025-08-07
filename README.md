@@ -6,17 +6,17 @@ At the core of MS2 is [**Malloy**](https://malloydata.dev), an open-source seman
 
 Once a semantic model is published, the MS2 platform makes it usable everywhere, powering a wide range of modern data experiences:
 
+- **AI agents** with contextual, trusted data via the Model Context Protocol (MCP) server
 - **Natural language notebooks** for ad hoc exploration
-- **AI agents** with contextual, trusted data
-- **Embedded data apps** built with the OpenSource Malloy SDK
-- **BI dashboards** through our SQL interface
+- **Embedded data apps** built with the open-source Malloy Publisher SDK
+- **BI dashboards** through our SQL interface (coming soon)
 
 <img src="overview.png" alt="MS2 Overview" width="400"/>
 
 No matter how your team works — in notebooks, apps, dashboards, or chat — MS2 ensures you're always working from the same semantic foundation, built on open standards and ready for the future.
 
 ## What's in this Quick Start?
-This Quick Start guides you through the end-to-end MS2 workflow, focusing on a familiar and powerful pattern: a **data modeler** defines trusted business logic in VS Code using our AI Copilot, and a **data analyst** explores and extends those definitions using Malloy's no-code Explorer query builder. This mirrors the proven modeler → analyst workflow popularized by tools like DBT and Looker — now reimagined for the AI era, and freed from closed systems.
+This Quick Start guides you through the end-to-end MS2 workflow, focusing on a familiar and powerful pattern: a **data modeler** defines trusted business logic in VS Code using our AI Copilot, and a **data analyst** explores the governed data model using Malloy's no-code Explorer query builder. This mirrors the proven modeler → analyst workflow popularized by tools like DBT and Looker — now reimagined for the AI era, and freed from closed systems.
 
 You will learn how to:
 1. [**Build a semantic model**](#step-1-build-a-semantic-model-with-the-ms2-ai-copilot) using the MS2 AI Copilot in VS Code.
@@ -35,11 +35,10 @@ Before you can build a semantic model, you'll need to set up your environment.
 
 Before starting, make sure:
 
-- A **MS2 admin has set up your organization** on the service. [Can we create a self-service demo instance?]
+- A **MS2 admin has set up your organization** on the service. (self-service demo coming soon)
 - You have a basic understanding of **Malloy**, the semantic modeling language MS2 is built on. [View Malloy Docs →](https://docs.malloydata.dev/documentation/)
-[TODO: consider adding a walkthrough / intro to Malloy]
 
-#### Clone the Quick Start Package
+#### Clone the Quick Start Package & Open in VS Code
 
 ```bash
 git clone https://github.com/ms2data/ms2-quick-start.git
@@ -47,23 +46,21 @@ cd ms2-quick-start
 code .
 ```
 
-
 #### Install the MS2 VS Code Extension
 
-1. Open VS Code.
-2. Go to the Extensions view (`Cmd+Shift+X`).
-3. Search for `MS2` and install the extension.
-4. _(Temporary)_ Find the installed Malloy extension and select **"Switch to Pre-Release Version."**
+1. In VS Code, go to the Extensions view (`Cmd+Shift+X`).
+2. Search for `MS2` and install the extension.
+3. _(Temporary)_ Find the installed Malloy extension and select **"Switch to Pre-Release Version."**
 
 > [!WARNING]
 > The VS Code AI Copilot extension mostly works in Cursor, but it hasn't been fully tested—some features may be limited.
 
-**Log In to MS2**
+#### Log In to MS2 Service
 
 1. In the VS Code Explorer sidebar, expand **"MS2 Service."**
 2. Click **"Sign In."**
 3. Click **"+ Add new organization"** and enter the name provided by your MS2 admin.
-4. Complete the login flow in your browser (email or Google account).
+4. Complete the login flow in your browser by authenticating with you email or Google account.
 5. When redirected back to VS Code, select the project: `ms2-quick-start`.
 
 <img src="docs/screenshots/ms2-ext-login4.gif" alt="Expanding MS2 Service in VS Code sidebar" width="600"/>
@@ -74,24 +71,37 @@ The VS Code Service Panel is where you can view your organization's projects, co
 
 In the `ms2-quick-start` project, you can see you have access to a "bq_demo" connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus eliminating the need to store database credentials locally. The `ms2-quick-start` project has a single package `ecommerce` and a single version has been published (0.0.0)
 
-You can read about organizations > projects > packages structures in the [MS2 Portal Getting Started Guide →](docs/portal.md)
-
 ## Step 1: Build a Semantic Model with the MS2 AI Copilot
 
-At the core of MS2 is the **semantic model**—a governed, versioned interface that defines how your data should be understood and used. Think of it as a **semantic API**: it captures not just structure, but business meaning. You'll use the **MS2 AI Copilot in VS Code** to generate your first model using existing catalog metadata, query logs, and the structure of your data warehouse.
+At the core of MS2 is the **semantic model**—a governed, versioned interface that defines how your data should be understood and used. Think of it as a **an API for your data**: it captures not just structure, but business meaning. You'll use the **MS2 AI Copilot in VS Code** to generate your first model using existing catalog metadata, query logs, and the structure of your data warehouse.
 
-#### Generate Your Semantic Model
+#### Open & Arrange the MS2 Chat Panel
 
-1. In the file view within the `ecommerce` folder, create a new file: `ecommerce.malloy` (files that end in `.malloy` are Malloy model files)
-2. Open the Command Palette (`Cmd+Shift+P`) and run: **MS2: Suggest Semantic Model**
-3. When prompted, enter a high-level prompt.  Typically, you want to identify and start with the main transaction table in your data.  For example, in the ecommerce data, the `orders` table is the main transaction table.  So, you might enter: _Build a model of our orders data_
+1. Open the MS2 Chat Panel. You will initially see it on the left in Activity Bar. To open the AI Copilot chat, click on the `M`, as shown in the screenshot below.
+
+<img src="docs/screenshots/MS2Chat-Activity-Bar.png" alt="MS2 Chat Activity Bar" width="400"/>
+
+2. In order to view both the File Explorer, the MS2 Service Panel and the Chat (along with your file), we recommend moving the chat over to the right panel by dragging and dropping the MS2 Chat into a panel on the right, as shown in the screencast below:
+
+<img src="docs/screenshots/VSCode-Move-MS2-Chat.gif" alt="Moving MS2 Chat Panel" width="800"/>
+
+#### Generate Your Semantic Model with the MS2 AI Copilot
+
+1. Create a new .malloy file in the ecommerce folder, then open the MS2 chat and ask the Agent to help you build a model on the ecommerce dataset. For example, you might enter: _Build a semantic model of our ecommerce data to analyze sales by brand_. 
+
+<img src="docs/screenshots/AIcopilot-create-model.gif" alt="MS2 Chat Create Malloy File" width="800"/>
+
+2. The Agent will walk you through the process of building a Malloy semantic model - asking clarify questions at key steps along the process. You may have to review the AI agent's recommendations and confirm to ensure that the model meets your needs: 
+<img src="docs/screenshots/GenerateModel.gif" alt="MS2 Chat Generate Model" width="400"/>
+
+3. After the model is generated, you can review Approve the edit to move the model into a malloy file. 
 
 The ecommerce data set has four tables -- `orders_items`, `users`, `products`, and `inventory_items`.  You should see Malloy sources for each of these tables.  The `orders_items` table should have join relationship to the `users` and `inventory_items` tables.  And the `inventory_items` table should have a join relationship to the `products` table.
 
 Each source should have a set of dimensions and measures defined, along with annotations that describe the different entities and type information (e.g., currency, percent, duration). For more information on how Malloy dimensions, measures, joins, views, etc. work, see the [Malloy documentation →](https://malloydata.dev/documentation)
 
 > [!NOTE]
-> In this example, we are using the ecommerce data set.  The ecommerce data set is a sample data set that is included with the Malloy samples.  Our copilot only has access to the table schema to generate the model.  In a real-world scenario, you can add more context to the copilot by connecting to or uploading additional metadata such as:
+> In this example, we are using a sample ecommerce data set.  The ecommerce data set is a sample data set that is included with the Malloy samples.  Our copilot only has access to the table schema to generate the model.  In a real-world scenario, you can add more context to the copilot by connecting to or uploading additional metadata such as:
 > - Catalog metadata
 > - Query logs
 > - Business glossary
