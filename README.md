@@ -77,22 +77,14 @@ At the core of MS2 is the **semantic model**—a governed, versioned interface t
 
 #### Open & Arrange the MS2 Chat Panel
 
-1. Open the MS2 Chat Panel. You will initially see it on the left in Activity Bar. To open the AI Copilot chat, click on the `M`, as shown in the screenshot below.
+Open the MS2 Chat Panel. You will initially see it on the left in Activity Bar. To open the AI Copilot chat, click on the `M` icon. To view the File Explorer, the MS2 Service Panel and the Chat (along with your file), we recommend moving the chat over to the right panel by dragging and dropping the MS2 Chat into a panel on the right, as shown in the screencast below:
 
-<img src="docs/screenshots/MS2Chat-Activity-Bar.png" alt="MS2 Chat Activity Bar" width="400"/>
-
-2. In order to view both the File Explorer, the MS2 Service Panel and the Chat (along with your file), we recommend moving the chat over to the right panel by dragging and dropping the MS2 Chat into a panel on the right, as shown in the screencast below:
-
-<img src="docs/screenshots/VSCode-Move-MS2-Chat.gif" alt="Moving MS2 Chat Panel" width="800"/>
+<img src="docs/screenshots/vscode-ms2-setup.gif" alt="Moving MS2 Chat Panel" width="800"/>
 
 #### Generate Your Semantic Model with the MS2 AI Copilot
 
-1. Create a new .malloy file in the ecommerce folder, then open the MS2 chat and ask the Agent to help you build a model on the ecommerce dataset. For example, you might enter: _Build a semantic model of our ecommerce data to analyze sales by brand_. 
-
-<img src="docs/screenshots/AIcopilot-create-model.gif" alt="MS2 Chat Create Malloy File" width="800"/>
-
-2. The Agent will walk you through the process of building a Malloy semantic model - asking clarify questions at key steps along the process. You may have to review the AI agent's recommendations and confirm to ensure that the model meets your needs: 
-<img src="docs/screenshots/GenerateModel.gif" alt="MS2 Chat Generate Model" width="800"/>
+1. Create a new .malloy file in the ecommerce folder, then open the MS2 chat and ask the Agent to help you build a model on the ecommerce dataset. For example, you might enter: _Build a semantic model of our ecommerce data to analyze sales by brand or product and user spend by age bucket_. The Agent will walk you through the process of building a Malloy semantic model - asking clarify questions at key steps along the process. You may have to review the AI agent's recommendations and confirm to ensure that the model meets your needs: 
+<img src="docs/screenshots/GenerateModel2.gif" alt="MS2 Chat Generate Model" width="800"/>
 
 3. After the model is generated, you can review Approve the edit to move the model into a malloy file. 
 
