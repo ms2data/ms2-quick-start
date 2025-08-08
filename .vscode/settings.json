@@ -5,4 +5,7 @@
     "cursor.cpp.disabledLanguages": [
         "malloy"
     ]
+
+    "ms2.show_chat_panel":true,
+
 }
