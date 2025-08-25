@@ -41,8 +41,8 @@ Before starting, make sure:
 #### Clone the Quick Start Package & Open in VS Code
 
 ```bash
-git clone https://github.com/ms2data/ms2-quick-start.git
-cd ms2-quick-start
+git clone https://github.com/ms2data/quick-start.git
+cd quick-start
 code .
 ```
 
@@ -61,7 +61,7 @@ code .
 2. Click **"Sign In."**
 3. Click **"+ Add new organization"** and enter the name provided by your MS2 admin.
 4. Complete the login flow in your browser by authenticating with you email or Google account.
-5. When redirected back to VS Code, select the project: `ms2-quick-start`.
+5. When redirected back to VS Code, select the project: `quick-start`.
 
 <img src="docs/screenshots/ms2-ext-login4.gif" alt="Expanding MS2 Service in VS Code sidebar" width="600"/>
 
@@ -69,7 +69,7 @@ The VS Code Service Panel is where you can view your organization's projects, co
 
 <img src="docs/screenshots/vs-code-service-panel.png" alt="VS Code Service Panel" width="400"/>
 
-In the `ms2-quick-start` project, you can see you have access to a "bq_demo" connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus eliminating the need to store database credentials locally. The `ms2-quick-start` project has a single package `ecommerce` and a single version has been published (0.0.0)
+In the `quick-start` project, you can see you have access to a "bq_demo" connection. The connection is managed by the MS2 service and is not stored locally, but the MS2 VS code extension will discover it in your project and allow you to use it in your local models -- thus eliminating the need to store database credentials locally. The `quick-start` project has a single package `ecommerce` and a single version has been published (0.0.0)
 
 ## Step 1: Build a Semantic Model with the MS2 AI Copilot
 
@@ -209,9 +209,9 @@ This is where your work as a data modeler becomes a launchpad for analysts, prod
 
 Let's open the Explorer interface to explore your semantic model.
 
-1. **Open your browser** and navigate to: `https://<your-org>.data.ms2.co/ms2-quick-start`
+1. **Open your browser** and navigate to: `https://<your-org>.admin.ms2.co/quick-start`
 2. **Log in** to your MS2 account
-3. **Select the `ms2-quick-start` project** from your organization's project list
+3. **Select the `quick-start` project** from your organization's project list
 4. **Click the `ecommerce` package** you just published to open its detailed view
 5. **Navigate to the Models panel** and click `ecommerce.malloy` — the model file you authored in VS Code
 6. **Select the `order_items` source tab** to focus on the main fact table
