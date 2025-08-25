@@ -178,9 +178,6 @@ If you have the `ecommerce` package open locally, you should see a single versio
 3. Click the **"Publish"** button.
 4. When prompted, click **"Yes"** to confirm.
 
-> [!NOTE]
-> You can also publish packages from the command line using the [MS2 CLI →](docs/cli.md)
-
 #### Confirm Successful Publication
 
 1. In the Explorer panel, expand **"MS2 Service."**
@@ -369,36 +366,6 @@ A typical workflow integrates your existing tools:
 By default, consuming applications will use the **'latest'** version of a semantic model. However, any downstream tool can pin to a specific version number. This ensures that changes to the model won't break existing dashboards, AI agents, or embedded applications.
 
 This versioning system enables robust deployment patterns like A/B testing, blue-green deployments, and instant rollbacks, giving you full control over your data assets.
-
-## MS2 Admin Portal
-
-The **Admin Portal** is a browser-based interface for managing your organization's semantic models.
-
-🔗 Open the Admin Portal:  
-`https://<your-org>.admin.ms2.co/ms2-quick-start`
-
-From the portal, you can:
-
-- Navigate across **organizations**, **projects**, and **packages**
-- Manage permissions and access roles
-- View and promote package versions
-- Configure database connections for different environments (e.g., dev, staging, prod)
-
-To learn more, see the [Admin Portal Guide →](docs/portal.md)
-
-## MS2 CLI
-
-For advanced users and DevOps teams, the **MS2 CLI** offers full control over your semantic layer via the command line — ideal for automation, CI/CD, and scripting.
-
-With the CLI, you can:
-
-- Manage projects, packages, and connections
-- Publish and promote versions
-- Automate semantic model deployments
-
-To learn more, see the [MS2 CLI Guide →](docs/cli.md)
-
-With MS2's robust admin tools, you can confidently govern semantic models across environments — and power data experiences at scale.
 
 ---
 
